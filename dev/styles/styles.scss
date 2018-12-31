@@ -1,0 +1,39 @@
+@import 'setup';
+@import 'variables';
+@import 'nav';
+@import 'header';
+@import 'travelerInfo';
+@import 'about';
+@import 'reviews';
+@import 'activities';
+@import 'surf';
+@import 'footer';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.center {
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: $lora;
+    font-size: 46px;
+    font-weight: 300;
+}
+p {
+    font-family: $muli;
+    font-size: 18px;
+}
+
+.lh-30 {
+    line-height: 26px;
+}
+
+

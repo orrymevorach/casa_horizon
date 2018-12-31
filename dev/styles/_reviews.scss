@@ -1,0 +1,18 @@
+.reviews {
+    background-image: url(../img/reviews-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 50px;
+        color: $white;
+        font-family: $lora;
+        font-weight: 400;
+        padding: 30px 0 0 50px;
+    }
+}
