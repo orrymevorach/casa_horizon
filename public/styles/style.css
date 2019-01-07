@@ -136,10 +136,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
   padding: 0; }
 
 nav.ham-nav {
-  position: fixed;
-  top: 67px;
-  right: 35px;
-  z-index: 1000;
   display: flex; }
   nav.ham-nav #ham-menu {
     display: none;
@@ -225,6 +221,28 @@ nav.ham-nav {
     width: 0%;
     left: 50%; }
 
+.logo-nav {
+  height: 20vh;
+  padding: 40px 40px 0 40px;
+  z-index: 1000;
+  width: 100vw; }
+
+.logo-nav-top-left {
+  float: left; }
+  .logo-nav-top-left img {
+    width: 150px; }
+
+.logo-nav-top-right {
+  float: right;
+  padding-top: 28px; }
+
+.fixed-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.5); }
+
 header {
   background-image: url(../img/header-background.png);
   background-size: 100% 100%;
@@ -238,9 +256,6 @@ header {
     font-weight: 400;
     padding-top: 70px;
     line-height: 38px; }
-  header .header-top {
-    height: 20vh;
-    padding: 40px 0 0 40px; }
   header .text-container {
     display: flex;
     justify-content: center;
@@ -254,8 +269,20 @@ header {
       transform: translateX(-50%); }
       header .text-container .arrow-container img {
         width: 60px; }
-  header .header-top-left img {
-    width: 150px; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeAndGrow {
+  0% {
+    opacity: 0;
+    transform: scale(0.97); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 
 .traveler-info {
   position: relative;
