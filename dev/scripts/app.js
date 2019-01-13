@@ -27,15 +27,23 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // Hiding and Showing LogoNav when user scrolls past Header Section
     const headerHeight = document.getElementsByTagName('header')[0].clientHeight
     
-    const fixedNav = document.getElementsByClassName('fixed-nav')[0]
+    const fixedSection = document.getElementsByClassName('fixed-section')
+
     document.addEventListener('scroll', () => {
       if(window.scrollY < headerHeight) {
-        fixedNav.style.display = 'none'
+        for(let i = 0; i < fixedSection.length; i++) {
+          fixedSection[i].style.display = 'none'
+        }
+
       }
       else if(window.scrollY > headerHeight) {
-        fixedNav.style.display = 'block'
+        for (let i = 0; i < fixedSection.length; i++) {
+          fixedSection[i].style.animation = 'fadeIn linear 0.2s'
+          fixedSection[i].style.display = 'block'
+        }
       }
     })
   }
@@ -43,9 +51,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="fixed-nav">
-          <LogoNav />
-        </div>
+        {/* LogoNav & Book Button that only display when user scrolls past the Header */}
+          <div className="fixed-section fixed-nav">
+            <LogoNav />
+          </div>
+          
+          <div className="fixed-section fixed-book-button">
+            <button className="button">Book Now</button>
+          </div>
+        
+        
         <Header />
         <TravelerInfo />
         <About />

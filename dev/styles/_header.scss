@@ -30,14 +30,6 @@ header {
         }
     }
     // animation called in <Header /> ComponentDidMount
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
     @keyframes fadeAndGrow {
         0% {
             opacity: 0;
@@ -49,6 +41,13 @@ header {
         }
     }
 
-
+    @keyframes shrink {
+        0% {
+            background-size: 105% 105%;
+        }
+        100% {
+            background-size: 100% 100%;
+        }
+    }
 }
 

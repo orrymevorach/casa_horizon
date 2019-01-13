@@ -4,36 +4,44 @@ import LogoNav from './LogoNav';
 class Header extends React.Component {
     // Fade In Animations
     componentDidMount() {
-        // text-container H1 Text Initial CSS
-        $('header .text-container h1').css({ 
-                'opacity': ' 0', 
-                'transform': 'scale(0.97)' 
-            })
-        // text-container Arrow Initial Css
-        $('header .text-container a').css({ 'opacity': ' 0' })
-        // Logo and Nav Initial Css
-        $('header .logo-nav').css({ 'opacity': ' 0' })
         
-        // Trigger Animation for text-container H1
+        // Initial Css for Header Background Image
+        $('header').css({'background-size': '105% 105%'})
+        // Trigger Animation for Header Background Image
+        $('header').css({
+            'animation': 'shrink linear 3s',
+            'background-size': '100% 100%'
+        })
+        
+        // Initial CSS for text-container H1
         $('header .text-container h1').css({ 
-            'animation': 'fadeAndGrow linear 3s', 
-            'opacity': ' 1', 
+            'opacity': ' 0', 
+            'transform': 'scale(0.97)' 
+        })
+        // Trigger Animation for text-container H1
+        $('header .text-container h1').css({
+            'animation': 'fadeAndGrow linear 3s',
+            'opacity': ' 1',
             'transform': 'scale(1)'
         })
         
-        setTimeout(() => {
-            // Trigger Animation for Logo and Nav
-            $('header .logo-nav').css({ 
-                'animation': ' fadeIn linear 1s',
-                'opacity': ' 1' 
-            })
+        // Initial Css for arrow 
+        $('header .text-container a').css({ 'opacity': ' 0' })
+        // Trigger Animation for Arrow
+        $('header .text-container a').css({
+            'animation': 'fadeIn linear 3s',
+            'opacity': ' 1'
+        })
 
-            // Trigger Animation for text-container Arrow
-            $('header .text-container a').css({ 
-                'animation': 'fadeIn linear 3s', 
-                'opacity': ' 1' 
-            })
-        }, 2000);
+        // Initial Css for Logo and Nav
+        $('header .logo-nav').css({ 'opacity': ' 0' })
+        // Trigger Animation for Logo and Nav
+        $('header .logo-nav').css({ 
+            'animation': ' fadeIn linear 3s',
+            'opacity': ' 1' 
+        })
+
+        
     }
 
     render() {

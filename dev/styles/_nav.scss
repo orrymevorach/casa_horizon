@@ -1,7 +1,40 @@
+// General Styles for LogoNav
+// Applies to the one in the header, and fixed one below the header
+.logo-nav {
+    height: 20vh;
+    padding: 40px 40px 0 40px;
+    z-index: 30;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.logo-nav-top-left {
+    float: left;
+    img {
+        width: 150px;
+    }
+}
+.logo-nav-top-right {
+    float: right;
+    padding-top: 28px;
+}
+
+.fixed-section {
+    display: none;
+    position: fixed;
+    z-index: 20;
+}
+
+.fixed-nav {
+    background-color: rgba(255,255,255,0.5);
+}
+.fixed-book-button {
+    top: 50%;
+    right: 40px;
+}
+
 nav.ham-nav {
-    // position: fixed;
-    // top: 67px;
-    // right: 35px;
     display: flex;
     #ham-menu {
         display: none;
@@ -21,22 +54,7 @@ nav.ham-nav {
     #ham-menu.fadeOut {
         animation: fadeOut linear 0.3s;
     }
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    @keyframes fadeOut {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
+    
     // Ham Menu Icon
     #ham-icon {
         width: 40px;
@@ -113,30 +131,3 @@ nav.ham-nav {
     }
 }
 
-// General Styles for LogoNav
-// Applies to the one in the header, and fixed one below the header
-.logo-nav {
-    height: 20vh;
-    padding: 40px 40px 0 40px;
-    z-index: 1000;
-    width: 100vw;
-}
-.logo-nav-top-left {
-    float: left;
-    img {
-        width: 150px;
-    }
-}
-.logo-nav-top-right {
-    float: right;
-    padding-top: 28px;
-}
-
-// Only Applies to Fixed Nav
-.fixed-nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    z-index: 20;
-    background-color: rgba(255,255,255,0.5);
-}
