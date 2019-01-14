@@ -69,16 +69,14 @@
             padding: 8px 0;
         }
     }
+    // For animation effects
+    .box {
+        transition: 1s;
+        position: relative;
+    }
     // Position box1 and box4 to add overlapping effect
     .box1 {
-        position: relative;
         z-index: 10;
-        left: -10px;
-    }
-    .box4 {
-        position: relative;
-        top: -73px;
-        right: 0px;
     }
     .box3 {
         // Add spacing above text
@@ -88,4 +86,32 @@
             margin: 10px 0 30px;
         }
     }
+    .box4 {
+        top: -73px;
+    }
+    // Initial Shift Classes Added on ComponentDidMount()
+    .shift-left-boxes {
+        left: -100px;
+    }
+    .shift-right-boxes {
+        right: -100px;
+    }
+    // Animations to be added on scroll
+    .animate-box1 {
+        opacity: 1;
+        left: -10px;
+    }
+    .animate-box2 {
+        opacity: 1;
+        right: 0px;
+    }
+    .animate-box3 {
+        opacity: 1;
+        left: 0;
+    }
+    .animate-box4 {
+        opacity: 1;
+        right: 0;
+    }
+    
 }

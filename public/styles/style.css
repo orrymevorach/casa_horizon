@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
 
 .logo-nav-top-right {
   float: right;
-  padding-top: 28px; }
+  padding-top: 20px; }
 
 .fixed-section {
   display: none;
@@ -160,6 +160,9 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
 
 .fixed-nav {
   background-color: rgba(255, 255, 255, 0.5); }
+  .fixed-nav .logo-nav {
+    height: 110px;
+    padding: 30px 40px 0 30px; }
 
 .fixed-book-button {
   top: 50%;
@@ -359,18 +362,33 @@ header {
       width: 65px;
       height: 65px;
       padding: 8px 0; }
+  .about .box {
+    transition: 1s;
+    position: relative; }
   .about .box1 {
-    position: relative;
-    z-index: 10;
-    left: -10px; }
-  .about .box4 {
-    position: relative;
-    top: -73px;
-    right: 0px; }
+    z-index: 10; }
   .about .box3 {
     padding: 150px 60px 0 0; }
     .about .box3 p {
       margin: 10px 0 30px; }
+  .about .box4 {
+    top: -73px; }
+  .about .shift-left-boxes {
+    left: -100px; }
+  .about .shift-right-boxes {
+    right: -100px; }
+  .about .animate-box1 {
+    opacity: 1;
+    left: -10px; }
+  .about .animate-box2 {
+    opacity: 1;
+    right: 0px; }
+  .about .animate-box3 {
+    opacity: 1;
+    left: 0; }
+  .about .animate-box4 {
+    opacity: 1;
+    right: 0; }
 
 .reviews {
   background-image: url(../img/reviews-background.png);
@@ -446,33 +464,33 @@ header {
 
 .surf {
   position: relative; }
-  .surf .text-container {
-    font-family: "Lora", serif;
-    text-align: center; }
-    .surf .text-container h2 {
-      font-size: 40px;
-      color: #31322b;
-      font-weight: 400;
-      margin-bottom: 50px; }
-    .surf .text-container button {
-      font-size: 22px;
-      border: 2px solid #31322b;
-      background-color: rgba(0, 0, 0, 0);
-      padding: 12px 30px; }
-  .surf .vertical-line {
-    position: absolute;
-    background-color: #31322b;
-    width: 1px;
-    height: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -70px; }
   .surf .background {
     background-image: url(../img/surfing.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 1000px; }
+  .surf .text-container {
+    width: 650px;
+    font-family: "Lora", serif;
+    text-align: center;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .surf .text-container h2 {
+      font-size: 40px;
+      color: #31322b;
+      font-weight: 400;
+      margin-bottom: 50px; }
+  .surf .vertical-line {
+    position: absolute;
+    background-color: #31322b;
+    width: 2px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -70px; }
 
 footer {
   background-color: #386362;
@@ -543,6 +561,10 @@ footer {
     font-weight: 700; }
   footer .column4 .email {
     margin-bottom: 20px; }
+  footer iframe {
+    border: none;
+    overflow: hidden;
+    width: 100%; }
 
 html {
   scroll-behavior: smooth; }

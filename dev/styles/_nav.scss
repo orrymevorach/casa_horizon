@@ -17,7 +17,7 @@
 }
 .logo-nav-top-right {
     float: right;
-    padding-top: 28px;
+    padding-top: 20px;
 }
 
 .fixed-section {
@@ -28,6 +28,10 @@
 
 .fixed-nav {
     background-color: rgba(255,255,255,0.5);
+    .logo-nav {
+        height: 110px;
+        padding: 30px 40px 0 30px;
+    }
 }
 .fixed-book-button {
     top: 50%;

@@ -1,35 +1,34 @@
 .surf {
     position: relative;
-    .text-container {
-        font-family: $lora;
-        text-align: center;
-        h2 {
-            font-size: 40px;
-            color: $black;
-            font-weight: 400;
-            margin-bottom: 50px;
-        }
-        button {
-            font-size: 22px;
-            border: 2px solid $black;
-            background-color: rgba(0,0,0,0);
-            padding: 12px 30px;
-        }
-    }
-    .vertical-line {
-        position: absolute;
-        background-color: $black;
-        width: 1px;
-        height: 200px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -70px;
-    }
     .background {
         background-image: url(../img/surfing.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 1000px;
+    }
+    .text-container {
+        width: 650px;
+        font-family: $lora;
+        text-align: center;
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        h2 {
+            font-size: 40px;
+            color: $black;
+            font-weight: 400;
+            margin-bottom: 50px;
+        }
+    }
+    .vertical-line {
+        position: absolute;
+        background-color: $black;
+        width: 2px;
+        height: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -70px;
     }
 }

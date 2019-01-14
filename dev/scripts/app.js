@@ -29,23 +29,22 @@ class App extends React.Component {
   componentDidMount() {
     // Hiding and Showing LogoNav when user scrolls past Header Section
     const headerHeight = document.getElementsByTagName('header')[0].clientHeight
-    
     const fixedSection = document.getElementsByClassName('fixed-section')
-
-    document.addEventListener('scroll', () => {
-      if(window.scrollY < headerHeight) {
-        for(let i = 0; i < fixedSection.length; i++) {
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < headerHeight) {
+        for (let i = 0; i < fixedSection.length; i++) {
           fixedSection[i].style.display = 'none'
         }
-
       }
-      else if(window.scrollY > headerHeight) {
+      else if (window.scrollY > headerHeight) {
         for (let i = 0; i < fixedSection.length; i++) {
           fixedSection[i].style.animation = 'fadeIn linear 0.2s'
           fixedSection[i].style.display = 'block'
         }
       }
     })
+
   }
 
   render() {
