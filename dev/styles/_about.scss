@@ -90,11 +90,13 @@
         top: -73px;
     }
     // Initial Shift Classes Added on ComponentDidMount()
-    .shift-left-boxes {
+    .shift-and-hide-left-boxes {
         left: -100px;
+        opacity: 0;
     }
-    .shift-right-boxes {
+    .shift-and-hide-right-boxes {
         right: -100px;
+        opacity: 0;
     }
     // Animations to be added on scroll
     .animate-box1 {

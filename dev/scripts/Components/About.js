@@ -8,11 +8,11 @@ class About extends React.Component {
         const boxThree = document.getElementsByClassName('box3')[0]
         const boxFour = document.getElementsByClassName('box4')[0]
         
-        // Initial Styling for boxes to shift them off to the sides
-        boxOne.classList.add('shift-left-boxes')
-        boxThree.classList.add('shift-left-boxes')
-        boxTwo.classList.add('shift-right-boxes')
-        boxFour.classList.add('shift-right-boxes')
+        // Initial Styling for boxes to shift off to the sides and opacity = 0
+        boxOne.classList.add('shift-and-hide-left-boxes')
+        boxThree.classList.add('shift-and-hide-left-boxes')
+        boxTwo.classList.add('shift-and-hide-right-boxes')
+        boxFour.classList.add('shift-and-hide-right-boxes')
 
         // Defining Heights of Header, TravellerInfo Section and Row One
         const headerHeight = document.getElementsByTagName('header')[0].clientHeight
@@ -20,8 +20,8 @@ class About extends React.Component {
         const rowOneHeight = document.getElementsByClassName('about-row-one')[0].clientHeight
         
         // Defining Animation Starting Points for Each Row
-        const animationStartRowOne = headerHeight + travellerInfoHeight + (boxOne.clientHeight / 3)
-        const animationStartRowTwo = headerHeight + travellerInfoHeight + rowOneHeight + (boxThree.clientHeight / 3)
+        const animationStartRowOne = headerHeight + travellerInfoHeight + (boxOne.clientHeight / 4)
+        const animationStartRowTwo = headerHeight + travellerInfoHeight + rowOneHeight + (boxThree.clientHeight / 4)
 
         window.addEventListener('scroll', () => {
             // Variable to pinpoint bottom of the window
@@ -84,7 +84,7 @@ class About extends React.Component {
                             <div className="row">
                                 <div className="numbers-individual-container">
                                     <p className="number">100</p>
-                                    <p className="text">Step to the<br></br>Beach</p>
+                                    <p className="text">Steps to the<br></br>Beach</p>
                                 </div>
                                 <div className="numbers-individual-container">
                                     <p className="number">16</p>

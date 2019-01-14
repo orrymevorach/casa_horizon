@@ -373,10 +373,12 @@ header {
       margin: 10px 0 30px; }
   .about .box4 {
     top: -73px; }
-  .about .shift-left-boxes {
-    left: -100px; }
-  .about .shift-right-boxes {
-    right: -100px; }
+  .about .shift-and-hide-left-boxes {
+    left: -100px;
+    opacity: 0; }
+  .about .shift-and-hide-right-boxes {
+    right: -100px;
+    opacity: 0; }
   .about .animate-box1 {
     opacity: 1;
     left: -10px; }
