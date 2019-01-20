@@ -6,11 +6,10 @@ class TravelerInfo extends React.Component {
         for(let i = 0; i < boxes.length; i++) {
             boxes[i].classList.add('hideAndSlideDown')
         }
-
-        
-            const headerHeight = document.getElementsByTagName('header')[0].clientHeight,
-            boxesHeight = boxes[0].clientHeight,
-            revealAt = headerHeight + ((boxesHeight / 3) * 2);
+    
+        const headerHeight = document.getElementsByTagName('header')[0].clientHeight,
+        boxesHeight = boxes[0].clientHeight,
+        revealAt = headerHeight + ((boxesHeight / 3) * 2);
         
         window.addEventListener('scroll', () => {
             const bottomOfWindow = window.scrollY + window.innerHeight

@@ -169,6 +169,10 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
   top: 50%;
   right: 40px; }
 
+.white-fixed-book-button {
+  outline: 2px solid white;
+  color: white; }
+
 nav.ham-nav {
   display: flex; }
   nav.ham-nav #ham-menu {
@@ -318,7 +322,7 @@ header {
     transform: translateX(-50%); }
   .traveler-info .hideAndSlideDown {
     opacity: 0;
-    top: 20px; }
+    top: 100px; }
 
 .about {
   margin-top: 35px;

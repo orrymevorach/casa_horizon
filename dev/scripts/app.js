@@ -28,11 +28,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // Hiding and Showing LogoNav when user scrolls past Header Section
-    const headerHeight = document.getElementsByTagName('header')[0].clientHeight
-    const fixedSection = document.getElementsByClassName('fixed-section')
+    const headerHeight = document.getElementsByTagName('header')[0].clientHeight,
+      fixedSection = document.getElementsByClassName('fixed-section')
     
     window.addEventListener('scroll', () => {
+      // Hiding and Showing LogoNav when user scrolls past Header Section
       if (window.scrollY < headerHeight) {
         for (let i = 0; i < fixedSection.length; i++) {
           fixedSection[i].style.display = 'none'
@@ -44,7 +44,37 @@ class App extends React.Component {
           fixedSection[i].style.display = 'block'
         }
       }
+      // Changing color of book button when its over dark section
+      const middleOfWindow = window.scrollY + (window.innerHeight / 2),
+        travelerInfoHeight = document.getElementsByTagName('section')[0].clientHeight,
+        aboutHeight = document.getElementsByTagName('section')[1].clientHeight,
+        reviewsHeight = document.getElementsByTagName('section')[2].clientHeight,
+        activitiesHeight = document.getElementsByTagName('section')[3].clientHeight,
+        surfHeight = document.getElementsByTagName('section')[4].clientHeight,
+        totalHeightWithoutFooter = headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight + activitiesHeight + surfHeight,
+        fixedBookButton = document.getElementsByClassName('fixed-book-button')[0]
+      
+      if(middleOfWindow > headerHeight + travelerInfoHeight + aboutHeight && middleOfWindow < headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight) {
+        fixedBookButton.children[0].style.color = 'white';
+        fixedBookButton.style.outline = '2px solid white';
+      }
+      else {
+        document.getElementsByClassName('fixed-book-button')[0].children[0].style.color = 'black';
+        document.getElementsByClassName('fixed-book-button')[0].style.outline = '2px solid black';
+      }
+
+      // Hide button if its over the footer
+      const section = document.getElementsByTagName('section')
+      if (middleOfWindow > totalHeightWithoutFooter) {
+        fixedBookButton.style.visibility = 'hidden'
+      }
+      else {
+        fixedBookButton.style.visibility = 'visible'
+      }
+
     })
+
+
 
   }
 

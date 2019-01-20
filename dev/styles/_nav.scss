@@ -20,12 +20,14 @@
     padding-top: 20px;
 }
 
+// Refers to both the fixed logoNav and fixed book button
 .fixed-section {
     display: none;
     position: fixed;
     z-index: 20;
 }
 
+// Specific to the fixed navigation menu
 .fixed-nav {
     background-color: rgba(255,255,255,0.8);
     box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
@@ -35,11 +37,18 @@
         padding: 30px 40px 0 30px;
     }
 }
+// Specific to the fixed book button
 .fixed-book-button {
     top: 50%;
     right: 40px;
 }
 
+.white-fixed-book-button {
+    outline: 2px solid white;
+    color: white;
+}
+
+// Hamburger Menu
 nav.ham-nav {
     display: flex;
     #ham-menu {
