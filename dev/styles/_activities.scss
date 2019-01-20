@@ -60,6 +60,7 @@
     .image-container-small {
         display: flex;
         transition: 0.2s;
+        align-items: center;
     }
     // Formatting each image within the container to be the exact size of the large container
     img {

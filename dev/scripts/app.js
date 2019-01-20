@@ -5,6 +5,7 @@ import TravelerInfo from './Components/TravelerInfo';
 import About from './Components/About';
 import Reviews from './Components/Reviews';
 import Activities from './Components/Activities';
+import Trial from './Components/Trial';
 import Surf from './Components/Surf';
 import Footer from './Components/Footer';
 import firebase from 'firebase/app';
@@ -65,6 +66,7 @@ class App extends React.Component {
         <About />
         <Reviews />
         <Activities />
+        {/* <Trial /> */}
         <Surf />
         <Footer />
       </div>

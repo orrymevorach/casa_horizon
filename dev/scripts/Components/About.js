@@ -3,10 +3,10 @@ import React from 'react';
 class About extends React.Component {
     componentDidMount() {
         // Selecting Individal Box Elements To Animate
-        const boxOne = document.getElementsByClassName('box1')[0]
-        const boxTwo = document.getElementsByClassName('box2')[1]
-        const boxThree = document.getElementsByClassName('box3')[0]
-        const boxFour = document.getElementsByClassName('box4')[0]
+        const boxOne = document.getElementsByClassName('box1')[0],
+            boxTwo = document.getElementsByClassName('box2')[1],
+            boxThree = document.getElementsByClassName('box3')[0],
+            boxFour = document.getElementsByClassName('box4')[0]
         
         // Initial Styling for boxes to shift off to the sides and opacity = 0
         boxOne.classList.add('shift-and-hide-left-boxes')
@@ -15,13 +15,13 @@ class About extends React.Component {
         boxFour.classList.add('shift-and-hide-right-boxes')
 
         // Defining Heights of Header, TravellerInfo Section and Row One
-        const headerHeight = document.getElementsByTagName('header')[0].clientHeight
-        const travellerInfoHeight = document.getElementsByClassName('traveler-info')[0].clientHeight
-        const rowOneHeight = document.getElementsByClassName('about-row-one')[0].clientHeight
+        const headerHeight = document.getElementsByTagName('header')[0].clientHeight,
+            travellerInfoHeight = document.getElementsByClassName('traveler-info')[0].clientHeight,
+            rowOneHeight = document.getElementsByClassName('about-row-one')[0].clientHeight
         
         // Defining Animation Starting Points for Each Row
-        const animationStartRowOne = headerHeight + travellerInfoHeight + (boxOne.clientHeight / 4)
-        const animationStartRowTwo = headerHeight + travellerInfoHeight + rowOneHeight + (boxThree.clientHeight / 4)
+        const animationStartRowOne = headerHeight + travellerInfoHeight + (boxOne.clientHeight / 4),
+            animationStartRowTwo = headerHeight + travellerInfoHeight + rowOneHeight + (boxThree.clientHeight / 4)
 
         window.addEventListener('scroll', () => {
             // Variable to pinpoint bottom of the window
@@ -47,22 +47,6 @@ class About extends React.Component {
                 boxFour.classList.remove('animate-box4')
             }
         })
-
-        // function debounce(func, wait = 20, immediate = true) {
-        //     let timeout;
-        //     return function () {
-        //         let context = this, args = arguments;
-        //         let later = function () {
-        //             timeout = null;
-        //             if (!immediate) func.apply(context, args);
-        //         };
-        //         let callNow = immediate && !timeout;
-        //         clearTimeout(timeout)
-        //         timeout = setTimeout(later, wait);
-        //         if (callNow) func.apply(context, args);
-        //     };
-        // };
-        
     }
 
     render() {
