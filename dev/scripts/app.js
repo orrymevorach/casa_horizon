@@ -64,7 +64,6 @@ class App extends React.Component {
       }
 
       // Hide button if its over the footer
-      const section = document.getElementsByTagName('section')
       if (middleOfWindow > totalHeightWithoutFooter) {
         fixedBookButton.style.visibility = 'hidden'
       }
