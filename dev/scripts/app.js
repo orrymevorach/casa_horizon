@@ -5,7 +5,6 @@ import TravelerInfo from './Components/TravelerInfo';
 import About from './Components/About';
 import Reviews from './Components/Reviews';
 import Activities from './Components/Activities';
-import Trial from './Components/Trial';
 import Surf from './Components/Surf';
 import Footer from './Components/Footer';
 import firebase from 'firebase/app';
@@ -29,7 +28,8 @@ class App extends React.Component {
 
   componentDidMount() {
     const headerHeight = document.getElementsByTagName('header')[0].clientHeight,
-      fixedSection = document.getElementsByClassName('fixed-section')
+      fixedSection = document.getElementsByClassName('fixed-section'),
+      fixedBookButton = document.getElementsByClassName('fixed-book-button')[0]
     
     window.addEventListener('scroll', () => {
       // Hiding and Showing LogoNav when user scrolls past Header Section
@@ -51,16 +51,16 @@ class App extends React.Component {
         reviewsHeight = document.getElementsByTagName('section')[2].clientHeight,
         activitiesHeight = document.getElementsByTagName('section')[3].clientHeight,
         surfHeight = document.getElementsByTagName('section')[4].clientHeight,
-        totalHeightWithoutFooter = headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight + activitiesHeight + surfHeight,
-        fixedBookButton = document.getElementsByClassName('fixed-book-button')[0]
+        totalHeightWithoutFooter = headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight + activitiesHeight + surfHeight
+      
       
       if(middleOfWindow > headerHeight + travelerInfoHeight + aboutHeight && middleOfWindow < headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight) {
         fixedBookButton.children[0].style.color = 'white';
         fixedBookButton.style.outline = '2px solid white';
       }
       else {
-        document.getElementsByClassName('fixed-book-button')[0].children[0].style.color = 'black';
-        document.getElementsByClassName('fixed-book-button')[0].style.outline = '2px solid black';
+        fixedBookButton.children[0].style.color = 'black';
+        fixedBookButton.style.outline = '2px solid black';
       }
 
       // Hide button if its over the footer
@@ -71,6 +71,12 @@ class App extends React.Component {
         fixedBookButton.style.visibility = 'visible'
       }
 
+    })
+    
+    // Add hover state to fixed book button (intentionally outside of scroll event listener)
+    fixedBookButton.addEventListener("mouseover", function() {
+      fixedBookButton.style.outline = 'none';   
+      fixedBookButton.children[0].style.color = 'white'; 
     })
 
 
@@ -95,7 +101,6 @@ class App extends React.Component {
         <About />
         <Reviews />
         <Activities />
-        {/* <Trial /> */}
         <Surf />
         <Footer />
       </div>

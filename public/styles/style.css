@@ -169,10 +169,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
   top: 50%;
   right: 40px; }
 
-.white-fixed-book-button {
-  outline: 2px solid white;
-  color: white; }
-
 nav.ham-nav {
   display: flex; }
   nav.ham-nav #ham-menu {
@@ -374,9 +370,16 @@ header {
       padding: 8px 0; }
   .about .box {
     transition: 1s;
-    position: relative; }
+    position: relative;
+    height: 100%; }
   .about .box1 {
     z-index: 10; }
+  .about .container-large {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .about .container-small {
+    display: flex; }
   .about .box3 {
     padding: 150px 60px 0 0; }
     .about .box3 p {

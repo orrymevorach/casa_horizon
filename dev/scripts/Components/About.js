@@ -47,14 +47,36 @@ class About extends React.Component {
                 boxFour.classList.remove('animate-box4')
             }
         })
-    }
 
+    }
+    
     render() {
+        // const images = [
+        //     { 
+        //         'name': 'Cottage',
+        //         'path': '../img/jungle-house.png'
+        //     },
+        //     {
+        //         'name': 'Surf',
+        //         'path': '../img/SURF.png'
+        //     }
+        // ]
+
         return (
             <section className="about" id="about">
                 <div className="row about-row-one">
                     <div className="box box1 box-image">
+                        {/* <div className="container-large">
+                            <div className="container-small">
+                                {images.map(image => {
+                                    return (
+                                        <img src={image.path} />
+                                    )
+                                })}
+                            </div>
+                        </div> */}
                         <img src="../img/jungle-house.png" alt="Casa Horizon Jungle House"/>
+                        {/* <div className="timer"></div> */}
                     </div>
                     <div className="box box2 box-text">
                         <h2>Jungle House &

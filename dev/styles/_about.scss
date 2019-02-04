@@ -73,10 +73,19 @@
     .box {
         transition: 1s;
         position: relative;
+        height: 100%;
     }
     // Position box1 and box4 to add overlapping effect
     .box1 {
         z-index: 10;
+    }
+    .container-large {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .container-small {
+        display: flex;
     }
     .box3 {
         // Add spacing above text
@@ -115,5 +124,22 @@
         opacity: 1;
         right: 0;
     }
+    // .timer {
+    //     position: absolute;
+    //     bottom: 0;
+    //     background-color: white;
+    //     height: 5px;
+    //     animation: timer infinite 4s linear;
+    // }
+    
+    // @keyframes timer {
+    //     0% {
+    //         width: 0;
+    //     }
+    //     100% {
+    //         width: 100%;
+    //     }
+    // }
+
     
 }
