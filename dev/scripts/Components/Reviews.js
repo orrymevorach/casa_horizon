@@ -72,6 +72,7 @@ class Reviews extends React.Component {
 
         return (
             <section className="reviews" id="reviews">
+                <div className="timer"></div>
                 <div className="text-container">
                     <h3>What Our Visitors Say:</h3>
                     <div className="review-container-large">

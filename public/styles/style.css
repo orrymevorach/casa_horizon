@@ -187,7 +187,6 @@ p {
     opacity: 0; } }
 
 .logo-nav {
-  height: 20vh;
   padding: 40px 40px 0 40px;
   z-index: 30;
   position: absolute;
@@ -209,7 +208,8 @@ p {
   position: fixed;
   top: 0;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px 20px 40px; }
   .non-header-styling .logo-nav {
     height: 110px;
     padding: 30px 40px 0 30px; }
@@ -509,6 +509,19 @@ header {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%); }
+  .reviews .timer {
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 70px;
+    animation: timer linear infinite 5s; }
+
+@keyframes timer {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 .activities {
   margin: 100px 0 150px 0; }
