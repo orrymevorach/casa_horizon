@@ -244,11 +244,15 @@ nav.ham-nav {
     left: 50%; }
 
 header {
-  background-image: url(../img/Hero-Image2.png);
+  background-image: url(../img/Hero-Image-latest.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 110vh; }
+  height: 110vh;
+  position: relative;
+  top: -50px; }
+  header .logo-nav {
+    top: 50px; }
   header h1 {
     font-family: "Lora", serif;
     color: #ffffff;
@@ -261,7 +265,8 @@ header {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    position: relative; }
+    position: relative;
+    top: 50px; }
     header .text-container .arrow-container {
       position: absolute;
       bottom: 30px;
@@ -286,7 +291,7 @@ header {
 
 .traveler-info {
   position: relative;
-  top: -40px; }
+  top: -90px; }
   .traveler-info .boxes-container {
     display: flex;
     justify-content: center; }
@@ -321,7 +326,7 @@ header {
     top: 100px; }
 
 .about {
-  margin-top: 35px;
+  margin-top: -15px;
   color: #31322b; }
   .about h2 {
     font-size: 36px;

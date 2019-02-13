@@ -1,9 +1,14 @@
 header {
-    background-image: url(../img/Hero-Image2.png);
+    background-image: url(../img/Hero-Image-latest.png);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     height: 110vh;
+    position: relative;
+    top: -50px;
+    .logo-nav {
+        top: 50px;
+    }
     h1 {
         font-family: $lora;
         color: #ffffff;
@@ -19,6 +24,7 @@ header {
         align-items: center;
         height: 80vh;
         position: relative;
+        top: 50px;
         .arrow-container {
             position: absolute;
             bottom: 30px;

@@ -3,7 +3,7 @@
         font-size: 36px;
         line-height: 45px;
     }
-    margin-top: 35px;
+    margin-top: -15px;
     color: $black;
     // Align horizontaly and center
     .row {
@@ -124,22 +124,5 @@
         opacity: 1;
         right: 0;
     }
-    // .timer {
-    //     position: absolute;
-    //     bottom: 0;
-    //     background-color: white;
-    //     height: 5px;
-    //     animation: timer infinite 4s linear;
-    // }
-    
-    // @keyframes timer {
-    //     0% {
-    //         width: 0;
-    //     }
-    //     100% {
-    //         width: 100%;
-    //     }
-    // }
-
     
 }
