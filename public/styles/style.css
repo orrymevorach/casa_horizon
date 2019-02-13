@@ -498,7 +498,7 @@ header {
     margin: 0 auto; }
   .reviews .review-container-small {
     display: flex;
-    transition: 0.3s;
+    transition: 1s;
     align-items: center; }
   .reviews .reviews-user-review {
     width: 100%; }
@@ -565,6 +565,13 @@ header {
     width: 100%; }
   .activities .textIndex {
     padding-right: 10px; }
+  .activities .paragraph-container-large {
+    width: 360px;
+    overflow: hidden; }
+  .activities .paragraph-container-small {
+    display: flex;
+    align-items: center;
+    transition: 0.2s; }
 
 .surf {
   position: relative; }
@@ -610,6 +617,10 @@ footer {
     font-family: "Lora", serif;
     font-weight: 400;
     margin-bottom: 25px; }
+  footer .column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   footer .column2 .social-media-icons svg {
     margin: 25px 10px 0 0;
     color: #386362;
@@ -668,5 +679,4 @@ footer {
   footer iframe {
     border: none;
     overflow: hidden;
-    width: 190px;
-    margin-left: 35px; }
+    width: 75%; }

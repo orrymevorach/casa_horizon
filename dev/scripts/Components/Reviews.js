@@ -60,12 +60,12 @@ class Reviews extends React.Component {
         function fillCircleWhite(index) {
             const circles = document.getElementsByClassName('review-circle')
             for(let i = 0; i < circles.length; i++) {
-                const circleIndex = parseInt(circles[i].classList[1].split("-")[1])
+                const circleIndex = parseInt(circles[i].classList[1].split("-")[2])
                 if(circleIndex === index) {
-                    $(`.circle-${circleIndex}`).css({ 'background-color': 'white' })
+                    $(`.review-circle-${circleIndex}`).css({ 'background-color': 'white' })
                 }
                 else {
-                    $(`.circle-${circleIndex}`).css({ 'background-color': 'black' })
+                    $(`.review-circle-${circleIndex}`).css({ 'background-color': 'black' })
                 }
             }
         }

@@ -85,4 +85,13 @@
     .textIndex {
         padding-right: 10px;
     }
+    .paragraph-container-large {
+        width: 360px;
+        overflow: hidden;
+    }
+    .paragraph-container-small {
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+    }
 }

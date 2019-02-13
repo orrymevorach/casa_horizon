@@ -7,6 +7,12 @@ class Activities extends React.Component {
         const width = document.getElementsByClassName('textIndex-0')[0].clientWidth
         document.getElementsByClassName('text-container-large')[0].style.width = `${width}px`
 
+        // Initial width of paragraph container
+        // const width = document.getElementsByClassName('textIndex-0')[0].clientWidth
+        const numberOfParagraphs = document.getElementsByClassName("paragraph").length
+        const paragraphWidth = numberOfParagraphs * 360
+        document.getElementsByClassName('paragraph-container-small')[0].style.width = `${paragraphWidth}px`
+
         // Initial width of image container small, which holds all the images and needs to be as long as all of them combined
         const numberOfImages = document.getElementsByClassName('activities-images').length
         const containerWidth = 360 * numberOfImages
@@ -45,6 +51,7 @@ class Activities extends React.Component {
             slideImage(index)
             fillCircleWhite(index)
             slideText(index)
+            slideParagraph(index)
         }
 
         function slideLeft() {
@@ -56,6 +63,7 @@ class Activities extends React.Component {
             slideImage(index)
             fillCircleWhite(index)
             slideText(index)
+            slideParagraph(index)
         }
 
         function fillCircleWhite(index) {
@@ -74,6 +82,12 @@ class Activities extends React.Component {
         function slideImage(index) {
             let posX = 360 * index
             $('.image-container-small').css({ 'transform': `translateX(-${posX}px)` })
+        }
+
+        function slideParagraph(index) {
+            
+            let posX = 360 * index
+            $('.paragraph-container-small').css({ 'transform': `translateX(-${posX}px)` })
         }
 
         function slideText(index) {
@@ -109,7 +123,9 @@ class Activities extends React.Component {
                         <div className="image-container-large">
                             <div className="image-container-small">
                                 <img src="../img/yoga.png" alt="Yoga"  className="activities-images"/>    
-                                <img src="../img/surf.png" alt="Surf" className="activities-images"/>
+                                <img src="../img/rory.jpg" alt="Surf" className="activities-images"/>
+                                <img src="../img/sunsets.jpg" alt="Sunsets" className="activities-images"/>
+                                <img src="../img/turtles.jpg" alt="Turtles" className="activities-images"/>
                             </div>
                         </div>
                         {/* Circles get added in Component Did Mount of app.js */}
@@ -123,11 +139,21 @@ class Activities extends React.Component {
                                 <div className="text-container-small">
                                     <h2 className="textIndex textIndex-0">Yoga.</h2>
                                     <h2 className="textIndex textIndex-1">Surf.</h2>
+                                    <h2 className="textIndex textIndex-2">Sunsets.</h2>
+                                    <h2 className="textIndex textIndex-3">Turtles.</h2>
                                 </div>
                             </div>
                         </div>
                         
-                        <p className="lh-30">The regular breeze in Nicaragua is also what makes this area more well known for surfing, beause it creates the ideal 'offshore' winds that give the wave good shape. We're blssed with consistent surf, and you can catch good waves any month.</p>
+                        <div className="paragraph-container-large">
+                            <div className="paragraph-container-small">
+                                <p className="lh-30 paragraph">We have an outstanding yoga studio that overlooks the ocean. Our yoga instructors are certified to instruct those who are brand new to yoga, all the way to the most experienced of yogis.</p>
+                                <p className="lh-30 paragraph">The regular breeze in Nicaragua is also what makes this area more well known for surfing, beause it creates the ideal 'offshore' winds that give the wave good shape. We're blssed with consistent surf, and you can catch good waves any month.</p>
+                                <p className="lh-30 paragraph">The sunsets in Nicaragua are jaw droppingly beautiful. Feel the golden sun warm your body with your toes sunken into the sand and not a worry in sight.</p>
+                                <p className="lh-30 paragraph">We are lucky to have a turtle sanctuary right on our very own beach. Every few weeks we release a batch of sea turtles into the ocean for the very first time. </p>
+                            </div>
+                        </div>
+
                         <div className="right-arrow" onClick={slideRight}>
                             <img src="../img/right-arrow.png" alt="Right Arrow"/>
                         </div>
