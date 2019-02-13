@@ -1,18 +1,58 @@
 .reviews {
     background-image: url(../img/reviews-background.png);
     background-size: cover;
-    background-position: center;
+    background-position: center 70px;
     background-repeat: no-repeat;
-    height: 100vh;
-    .wrapper {
-        max-width: 1200px;
+    height: 90vh;
+    overflow: hidden;
+    margin-top: -70px;
+    position: relative;
+    .text-container {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: $muli;
+        text-align: center;
+        color: white;
+        font-weight: 400;
+        h1 {
+            line-height: 45px;
+            font-family: $lora;
+            font-weight: normal;
+        }
+        h3 {
+            margin-bottom: 30px;
+            font-size: 22px;
+            font-weight: normal;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .reviewer {
+        margin-top: 20px;
+    }
+    .review-container-large {
+        width: 1000px;
+        overflow: hidden;
         margin: 0 auto;
     }
-    h1 {
-        font-size: 50px;
-        color: $white;
-        font-family: $lora;
-        font-weight: 400;
-        padding: 30px 0 0 50px;
+    .review-container-small {
+        display: flex;
+        transition: 0.3s;
+        align-items: center;
     }
+    .reviews-user-review {
+        width: 100%;
+    }
+    .circles-container-reviews {
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 }
