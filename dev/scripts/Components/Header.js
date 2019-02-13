@@ -47,7 +47,7 @@ class Header extends React.Component {
     render() {
         return (
             <header>
-                <LogoNav />
+                {/* <LogoNav /> */}
     
                 <div className="text-container">
                     <div className="header-text center">
