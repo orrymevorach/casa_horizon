@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Nav extends React.Component {
     constructor(props) {
@@ -24,7 +25,8 @@ class Nav extends React.Component {
         return (
             <nav className="ham-nav">
                 <ul id="ham-menu">
-                    <li>Our Rooms</li>
+                    <NavLink to="/"><li>Home</li></NavLink>
+                    <NavLink to="/rooms"><li>Our Rooms</li></NavLink>
                     <li>Book Now</li>
                 </ul>
                 <button id="ham-icon" onClick={this.showNav}>

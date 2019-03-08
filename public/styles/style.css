@@ -203,6 +203,9 @@ p {
 .logo-nav-top-right {
   float: right;
   padding-top: 20px; }
+  .logo-nav-top-right a {
+    text-decoration: none;
+    color: #31322b; }
 
 .non-header-styling {
   position: fixed;
@@ -617,6 +620,95 @@ header {
     left: 50%;
     transform: translateX(-50%);
     top: -70px; }
+
+section.rooms {
+  position: relative; }
+  section.rooms header {
+    width: 100%;
+    height: 110vh;
+    background-image: url(../img/Hero-Image-latest.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; }
+    section.rooms header .overlay {
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      height: 100%;
+      padding-top: 250px; }
+  section.rooms .video-container {
+    max-width: 1050px;
+    margin: 0 auto; }
+    section.rooms .video-container video {
+      width: 100%; }
+  section.rooms .room-container {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    display: flex; }
+  section.rooms .left {
+    width: 60%; }
+    section.rooms .left img {
+      width: 100%; }
+  section.rooms .right {
+    width: 40%;
+    padding: 0px 0 0 50px;
+    color: #31322b; }
+    section.rooms .right .top-text {
+      position: relative;
+      margin-bottom: 30px; }
+      section.rooms .right .top-text:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        background-color: #f7f7f7;
+        height: 3px; }
+      section.rooms .right .top-text p {
+        font-family: "Lora", serif; }
+    section.rooms .right h2 {
+      font-family: "Muli", sans-serif;
+      font-size: 32px;
+      margin-bottom: 10px; }
+    section.rooms .right .from {
+      font-size: 15px;
+      margin-bottom: 3px; }
+    section.rooms .right h1 {
+      font-size: 34px; }
+    section.rooms .right .descriptors {
+      margin-top: 20px; }
+      section.rooms .right .descriptors .descriptor {
+        display: flex;
+        padding: 9px 0px 7px 15px;
+        width: 97%; }
+        section.rooms .right .descriptors .descriptor p {
+          padding-left: 10px; }
+        section.rooms .right .descriptors .descriptor svg {
+          padding-top: 3px;
+          margin-top: 4px; }
+      section.rooms .right .descriptors .descriptor:nth-child(even) {
+        background-color: #f3c5ae; }
+      section.rooms .right .descriptors .descriptor:nth-child(odd) {
+        background-color: #fce6da; }
+    section.rooms .right .description {
+      margin: 15px 0 25px;
+      padding-bottom: 25px; }
+    section.rooms .right .button {
+      margin-top: 20px;
+      font-size: 18px; }
+  section.rooms .shift-and-hide-left-boxes {
+    left: -100px;
+    opacity: 0; }
+  section.rooms .shift-and-hide-right-boxes {
+    right: -100px;
+    opacity: 0; }
+  section.rooms .animate-left {
+    opacity: 1;
+    left: 0px; }
+  section.rooms .animate-right {
+    opacity: 1;
+    right: 0px; }
 
 footer {
   background-color: #386362;

@@ -20,6 +20,10 @@
 .logo-nav-top-right {
     float: right;
     padding-top: 20px;
+    a {
+        text-decoration: none;
+        color: $black;
+    }
 }
 
 // Styles that get added to the nav once scroll past the header

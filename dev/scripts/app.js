@@ -9,6 +9,8 @@ import Surf from './Components/Surf';
 import Footer from './Components/Footer';
 import firebase from 'firebase/app';
 import LogoNav from './Components/LogoNav';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Rooms from './Rooms/Rooms'
 
 // Initialize Firebase
 const config = {
@@ -85,28 +87,46 @@ class App extends React.Component {
       bookButton.children[0].style.color = 'white'; 
     })
 
-
-
   }
 
   render() {
     return (
       <div>
-        {/* LogoNav & Book Button that only display when user scrolls past the Header */}
-          <LogoNav />
-          
-          <div className="book-button">
-            <button className="button">Book Now</button>
+
+        <Router>
+          <div>
+          {/* LogoNav & Book Button that only display when user scrolls past the Header */}
+            <LogoNav />
+            
+            
+            <Route path="/" exact render={() => {
+              return (
+                <div>
+                  {/* Book Button */}
+                  <div className="book-button">
+                    <button className="button">Book Now</button>
+                  </div>
+
+                  <Header />
+                  <TravelerInfo />
+                  <About />
+                  <Reviews />
+                  <Activities />
+                  <Surf />
+                  <Footer />
+                </div>
+              )
+            }} />
+
+            <Route path="/rooms" exact render={() => {
+              return (
+                <div>
+                  <Rooms />
+                </div>
+              )
+            }} />
           </div>
-        
-        
-        <Header />
-        <TravelerInfo />
-        <About />
-        <Reviews />
-        <Activities />
-        <Surf />
-        <Footer />
+        </Router>
       </div>
     )
   }
