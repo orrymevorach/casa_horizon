@@ -46,7 +46,7 @@ class TravelerInfo extends React.Component {
                     <div className="box box2">
                         <div className="text-container">
                             <h2>Couples & Families</h2>
-                            <p>Come enjoy the luxuries of Casa Horizon as a group in our dorm-style or private rooms. We can sleep up to 8 people per room with common areas to vibe with other travelers.</p>
+                            <p>Come enjoy the luxuries of Casa Horizon as a group in our dorm-style or private rooms. We can sleep up to 4 people per room with common areas to vibe with other travelers.</p>
                         </div>
                     </div>
                     <div className="box">

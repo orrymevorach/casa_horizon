@@ -1,0 +1,54 @@
+section.promo-video {
+    position: relative;
+    margin: 100px 0;
+    
+    .video-container {
+        max-width: 850px;
+        margin: 0 auto;
+        z-index: 29;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        video {
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            z-index: 99;
+        }
+    }
+    .promo-overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        display: none;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        .video-container {
+            margin: 0;
+            max-width: 80%;
+        }
+        .close-button {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            cursor: pointer;
+            transition: 0.2s;
+            svg {
+                color: white;
+                font-size: 40px;
+            }
+            &:hover {
+                transition: 0.2s;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

@@ -12,6 +12,10 @@ const Footer = () => {
                 <h2>Stay Informed</h2>
                 <p>Get the latest updates on Casa Horizon</p>
                 <p className="margin-top">Sign up for our newsletter here</p>
+                <form action="#">
+                    <input type="email" className="margin-top" placeholder="Email Address" required />
+                    <input type="submit" value="Sign Up"/>
+                </form>
                 <div className="social-media-icons">
                     <a href="https://www.facebook.com/casahorizon/" target="blank">
                         <i className="fab fa-facebook-f"></i>
@@ -25,7 +29,7 @@ const Footer = () => {
                 <h2>Contact</h2>
                 <form action="#">
                     <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" required />
+                    <input type="email" placeholder="Email Address" required />
                     <input type="textarea" placeholder="Message" required/>
                     <input type="submit" value="Submit"/>
                 </form>

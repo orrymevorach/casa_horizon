@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './Components/Header';
-import TravelerInfo from './Components/TravelerInfo';
-import About from './Components/About';
-import Reviews from './Components/Reviews';
-import Activities from './Components/Activities';
-import Surf from './Components/Surf';
-import Footer from './Components/Footer';
+import Header from './HomePage/Header';
+import TravelerInfo from './HomePage/TravelerInfo';
+import About from './HomePage/About';
+import Reviews from './HomePage/Reviews';
+import Activities from './HomePage/Activities';
+import Surf from './HomePage/Surf';
+import Footer from './HomePage/Footer';
 import firebase from 'firebase/app';
-import LogoNav from './Components/LogoNav';
+import LogoNav from './HomePage/LogoNav';
+import PromoVideo from './HomePage/PromoVideo';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Rooms from './Rooms/Rooms'
 
@@ -54,15 +55,16 @@ class App extends React.Component {
 
       // Changing color of book button when its over dark section
       const middleOfWindow = window.scrollY + (window.innerHeight / 2),
-        travelerInfoHeight = document.getElementsByTagName('section')[0].clientHeight,
-        aboutHeight = document.getElementsByTagName('section')[1].clientHeight,
-        reviewsHeight = document.getElementsByTagName('section')[2].clientHeight,
-        activitiesHeight = document.getElementsByTagName('section')[3].clientHeight,
-        surfHeight = document.getElementsByTagName('section')[4].clientHeight,
-        totalHeightWithoutFooter = headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight + activitiesHeight + surfHeight
+        travelerInfoHeight = document.getElementsByClassName('traveler-info')[0].clientHeight,
+        aboutHeight = document.getElementsByClassName('about')[0].clientHeight,
+        promoHeight = document.getElementsByClassName("promo-video")[0].clientHeight,
+        reviewsHeight = document.getElementsByClassName('reviews')[0].clientHeight,
+        activitiesHeight = document.getElementsByClassName('activities')[0].clientHeight,
+        surfHeight = document.getElementsByClassName('surf')[0].clientHeight,
+        totalHeightWithoutFooter = headerHeight + travelerInfoHeight + aboutHeight + promoHeight + reviewsHeight + activitiesHeight + surfHeight
       
       
-      if(middleOfWindow > headerHeight + travelerInfoHeight + aboutHeight && middleOfWindow < headerHeight + travelerInfoHeight + aboutHeight + reviewsHeight) {
+      if(middleOfWindow > headerHeight + travelerInfoHeight + aboutHeight + promoHeight && middleOfWindow < headerHeight + travelerInfoHeight + aboutHeight + promoHeight + reviewsHeight) {
         bookButton.children[0].style.color = 'white';
         bookButton.style.outline = '2px solid white';
       }
@@ -98,10 +100,9 @@ class App extends React.Component {
           {/* LogoNav & Book Button that only display when user scrolls past the Header */}
             <LogoNav />
             
-            
             <Route path="/" exact render={() => {
               return (
-                <div>
+                <div className="home">
                   {/* Book Button */}
                   <div className="book-button">
                     <button className="button">Book Now</button>
@@ -110,10 +111,10 @@ class App extends React.Component {
                   <Header />
                   <TravelerInfo />
                   <About />
+                  <PromoVideo />
                   <Reviews />
                   <Activities />
                   <Surf />
-                  <Footer />
                 </div>
               )
             }} />
@@ -123,6 +124,12 @@ class App extends React.Component {
                 <div>
                   <Rooms />
                 </div>
+              )
+            }} />
+            
+            <Route path="/" render={() => {
+              return (
+                <Footer />
               )
             }} />
           </div>

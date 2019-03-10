@@ -1,8 +1,54 @@
 import React from 'react';
 
 class Rooms extends React.Component {
-    render() {
+    componentDidMount() {
+        // shift and hide each sides of the room containers right away
+        const left = document.getElementsByClassName("room-container-left")
+        const right = document.getElementsByClassName("room-container-right")
 
+        setTimeout(() => {
+            for(let room in right) {
+                right[room].classList.add("shift-and-hide-right-boxes")
+                left[room].classList.add("shift-and-hide-left-boxes")
+            }
+        }, 500);
+
+        // create an array 
+        // All rows will be the same height, in this case, the height of the first room container
+        // push the height value into the array for each room container
+        const animationArray = []
+        const roomContainer = document.getElementsByClassName("room-container")
+        const heightOfIndividualContainer = roomContainer[0].clientHeight
+        for(let i = 0; i < roomContainer.length; i++) {
+            if(typeof roomContainer[i] === "object") {
+                animationArray.push(heightOfIndividualContainer)
+            }
+        }
+        
+        // manipulate the value of each height to reflect the exact spot on the page that the animation should begin for each individual room container
+        const headerHeight = document.getElementsByClassName("rooms-header")[0].clientHeight
+        const newArray = animationArray.map((rowHeight, index) => {
+            return headerHeight + (rowHeight * index) + (rowHeight * 3 / 4);
+        })
+
+        // an event listener to trigger the animation for each row
+        window.addEventListener('scroll', () => {
+            const bottomOfWindow = window.scrollY + window.innerHeight
+
+            for(let key in newArray) {
+                if( bottomOfWindow > newArray[key]) {
+                  left[key].classList.add('animate-left')
+                  right[key].classList.add('animate-right')
+                }
+                else {
+                  left[key].classList.remove('animate-left')
+                  right[key].classList.remove('animate-right')
+                }
+            }
+        })
+    }
+    
+    render() {
         const rooms = [
             {
                 name: "Room 1",
@@ -22,58 +68,99 @@ class Rooms extends React.Component {
             {
                 name: "Room 2",
                 capacity: "2",
-                description: "This open air concept room features one king bed suitable for a couple looking for a tranquilo experience. It includes an ensuite bathroom with a hot rainfall shower, two high-powered fans, secure storage for personal items and, a personal hammock. A highlight of this room is the close connection to nature as you listen and watch the crashing waves as the sky paints another day.",
+                subtext: "Listen to the waves crashing below from your hammock in this room that is perfect for couples or pairs",
                 price: "$30",
-                image: "../img/rooms/Room2.jpg"
+                image: "../img/rooms/Room2.jpg",
+                descriptors: {
+                    one: "One king bed",
+                    two: "Open air concept",
+                    four: "Ensuite bathroom with tranquilo rainfall hot shower",
+                    three: "Hear the waves crashing from your bed",
+                    five: "Personal Hammock"
+                }
             },
             {
                 name: "Room 3",
                 capacity: "4",
-                description: "This room features both a queen and twin bed, suitable for families and friends alike. This space is located on the main floor outside of the ocean facing courtyard. Your hot rainfall shower is located within a shared bathroom directly outside your room. This room includes ample and secure storage for all belongings, and two high-powered fans to keep you cool during your stay.",
+                subtext: "This room has a larger capacity and ample storage space, perfect for families and friends alike",
                 price: "$30",
-                image: "../img/rooms/Room3.jpg"
+                image: "../img/rooms/Room3.jpg",
+                descriptors: {
+                    one: "One queen bed, one twin bed",
+                    two: "Shared bathroom with hot rainfall shower",
+                    three: "Ample storage space for belongings",
+                    four: "Located on the main floor outisde of the ocean, facing the courtyard",
+                    five: "Ample storage space and two high powered fans"
+                }
             },
             {
                 name: "Room 4",
                 capacity: "4",
-                description: "This dorm style room can accommodate up to 4 people, may that be a group or individual solo travelers, as it includes two bunk beds with one bunk bottom being a queen. This room includes ample storage for all personal belongings and high-powered fans to keep you cool during your stay. Your hot/cold rainfall shower is located within a shared bathroom directly outside your room. This room is located on the main floor outside of the ocean facing courtyard.",
+                subtext: "This dorm style room is perfect for families, groups or solo travelers, as it includes two bunk beds with one bunk bottom being a queen",
                 price: "$30",
-                image: "../img/rooms/Room4.jpg"
+                image: "../img/rooms/Room4.jpg",
+                descriptors: {
+                    one: "Dorm style room",
+                    two: "Shared bathroom with hot rainfall shower",
+                    three: "Sleeps up to five people",
+                    four: "Located on the main floor outisde of the ocean, facing the courtyard",
+                    five: "Ample storage space and two high powered fans"
+                }
             },
             {
-                name: "Room 5",
+                name: "Yoga Loft",
                 capacity: "2",
-                description: "Our yoga loft has a panoramic view unlike any other within Casa Horizon. It includes a large private bathroom with hot/cold shower, along with options to add a queen bed or multiple single beds to transform into a bedroom. This spacious open air room is complete with yoga mats, bolsters and, blocks. This space is available for those looking to host retreats at Casa Horizon or, for those who are looking to flow through their own self care practice.",
+                subtext: "Our yoga loft has a panoramic view unlike any other within Casa Horizon, and is perfect for those looking to host retreats at Casa Horizon, or for those who are looking to flow through their own self care practice",
                 price: "$30",
-                image: "../img/rooms/Room5.jpg"
+                image: "../img/rooms/Room5.jpg",
+                descriptors: {
+                    one: "Beautiful panoramic view",
+                    two: "Open air concept",
+                    three: "Large private bathrrom with hot shower",
+                    four: "Option to add one queen or multiple single beds",
+                    five: "Yoga mats, bolsters, and blocks available for use"
+                }
             },
             {
                 name: "Beachfront Cottage",
                 capacity: "3",
-                description: "The private Beach Cabin is known for its incredible views out over our beautiful Playa Escameca which is just a 100 steps away. This space includes 1 master king bedroom with a walk-through closet, 2 high-powered fans and a sofa sitting area (or single bed). There is an attached master bathroom with a private hot/cold shower with an ocean view. The Cabin has an open sitting area and large kitchen equipped with fridge/freezer and kitchen supplies, making a cozy home for a family or group of friends looking to enjoy. Soak up ocean views while relaxing in a hammock from your large covered patio. The open air design keeps you cool while connecting you with nature and its lullaby of crashing waves.",
+                subtext: "The private Beach Cabin is known for its incredible views out over our beautiful Playa Escameca which is just a 100 steps away. It will make a cozy home for a family or group of friends",
                 price: "$30",
-                image: "../img/rooms/Room6.jpg"
+                image: "../img/rooms/Room6.jpg",
+                descriptors: {
+                    one: "Includes 1 master king bedroom with walk in closet",
+                    two: "Large private kitchen equpped with fridge/freezer and cooking supplies",
+                    two: "Living room with sofa sitting area (or single bed)",
+                    three: "Master bathroom with hot shower and and ocean View",
+                    four: "Huge private balcony with open air concept, overlooking the ocean",
+                    five: "Private hammock on balcony"
+                }
             }
         ]
 
         return (
             <section className="rooms">
-                <header>
-                    <div className="overlay">
-                        <div className="video-container">
-                            <video controls autoPlay>
-                                <source src="../img/rooms/video.MOV"/>
-                            </video>
+                {/* Header */}
+                <header className="rooms-header">
+                    <video autoPlay loop>
+                        <source src="../img/rooms/video.MOV"/>
+                    </video>
+                    <a href="#rooms-body">
+                        <div className="arrow-container" >
+                            <img src="../img/header-arrow.png" alt="Click To See More"/>
                         </div>
-                    </div>
+                    </a>
                 </header>
+
+                {/* Body */}
+                <div className="rooms-body" id="rooms-body">
                 {rooms.map((room, index) => (
                     <div className="room-container" key={index}>
-                        <div className="left">
+                        <div className="room-container-left">
                             <img src={room.image} alt={room.name}/>
                         </div>
                         
-                        <div className="right">
+                        <div className="room-container-right">
                             <div className="top-text">
                                 <h2>{room.name}</h2>
                                 {room.subtext && (
@@ -87,31 +174,35 @@ class Rooms extends React.Component {
                             {room.descriptors && (
                                 <div className="descriptors">
                                     <div className="descriptor">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         <p>{room.descriptors.one}</p>
                                     </div>
                                     <div className="descriptor">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         <p>{room.descriptors.two}</p>
                                     </div>
                                     <div className="descriptor">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         <p>{room.descriptors.three}</p>
                                     </div>
                                     <div className="descriptor">
-                                        <i class="fas fa-check"></i>
+                                        <i className="fas fa-check"></i>
                                         <p>{room.descriptors.four}</p>
                                     </div>
-                                    <div className="descriptor">
-                                        <i class="fas fa-check"></i>
-                                        <p>{room.descriptors.five}</p>
-                                    </div>
+                                    {room.descriptors.five && (
+                                        <div className="descriptor">
+                                            <i className="fas fa-check"></i>
+                                            <p>{room.descriptors.five}</p>
+                                        </div>
+                                    )}
                                 </div>
                             )}
                             <button className="button">Book Now</button>
                         </div>
                     </div>
                 ))}
+                </div>
+                
             </section>
         )
     }

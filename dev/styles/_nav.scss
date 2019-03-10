@@ -22,7 +22,12 @@
     padding-top: 20px;
     a {
         text-decoration: none;
-        color: $black;
+        color: white;
+        transition: 0.2s;
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
     }
 }
 
@@ -37,6 +42,14 @@
         height: 110px;
         padding: 30px 40px 0 30px;
     }
+    .logo-nav-top-right a {
+        color: $black;
+    }
+    nav.ham-nav 
+        #ham-icon span {
+            background: $black;
+        }
+        
 }
 
 
@@ -55,7 +68,7 @@ nav.ham-nav {
     #ham-menu {
         display: none;
         list-style: none;
-        color: $black;
+        color: white;
     }
     #ham-menu.show {
         display: flex;
@@ -88,6 +101,11 @@ nav.ham-nav {
         cursor: pointer;
         border: none;
         background-color: rgba(0,0,0,0);
+        transition: 0.2s;
+        &:hover span {
+            transform: scaleX(1.2);
+            transition: 0.2s;
+        }
     }
 
     #ham-icon span {
@@ -95,7 +113,7 @@ nav.ham-nav {
         position: absolute;
         height: 2px;
         width: 100%;
-        background: $black;
+        background: white;
         border-radius: 9px;
         opacity: 1;
         left: 0;

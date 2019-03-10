@@ -186,6 +186,10 @@ p {
   100% {
     opacity: 0; } }
 
+.stop-scroll {
+  overflow: hidden;
+  scroll-behavior: no; }
+
 .logo-nav {
   padding: 40px 40px 0 40px;
   z-index: 30;
@@ -205,7 +209,11 @@ p {
   padding-top: 20px; }
   .logo-nav-top-right a {
     text-decoration: none;
-    color: #31322b; }
+    color: white;
+    transition: 0.2s; }
+    .logo-nav-top-right a:hover {
+      transform: scale(1.1);
+      transition: 0.2s; }
 
 .non-header-styling {
   position: fixed;
@@ -216,6 +224,11 @@ p {
   .non-header-styling .logo-nav {
     height: 110px;
     padding: 30px 40px 0 30px; }
+  .non-header-styling .logo-nav-top-right a {
+    color: #31322b; }
+  .non-header-styling nav.ham-nav
+#ham-icon span {
+    background: #31322b; }
 
 .book-button {
   position: fixed;
@@ -229,7 +242,7 @@ nav.ham-nav {
   nav.ham-nav #ham-menu {
     display: none;
     list-style: none;
-    color: #31322b; }
+    color: white; }
   nav.ham-nav #ham-menu.show {
     display: flex;
     transform: translateX(0);
@@ -255,13 +268,17 @@ nav.ham-nav {
     transition: .5s ease-in-out;
     cursor: pointer;
     border: none;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.2s; }
+    nav.ham-nav #ham-icon:hover span {
+      transform: scaleX(1.2);
+      transition: 0.2s; }
   nav.ham-nav #ham-icon span {
     display: block;
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #31322b;
+    background: white;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -298,7 +315,7 @@ nav.ham-nav {
     width: 0%;
     left: 50%; }
 
-header {
+.home header {
   background-image: url(../img/Hero-Image-latest.png);
   background-size: 100% 100%;
   background-position: center;
@@ -306,28 +323,28 @@ header {
   height: 110vh;
   position: relative;
   top: -50px; }
-  header .logo-nav {
+  .home header .logo-nav {
     top: 50px; }
-  header h1 {
+  .home header h1 {
     font-family: "Lora", serif;
     color: #ffffff;
     font-size: 28px;
     font-weight: 400;
     padding-top: 70px;
     line-height: 38px; }
-  header .text-container {
+  .home header .text-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
     position: relative;
     top: 25vh; }
-    header .text-container .arrow-container {
+    .home header .text-container .arrow-container {
       position: absolute;
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%); }
-      header .text-container .arrow-container img {
+      .home header .text-container .arrow-container img {
         width: 60px; }
 
 @keyframes fadeAndGrow {
@@ -474,9 +491,18 @@ header {
   overflow: hidden;
   margin-top: -70px;
   position: relative; }
+  .reviews .overlay {
+    position: absolute;
+    height: 82vh;
+    margin-top: 70px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    top: 0;
+    left: 0;
+    z-index: 10; }
   .reviews .text-container {
     position: absolute;
-    top: 20%;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-family: "Muli", sans-serif;
@@ -487,10 +513,12 @@ header {
       line-height: 45px;
       font-family: "Lora", serif;
       font-weight: normal; }
-    .reviews .text-container h3 {
-      margin-bottom: 30px;
-      font-size: 22px;
-      font-weight: normal; }
+    .reviews .text-container .header-text-container {
+      position: relative;
+      margin-bottom: 30px; }
+      .reviews .text-container .header-text-container h3 {
+        font-size: 30px;
+        font-weight: normal; }
   .reviews a {
     text-decoration: none;
     color: white; }
@@ -499,19 +527,29 @@ header {
   .reviews .review-container-large {
     width: 1000px;
     overflow: hidden;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
   .reviews .review-container-small {
     display: flex;
     transition: 1s;
     align-items: center; }
   .reviews .reviews-user-review {
     width: 100%; }
-  .reviews .circles-container-reviews {
-    display: flex;
+  .reviews .read-more-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
+    width: 200px;
+    text-align: center;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    color: white; }
+    .reviews .read-more-container.button {
+      outline: 2px solid white; }
+      .reviews .read-more-container.button:hover {
+        outline: none; }
+    .reviews .read-more-container p.link-to-reviews {
+      font-size: 18px;
+      font-family: "Lora", serif; }
   .reviews .timer {
     background-color: white;
     width: 100%;
@@ -624,40 +662,53 @@ header {
 section.rooms {
   position: relative; }
   section.rooms header {
+    position: relative;
     width: 100%;
-    height: 110vh;
-    background-image: url(../img/Hero-Image-latest.png);
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; }
-    section.rooms header .overlay {
-      top: 0;
-      background-color: rgba(255, 255, 255, 0.5);
-      width: 100%;
-      height: 100%;
-      padding-top: 250px; }
-  section.rooms .video-container {
-    max-width: 1050px;
-    margin: 0 auto; }
-    section.rooms .video-container video {
-      width: 100%; }
+    height: 100vh;
+    overflow: hidden; }
+  section.rooms video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%; }
+  section.rooms .arrow-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); }
+    section.rooms .arrow-container img {
+      width: 60px; }
+  section.rooms .rooms-body {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding-top: 80px;
+    border-top: 10px solid #f29f77;
+    overflow: hidden; }
   section.rooms .room-container {
     max-width: 1200px;
-    margin: 0 auto 70px;
+    margin: 0 auto;
+    padding-bottom: 70px;
     display: flex; }
-  section.rooms .left {
+  section.rooms .room-container-left,
+  section.rooms .room-container-right {
+    position: relative;
+    transition: 0.5s; }
+  section.rooms .room-container-left {
     width: 60%; }
-    section.rooms .left img {
-      width: 100%; }
-  section.rooms .right {
+    section.rooms .room-container-left img {
+      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+      width: 100%;
+      display: block; }
+  section.rooms .room-container-right {
     width: 40%;
     padding: 0px 0 0 50px;
     color: #31322b; }
-    section.rooms .right .top-text {
+    section.rooms .room-container-right .top-text {
       position: relative;
       margin-bottom: 30px; }
-      section.rooms .right .top-text:after {
+      section.rooms .room-container-right .top-text:after {
         content: '';
         position: absolute;
         bottom: -20px;
@@ -665,43 +716,43 @@ section.rooms {
         width: 100%;
         background-color: #f7f7f7;
         height: 3px; }
-      section.rooms .right .top-text p {
+      section.rooms .room-container-right .top-text p {
         font-family: "Lora", serif; }
-    section.rooms .right h2 {
+    section.rooms .room-container-right h2 {
       font-family: "Muli", sans-serif;
       font-size: 32px;
       margin-bottom: 10px; }
-    section.rooms .right .from {
+    section.rooms .room-container-right .from {
       font-size: 15px;
       margin-bottom: 3px; }
-    section.rooms .right h1 {
+    section.rooms .room-container-right h1 {
       font-size: 34px; }
-    section.rooms .right .descriptors {
+    section.rooms .room-container-right .descriptors {
       margin-top: 20px; }
-      section.rooms .right .descriptors .descriptor {
+      section.rooms .room-container-right .descriptors .descriptor {
         display: flex;
         padding: 9px 0px 7px 15px;
         width: 97%; }
-        section.rooms .right .descriptors .descriptor p {
+        section.rooms .room-container-right .descriptors .descriptor p {
           padding-left: 10px; }
-        section.rooms .right .descriptors .descriptor svg {
+        section.rooms .room-container-right .descriptors .descriptor svg {
           padding-top: 3px;
           margin-top: 4px; }
-      section.rooms .right .descriptors .descriptor:nth-child(even) {
+      section.rooms .room-container-right .descriptors .descriptor:nth-child(even) {
         background-color: #f3c5ae; }
-      section.rooms .right .descriptors .descriptor:nth-child(odd) {
+      section.rooms .room-container-right .descriptors .descriptor:nth-child(odd) {
         background-color: #fce6da; }
-    section.rooms .right .description {
+    section.rooms .room-container-right .description {
       margin: 15px 0 25px;
       padding-bottom: 25px; }
-    section.rooms .right .button {
+    section.rooms .room-container-right .button {
       margin-top: 20px;
       font-size: 18px; }
   section.rooms .shift-and-hide-left-boxes {
-    left: -100px;
+    left: -200px;
     opacity: 0; }
   section.rooms .shift-and-hide-right-boxes {
-    right: -100px;
+    right: -200px;
     opacity: 0; }
   section.rooms .animate-left {
     opacity: 1;
@@ -710,12 +761,58 @@ section.rooms {
     opacity: 1;
     right: 0px; }
 
+section.promo-video {
+  position: relative;
+  margin: 100px 0; }
+  section.promo-video .video-container {
+    max-width: 850px;
+    margin: 0 auto;
+    z-index: 29;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    section.promo-video .video-container video {
+      width: 100%; }
+    section.promo-video .video-container button {
+      position: absolute;
+      z-index: 99; }
+  section.promo-video .promo-overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: none;
+    display: none;
+    align-items: center;
+    justify-content: center; }
+    section.promo-video .promo-overlay .video-container {
+      margin: 0;
+      max-width: 80%; }
+    section.promo-video .promo-overlay .close-button {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      cursor: pointer;
+      transition: 0.2s; }
+      section.promo-video .promo-overlay .close-button svg {
+        color: white;
+        font-size: 40px; }
+      section.promo-video .promo-overlay .close-button:hover {
+        transition: 0.2s;
+        transform: scale(1.2); }
+
 footer {
   background-color: #386362;
   width: 100%;
   padding: 75px 30px 50px;
   display: flex;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
   footer .column {
     width: 25%;
     padding: 0 10px; }

@@ -7,9 +7,20 @@
     overflow: hidden;
     margin-top: -70px;
     position: relative;
+    .overlay {
+        position: absolute;
+        height: 82vh;
+        margin-top: 70px;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+        // background-color: rgba(0,0,0,0.3);
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
     .text-container {
         position: absolute;
-        top: 20%;
+        top: 50px;
         left: 50%;
         transform: translateX(-50%);
         font-family: $muli;
@@ -21,10 +32,13 @@
             font-family: $lora;
             font-weight: normal;
         }
-        h3 {
+        .header-text-container {
+            position: relative;
             margin-bottom: 30px;
-            font-size: 22px;
-            font-weight: normal;
+            h3 {
+                font-size: 30px;
+                font-weight: normal;
+            }
         }
     }
     a {
@@ -38,6 +52,7 @@
         width: 1000px;
         overflow: hidden;
         margin: 0 auto;
+        position: relative;
     }
     .review-container-small {
         display: flex;
@@ -47,12 +62,32 @@
     .reviews-user-review {
         width: 100%;
     }
-    .circles-container-reviews {
-        display: flex;
+    // .circles-container-reviews {
+    //     display: flex;
+    //     position: absolute;
+    //     top: 40px;
+        // bottom: 20px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
+    .read-more-container {
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
+        width: 200px;
+        text-align: center;
         left: 50%;
         transform: translateX(-50%);
+        color: white;
+        &.button {
+            outline: 2px solid white;
+            &:hover {
+                outline: none;
+            }
+        }
+        p.link-to-reviews {
+            font-size: 18px;
+            font-family: $lora;
+        }
     }
     .timer {
         background-color: white;
