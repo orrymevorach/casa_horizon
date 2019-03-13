@@ -22,7 +22,7 @@
     padding-top: 20px;
     a {
         text-decoration: none;
-        color: white;
+        color: $black;
         transition: 0.2s;
         &:hover {
             transform: scale(1.1);
@@ -68,7 +68,7 @@ nav.ham-nav {
     #ham-menu {
         display: none;
         list-style: none;
-        color: white;
+        color: $black;
     }
     #ham-menu.show {
         display: flex;
@@ -120,7 +120,7 @@ nav.ham-nav {
         position: absolute;
         height: 2px;
         width: 100%;
-        background: white;
+        background: $black;
         border-radius: 9px;
         opacity: 1;
         left: 0;

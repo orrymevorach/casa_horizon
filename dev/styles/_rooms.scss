@@ -30,10 +30,64 @@ section.rooms {
         border-top: 10px solid $orange;
         overflow: hidden;
     }
-    .room-container {
-        max-width: 1200px;
+
+    .room-categories-container {
+        display: flex;
+        margin-bottom: 80px;
+        
+        // max-width: 1280px;
+        // margin: 0 auto;
+    }
+    
+
+    // Everything below is new
+    .room-categories-title {
+        text-align: center;
+        margin: 20px 0;
+    }
+    #room-category-0 {
+        background-image: url(../img/house/casa-courtyard.jpg);
+    }
+    #room-category-1 {
+        background-image: url(../img/house/balcony-sunset.jpg);
+    } 
+    #room-category-2 {
+        background-image: url(../img/rooms/Room6.jpg);
+    }
+    .room-category {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        box-shadow: $shadow;
+        position: relative;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        overflow: hidden;
+        h3 {
+            font-size: 34px;
+            font-weight: normal;
+            color: white;
+            font-family: $lora;
+            
+        }
+    }
+
+    .slider-container-large {
+        width: max-content;
         margin: 0 auto;
-        padding-bottom: 70px;
+        overflow: hidden;
+    }
+    .slider-container-small {
+        display: flex;
+    }
+
+    .room-container {
+        width: 100vw;
+        margin: 0 auto;
+        padding: 100px 200px;
         display: flex;
     }
     .room-container-left,
@@ -130,4 +184,154 @@ section.rooms {
         opacity: 1;
         right: 0px;
     }
+
+    .building-container {
+        display: flex;
+        max-width: 1280px;
+        margin: 0 auto;
+        .left,
+        .right {
+            width: 50%;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        .left {
+            box-shadow: $shadow;
+            background-image: url(../img/house/cottage-inside-1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-align: center;
+        }
+        .text-container {
+            padding: 10px 0 10px 60px;
+            h2 {
+                font-size: 36px;
+            }
+            p {
+                line-height: 26px;
+                font-size: 16px;
+                margin: 10px 0;
+            }
+            p.paradise {
+                font-size: 18px;
+                font-family: $lora;
+                margin: 12px 0 15px;
+            }
+        }
+    }
+
+    .cottage-container {
+        display: flex;
+        width: 100%;
+        margin: 25px 0 80px;
+        .cottage {
+            width: 25%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: $shadow;
+            position: relative;
+            h4 {
+                color: white;
+            }
+
+        }
+        .cottage1 {
+            background-image: url(../img/house/balcony-sunset.jpg);
+        }
+        .cottage2 {
+            background-image: url(../img/house/cottage-balcony.jpg);
+        }
+        .cottage3 {
+            background-image: url(../img/house/cottage-inside-1.jpg);
+        }
+        .cottage4 {
+            background-image: url(../img/rooms/Room6.jpg);
+        }
+        .cottage5 {
+            background-image: url(../img/house/cottage-kitchen.jpg);
+        }
+    }
+    .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 1;
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 0;
+            transition: 0.2s;
+        }
+        h4 {
+            text-align: center;
+            font-family: $lora;
+            font-size: 28px;
+            color: white;
+            font-weight: normal;
+            color: $black;
+        }
+    }
+    .numbers-container-large {
+        display: flex;
+        color: $black;
+        justify-content: space-between;
+        margin-left: 60px;
+        .number-container {
+            text-align: center;
+            width: 85px;
+            .number {
+                border: 2px solid $black;
+                border-radius: 50%;
+                padding: 8px 0;
+                width: 65px;
+                height: 65px;
+                font-family: $lora;
+                font-size: 33px;
+                display: inline-block;
+                font-weight: 400;
+            }
+            .number-text {
+                font-size: 16px;
+                font-family: $muli;
+                margin-top: 10px;
+            }
+
+        }
+    }
+
+    .jungle-house {
+        .building-container {
+            .left {
+                background-image: url(../img/rooms/Room1.jpg);
+            }
+        }
+        .cottage-container {
+            .cottage1 {
+                background-image: url(../img/house/casa-courtyard.jpg);
+            }
+            .cottage2 {
+                background-image: url(../img/house/casa-inside-couch.jpg);
+            }
+            .cottage3 {
+                background-image: url(../img/rooms/Room1.jpg);
+            }
+            .cottage4 {
+                background-image: url(../img/house/yoga-large.jpg);
+            }
+            .cottage5 {
+                background-image: url(../img/house/casa-inside-kitchen.jpg);
+            }
+        }
+    }
+
 }

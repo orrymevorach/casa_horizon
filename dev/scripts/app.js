@@ -11,7 +11,10 @@ import firebase from 'firebase/app';
 import LogoNav from './HomePage/LogoNav';
 import PromoVideo from './HomePage/PromoVideo';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Rooms from './Rooms/Rooms'
+import Rooms from './Rooms/Rooms';
+import Sirvoy from './Rooms/Sirvoy';
+import RoomsTwo from './Rooms/RoomsTwo';
+
 
 // Initialize Firebase
 const config = {
@@ -88,7 +91,6 @@ class App extends React.Component {
       bookButton.style.outline = 'none';   
       bookButton.children[0].style.color = 'white'; 
     })
-
   }
 
   render() {
@@ -126,6 +128,28 @@ class App extends React.Component {
                 </div>
               )
             }} />
+
+            <Route path="/roomTwo" exact render={() => {
+              return (
+                <div>
+                  <RoomsTwo />
+                </div>
+              )
+            }} />
+
+            <Route path="/sirvoy" exact render={() => {
+              return (
+                <Sirvoy />
+              )
+            }} />
+            
+            <Route path="/ezee" exact render={() => {
+              return (
+                <div><h1>Ezee</h1></div>
+              )
+            }}
+            
+            />
             
             <Route path="/" render={() => {
               return (
