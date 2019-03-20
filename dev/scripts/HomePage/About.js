@@ -98,7 +98,7 @@ class About extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row about-row-two">
                     <div className="box box3 box-text">
                         <h2>Private Beach</h2>
                         <p className="lh-30">Casa Horizon is located just a 3-minute walk away from Playa Escamaca, just a stone's throw from Costa Rica. This beach is surrounded by nothing but ocean, nature and a handful of beach bungalows. 2 hours away from San Juan Del Sure</p>

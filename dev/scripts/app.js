@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Rooms from './Rooms/Rooms';
 import Sirvoy from './Rooms/Sirvoy';
 import RoomsTwo from './Rooms/RoomsTwo';
+import RoomsHeader from './Rooms/RoomsHeader';
 
 
 // Initialize Firebase
@@ -91,6 +92,25 @@ class App extends React.Component {
       bookButton.style.outline = 'none';   
       bookButton.children[0].style.color = 'white'; 
     })
+
+    // hide book button if screen is less than 750px
+    setTimeout(function() {
+      if(window.innerWidth < 950) {
+        bookButton.style.display = 'none';
+      }
+      else {
+        bookButton.style.display = "block"
+      }
+    }, 100)
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth < 950) {
+        bookButton.style.display = 'none';
+      }
+      else {
+        bookButton.style.display = "block"
+      }
+    })
   }
 
   render() {
@@ -110,7 +130,29 @@ class App extends React.Component {
                     <button className="button">Book Now</button>
                   </div>
 
-                  <Header />
+                  <Header/>
+                  <TravelerInfo />
+                  <About />
+                  <PromoVideo />
+                  <Reviews />
+                  <Activities />
+                  <Surf />
+                </div>
+              )
+            }} />
+
+            <Route path="/home-2" exact render={() => {
+              return (
+                <div className="home">
+                  {/* Book Button */}
+                  <div className="book-button">
+                    <button className="button">Book Now</button>
+                  </div>
+
+                  <section className="rooms">
+                    <RoomsHeader />
+                  </section>
+
                   <TravelerInfo />
                   <About />
                   <PromoVideo />

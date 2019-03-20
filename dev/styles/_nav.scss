@@ -29,29 +29,13 @@
             transition: 0.2s;
         }
     }
-}
-
-// Styles that get added to the nav once scroll past the header
-.non-header-styling {
-    position: fixed;
-    top: 0;
-    background-color: rgba(255,255,255,0.8);
-    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
-    padding: 30px 40px 20px 40px;
-    .logo-nav {
-        height: 110px;
-        padding: 30px 40px 0 30px;
+    li {
+        margin: -6px 50px 0 0;
+        font-size: 24px;
+        font-family: $lora;
+        transition: 0.3s;
     }
-    .logo-nav-top-right a {
-        color: $black;
-    }
-    nav.ham-nav 
-        #ham-icon span {
-            background: $black;
-        }
-        
 }
-
 
 // Specific to the fixed book button
 .book-button {
@@ -74,12 +58,8 @@ nav.ham-nav {
         display: flex;
         transform: translateX(0);
         animation: fadeIn linear 0.3s;
-        li {
-            margin: -6px 50px 0 0;
-            font-size: 24px;
-            font-family: $lora;
-        }
     }
+
     #ham-menu.fadeOut {
         animation: fadeOut linear 0.3s;
     }
@@ -169,6 +149,89 @@ nav.ham-nav {
         top: 18px;
         width: 0%;
         left: 50%;
+    }
+
+    
+}
+
+// Styles that get added to the nav once scroll past the header
+.non-header-styling {
+    position: fixed;
+    top: 0;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+    // padding: 20px 40px 20px 40px;
+    padding: 10px 40px 0 40px;
+    transition: 0.2s;
+    .logo-nav {
+        height: 110px;
+    }
+    .logo-nav-top-right a {
+        color: $black;
+    }
+    nav.ham-nav {
+        #ham-icon span {
+            background: $black;
+        }
+        li {
+            font-size: 20px;
+            &.shrink {
+                font-size: 20px;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .logo-nav {
+        padding: 30px;
+    }
+    .logo-nav-top-left {
+        img {
+            width: 120px;
+        }
+    }
+    .logo-nav-top-right {
+        li {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+    }
+    nav.ham-nav #ham-icon {
+        width: 25px;
+        height: 20px;
+    }
+}
+
+@media(max-width: 570px) {
+    nav.ham-nav {
+        #ham-icon span {
+            background: white;
+        }
+        ul {
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: $orange;
+            text-align: center;
+            height: 100vh;
+            a {
+                padding: 100px 0;
+                border-bottom: 1px solid white;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 25%; 
+            }
+            li {
+                font-size: 40px;
+            }
+        }
     }
 }
 

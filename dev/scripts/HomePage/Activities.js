@@ -116,10 +116,13 @@ class Activities extends React.Component {
         return (
             <section className="activities" id="activities">
                 <div className="wrapper-small">
-                    <div className="left">
-                        <div className="left-arrow" onClick={slideLeft}>
-                            <img src="../img/left-arrow.png" alt="Left Arrow" />
+                    <div className="left-arrow" onClick={slideLeft}>
+                        <img src="../img/left-arrow.png" alt="Left Arrow" />
+                    </div>
+                    <div className="right-arrow" onClick={slideRight}>
+                            <img src="../img/right-arrow.png" alt="Right Arrow"/>
                         </div>
+                    <div className="left">
                         <div className="image-container-large">
                             <div className="image-container-small">
                                 <img src="../img/yoga.png" alt="Yoga"  className="activities-images"/>    
@@ -152,10 +155,6 @@ class Activities extends React.Component {
                                 <p className="lh-30 paragraph">The sunsets in Nicaragua are jaw droppingly beautiful. Feel the golden sun warm your body with your toes sunken into the sand and not a worry in sight.</p>
                                 <p className="lh-30 paragraph">We are lucky to have a turtle sanctuary right on our very own beach. Every few weeks we release a batch of sea turtles into the ocean for the very first time. </p>
                             </div>
-                        </div>
-
-                        <div className="right-arrow" onClick={slideRight}>
-                            <img src="../img/right-arrow.png" alt="Right Arrow"/>
                         </div>
                     </div>
                 </div>

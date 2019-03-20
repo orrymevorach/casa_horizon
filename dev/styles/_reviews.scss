@@ -107,5 +107,19 @@
         }
     }
 
+    @media(max-width: 1000px) {
+        .review-container-large {
+            width: 100%;
+            padding: 50px;
+        }
+        .review-container-small {
+            width: 300%;
+            padding: 0 50px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    }
+
 
 }

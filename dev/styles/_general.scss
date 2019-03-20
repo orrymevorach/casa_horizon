@@ -19,6 +19,9 @@ h2 {
 p {
     font-family: $muli;
     font-size: 18px;
+    @media (max-width: 550px) {
+        font-size: 17px;
+    }
 }
 
 .lh-30 {
@@ -66,4 +69,21 @@ p {
     overflow: hidden;
     scroll-behavior: no;
 
+}
+
+.close-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 50;
+    svg {
+        color: white;
+        font-size: 40px;
+    }
+    &:hover {
+        transition: 0.2s;
+        transform: scale(1.2);
+    }
 }

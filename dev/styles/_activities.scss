@@ -7,6 +7,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        position: relative;
     }
     // Formatting both sides of section
     .left,
@@ -44,7 +45,7 @@
     }
     // position right arrow
     .right-arrow {
-        right: -120px;
+        right: -80px;
     }
     // Formatting container of all circles
     .circles-container {
@@ -94,5 +95,43 @@
         display: flex;
         align-items: center;
         transition: 0.2s;
+    }
+    @media(max-width:1050px) {
+        .left-arrow {
+            left: -50px;
+        }
+        .right-arrow {
+            right: -50px;
+        }
+
+    }
+    @media (max-width: 930px) {
+        margin-top: 50px;
+        overflow: hidden;
+
+        .wrapper-small {
+            flex-direction: column;
+            max-width: 360px;
+        }
+        .left-arrow,
+        .right-arrow {
+            top: 20%;
+        }
+        .left,
+        .right {
+            margin: 0 auto;
+            height: inherit;
+            width: 100%;
+        }
+        .right {
+            padding-top: 50px;
+            order: 1;
+            margin-bottom: 10px;
+        }
+        .left {
+            order: 2;
+
+        }
+
     }
 }

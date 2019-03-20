@@ -41,8 +41,35 @@
         opacity: 0;
         top: 100px;
     }
-    // .showAndShiftUp {
-    //     opacity: 1;
-    //     top: 0;
-    // }
+    @media (max-width: 1200px) {
+        .box2 {
+            margin: 0 5px;
+        }
+        .box {
+            padding: 30px 10px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+
+    @media(max-width: 950px) {
+        margin-bottom: -50px;;
+        .boxes-container {
+            flex-direction: column;
+        }
+        .text-container {
+            width: inherit;
+        }
+        .boxes-container {
+            margin: 0 auto;
+            width: 90%;
+        }
+        .box2 {
+            margin: 0;
+        }
+        .box {
+            padding: 25px;
+        }
+    }
 }

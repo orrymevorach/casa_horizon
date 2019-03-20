@@ -35,20 +35,5 @@ section.promo-video {
             margin: 0;
             max-width: 80%;
         }
-        .close-button {
-            position: absolute;
-            top: 50px;
-            right: 50px;
-            cursor: pointer;
-            transition: 0.2s;
-            svg {
-                color: white;
-                font-size: 40px;
-            }
-            &:hover {
-                transition: 0.2s;
-                transform: scale(1.2);
-            }
-        }
     }
 }
