@@ -1202,19 +1202,27 @@ section.rooms header {
   .rooms-modal .right-arrow,
   .rooms-modal .left-arrow {
     position: absolute;
-    top: 48%; }
+    top: 48%;
+    z-index: 30;
+    cursor: pointer; }
     .rooms-modal .right-arrow img,
     .rooms-modal .left-arrow img {
       width: 20px; }
   .rooms-modal .left-arrow {
-    left: 80px; }
+    left: 50px; }
   .rooms-modal .right-arrow {
-    right: 80px; }
+    right: 50px; }
+  .rooms-modal .close-button svg {
+    color: #31322b; }
   .rooms-modal .room-container {
     width: 100vw;
+    height: 100vh;
     margin: 0 auto;
-    padding: 100px 200px;
-    display: flex; }
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: center; }
   .rooms-modal .room-container-left,
   .rooms-modal .room-container-right {
     position: relative;

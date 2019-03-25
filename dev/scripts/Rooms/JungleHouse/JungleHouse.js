@@ -8,6 +8,8 @@ class JungleHouse extends React.Component {
         const roomsModal = document.getElementsByClassName("rooms-modal")[0]
         const roomsModalTopPosition = roomsHeaderHeight + roomsAboutUsHeight + roomsCategoriesHeight
         
+        console.log(roomsModal)
+        
         roomsModal.style.top = `${roomsModalTopPosition}px`;
         
         const modal = document.getElementsByClassName("rooms-modal")[0]

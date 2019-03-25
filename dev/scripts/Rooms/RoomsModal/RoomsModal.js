@@ -97,17 +97,19 @@ class RoomsModal extends React.Component {
 
             // Dont let slider exceed number of circles
             const imagesLength = document.getElementsByClassName('room-container').length - 1
-            if (index >= imagesLength) {
-                index = imagesLength
+            if (index > imagesLength) {
+                index = 0
             }
             slideImage(index)
         }
 
         function slideLeft() {
             index--;
+
             // Dont let slider go below 0
-            if (index <= 0) {
-                index = 0
+            const imagesLength = document.getElementsByClassName('room-container').length - 1
+            if (index < 0) {
+                index = imagesLength
             }
             slideImage(index)
         }

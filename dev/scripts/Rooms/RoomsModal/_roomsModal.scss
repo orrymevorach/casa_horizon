@@ -17,29 +17,36 @@
     .left-arrow {
         position: absolute;
         top: 48%;
+        z-index: 30;
+        cursor: pointer;
         img {
             width: 20px;
         }
     }
     .left-arrow {
-        left: 80px;
+        left: 50px;
     }
     // position right arrow
     .right-arrow {
-        right: 80px;
+        right: 50px;
     }
     // Close Button
-    // .close-button svg {
-    //     color: $black;
-    // }
+    .close-button svg {
+        color: $black;
+    }
 
 
     .room-container {
         width: 100vw;
+        height: 100vh;
         margin: 0 auto;
-        padding: 100px 200px;
+        padding: 0 120px;
         display: flex;
+        align-items: center; 
+        transition: 0.3s;
+        justify-content: center;
     }
+
     .room-container-left,
     .room-container-right {
         position: relative;
