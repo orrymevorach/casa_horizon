@@ -13,6 +13,7 @@ section.rooms {
             background-repeat: no-repeat;
             box-shadow: $shadow;
             position: relative;
+            cursor: pointer;
             h4 {
                 text-align: center;
                 font-family: $lora;

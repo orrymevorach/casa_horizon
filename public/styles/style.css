@@ -1079,7 +1079,8 @@ section.rooms .images-slider {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     section.rooms .images-slider .image-container h4 {
       text-align: center;
       font-family: "Lora", serif;
