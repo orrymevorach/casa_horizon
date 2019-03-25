@@ -1,0 +1,58 @@
+section.rooms {
+      // Bottom images sectin of beachfront cottage and jungle
+      .images-slider {
+        display: flex;
+        width: 100%;
+        margin: 25px 0 150px;
+        border-bottom: 5px solid $orange;
+        .image-container {
+            width: 20%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: $shadow;
+            position: relative;
+            h4 {
+                text-align: center;
+                font-family: $lora;
+                font-size: 28px;
+                color: white;
+                font-weight: normal;
+                color: $white;
+            }
+        }
+    }
+    .beachfront-image:nth-of-type(1) {
+        background-image: url(../img/Rooms/cottage-sunset.jpg);
+    }
+    .beachfront-image:nth-of-type(2) {
+        background-image: url(../img/Rooms/cottage-balcony.jpg);
+    }
+    .beachfront-image:nth-of-type(3) {
+        background-image: url(../img/Rooms/cottage-inside.jpg);
+    }
+    .beachfront-image:nth-of-type(4) {
+        background-image: url(../img/Rooms/master.jpg);
+    }
+    .beachfront-image:nth-of-type(5) {
+        background-image: url(../img/Rooms/cottage-kitchen.jpg);
+    }
+    
+    .jungle-image:nth-of-type(1) {
+        background-image: url(../img/Rooms/casa-courtyard.jpg);
+    }
+    .jungle-image:nth-of-type(2) {
+        background-image: url(../img/Rooms/casa-living-room.jpg);
+    }
+    .jungle-image:nth-of-type(3) {
+        background-image: url(../img/Rooms/Room1.jpg);
+    }
+    .jungle-image:nth-of-type(4) {
+        background-image: url(../img/Rooms/yoga-loft.jpg);
+    }
+    .jungle-image:nth-of-type(5) {
+        background-image: url(../img/Rooms/casa-kitchen.jpg);
+    }
+
+}

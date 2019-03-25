@@ -1,5 +1,5 @@
 import React from 'react';
-import RoomsAboutUs from './RoomsAboutUs';
+import RoomsAboutUs from './RoomsAboutUs/RoomsAboutUs';
 
 class RoomsTwo extends React.Component {
     componentDidMount() {
@@ -56,7 +56,7 @@ class RoomsTwo extends React.Component {
                 building: "Jungle House",
                 capacity: "4",
                 price: "$30",
-                image: "../img/rooms/Room1.jpg",
+                image: "../img/Rooms/Room1.jpg",
                 subtext: "Watch the sunset from your hammock in this room that is perfect for families and small groups",
                 descriptors: 
                     {
@@ -73,7 +73,7 @@ class RoomsTwo extends React.Component {
                 capacity: "2",
                 subtext: "Listen to the waves crashing below from your hammock in this room that is perfect for couples or pairs",
                 price: "$30",
-                image: "../img/rooms/Room2.jpg",
+                image: "../img/Rooms/Room2.jpg",
                 descriptors: {
                     one: "One king bed",
                     two: "Open air concept",
@@ -88,7 +88,7 @@ class RoomsTwo extends React.Component {
                 capacity: "4",
                 subtext: "This room has a larger capacity and ample storage space, perfect for families and friends alike",
                 price: "$30",
-                image: "../img/rooms/Room3.jpg",
+                image: "../img/Rooms/Room3.jpg",
                 descriptors: {
                     one: "One queen bed, one twin bed",
                     two: "Shared bathroom with hot rainfall shower",
@@ -103,7 +103,7 @@ class RoomsTwo extends React.Component {
                 capacity: "4",
                 subtext: "This dorm style room is perfect for families, groups or solo travelers, as it includes two bunk beds with one bunk bottom being a queen",
                 price: "$30",
-                image: "../img/rooms/Room4.jpg",
+                image: "../img/Rooms/Room4.jpg",
                 descriptors: {
                     one: "Dorm style room",
                     two: "Shared bathroom with hot rainfall shower",
@@ -117,7 +117,7 @@ class RoomsTwo extends React.Component {
                 capacity: "2",
                 subtext: "Our yoga loft has a panoramic view unlike any other within Casa Horizon, and is perfect for those looking to host retreats at Casa Horizon, or for those who are looking to flow through their own self care practice",
                 price: "$30",
-                image: "../img/rooms/Room5.jpg",
+                image: "../img/Rooms/Room5.jpg",
                 descriptors: {
                     one: "Beautiful panoramic view",
                     two: "Open air concept",
@@ -131,7 +131,7 @@ class RoomsTwo extends React.Component {
                 capacity: "3",
                 subtext: "The private Beach Cabin is known for its incredible views out over our beautiful Playa Escameca which is just a 100 steps away. It will make a cozy home for a family or group of friends",
                 price: "$30",
-                image: "../img/rooms/Room6.jpg",
+                image: "../img/Rooms/Room6.jpg",
                 descriptors: {
                     one: "Includes 1 master king bedroom with walk in closet",
                     two: "Large private kitchen equpped with fridge/freezer and cooking supplies",
@@ -147,7 +147,7 @@ class RoomsTwo extends React.Component {
             <section className="rooms rooms-two">
                 <header className="rooms-header">
                     <video autoPlay loop>
-                        <source src="../img/rooms/video.MOV"/>
+                        <source src="../img/Rooms/video.MOV"/>
                     </video>
                     <a href="#rooms-body">
                         <div className="arrow-container" >

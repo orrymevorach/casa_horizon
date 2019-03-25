@@ -379,7 +379,7 @@ nav.ham-nav {
       font-size: 40px; } }
 
 .home header {
-  background-image: url(../img/Hero-Image-latest.png);
+  background-image: url(../img/HomePage/Hero-Image.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -632,7 +632,7 @@ nav.ham-nav {
       width: 80%; } }
 
 .reviews {
-  background-image: url(../img/reviews-background.png);
+  background-image: url(../img/Homepage/reviews-background.png);
   background-size: cover;
   background-position: center 70px;
   background-repeat: no-repeat;
@@ -817,7 +817,7 @@ nav.ham-nav {
 .surf {
   position: relative; }
   .surf .background {
-    background-image: url(../img/surfing.png);
+    background-image: url(../img/Homepage/surfing.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -849,117 +849,6 @@ nav.ham-nav {
 
 section.rooms {
   position: relative; }
-  section.rooms header {
-    position: relative;
-    width: 100%;
-    height: 110vh;
-    overflow: hidden;
-    background-image: url(../img/screenshot);
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat; }
-  section.rooms video {
-    right: 0;
-    top: 0;
-    min-width: 100%;
-    min-height: 100%; }
-  section.rooms .arrow-container {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%); }
-    section.rooms .arrow-container img {
-      width: 60px; }
-  section.rooms .rooms-body {
-    position: relative;
-    width: 100%;
-    background-color: white;
-    padding-top: 80px;
-    border-top: 10px solid #f29f77;
-    overflow: hidden; }
-  section.rooms .room-categories-container {
-    display: flex;
-    margin-bottom: 80px;
-    border-bottom: 5px solid #f29f77; }
-  section.rooms .room-categories-title {
-    text-align: center;
-    margin: 20px 0; }
-  section.rooms #room-category-0 {
-    background-image: url(../img/house/casa-courtyard.jpg); }
-  section.rooms #room-category-1 {
-    background-image: url(../img/house/balcony-sunset.jpg); }
-  section.rooms #room-category-2 {
-    background-image: url(../img/rooms/Room6.jpg); }
-  section.rooms .room-category {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-    position: relative;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    overflow: hidden; }
-    section.rooms .room-category h3 {
-      font-size: 34px;
-      font-weight: normal;
-      color: white;
-      font-family: "Lora", serif; }
-  section.rooms .slider-container-large {
-    width: max-content;
-    margin: 0 auto;
-    overflow: hidden; }
-  section.rooms .slider-container-small {
-    display: flex; }
-  section.rooms .room-container {
-    width: 100vw;
-    margin: 0 auto;
-    padding: 100px 200px;
-    display: flex; }
-  section.rooms .room-container-left,
-  section.rooms .room-container-right {
-    position: relative;
-    transition: 0.5s; }
-  section.rooms .room-container-left {
-    width: 60%; }
-    section.rooms .room-container-left img {
-      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-      width: 100%;
-      display: block; }
-  section.rooms .room-container-right {
-    width: 40%;
-    padding: 0px 0 0 50px;
-    color: #31322b; }
-    section.rooms .room-container-right .top-text {
-      position: relative;
-      margin-bottom: 30px; }
-      section.rooms .room-container-right .top-text:after {
-        content: '';
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        width: 100%;
-        background-color: #f7f7f7;
-        height: 3px; }
-      section.rooms .room-container-right .top-text p {
-        font-family: "Lora", serif; }
-    section.rooms .room-container-right h2 {
-      font-family: "Muli", sans-serif;
-      font-size: 32px;
-      margin-bottom: 10px; }
-    section.rooms .room-container-right .from {
-      font-size: 15px;
-      margin-bottom: 3px; }
-    section.rooms .room-container-right h1 {
-      font-size: 34px; }
-    section.rooms .room-container-right .description {
-      margin: 15px 0 25px;
-      padding-bottom: 25px; }
-    section.rooms .room-container-right .button {
-      margin-top: 20px;
-      font-size: 18px; }
   section.rooms .descriptors .descriptor {
     display: flex;
     padding: 9px 0px 7px 15px;
@@ -973,78 +862,6 @@ section.rooms {
     background-color: #f3c5ae; }
   section.rooms .descriptors .descriptor:nth-child(odd) {
     background-color: #fce6da; }
-  section.rooms .shift-and-hide-left-boxes {
-    left: -200px;
-    opacity: 0; }
-  section.rooms .shift-and-hide-right-boxes {
-    right: -200px;
-    opacity: 0; }
-  section.rooms .animate-left {
-    opacity: 1;
-    left: 0px; }
-  section.rooms .animate-right {
-    opacity: 1;
-    right: 0px; }
-  section.rooms .building-container {
-    display: flex;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-top: 80px;
-    position: relative; }
-    section.rooms .building-container .line {
-      top: -25px; }
-    section.rooms .building-container .left,
-    section.rooms .building-container .right {
-      width: 50%; }
-      section.rooms .building-container .left img,
-      section.rooms .building-container .right img {
-        width: 100%;
-        display: block; }
-    section.rooms .building-container .left {
-      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-      background-image: url(../img/house/cottage-inside-1.jpg);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    section.rooms .building-container h1 {
-      text-align: center; }
-    section.rooms .building-container .text-container {
-      padding: 10px 0 10px 60px; }
-      section.rooms .building-container .text-container h2 {
-        font-size: 36px; }
-      section.rooms .building-container .text-container p {
-        line-height: 26px;
-        font-size: 16px;
-        margin: 10px 0; }
-      section.rooms .building-container .text-container p.paradise {
-        font-size: 18px;
-        font-family: "Lora", serif;
-        margin: 12px 0 15px; }
-  section.rooms .cottage-container {
-    display: flex;
-    width: 100%;
-    margin: 25px 0 150px;
-    border-bottom: 5px solid #f29f77; }
-    section.rooms .cottage-container .cottage {
-      width: 20%;
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-      position: relative; }
-      section.rooms .cottage-container .cottage h4 {
-        color: white; }
-    section.rooms .cottage-container .cottage1 {
-      background-image: url(../img/house/balcony-sunset.jpg); }
-    section.rooms .cottage-container .cottage2 {
-      background-image: url(../img/house/cottage-balcony.jpg); }
-    section.rooms .cottage-container .cottage3 {
-      background-image: url(../img/house/cottage-inside-1.jpg); }
-    section.rooms .cottage-container .cottage4 {
-      background-image: url(../img/rooms/Room6.jpg); }
-    section.rooms .cottage-container .cottage5 {
-      background-image: url(../img/house/cottage-kitchen.jpg); }
   section.rooms .overlay {
     position: relative;
     width: 100%;
@@ -1058,116 +875,60 @@ section.rooms {
     section.rooms .overlay:hover {
       opacity: 0;
       transition: 0.2s; }
-    section.rooms .overlay h4 {
-      text-align: center;
-      font-family: "Lora", serif;
-      font-size: 28px;
-      color: white;
-      font-weight: normal;
-      color: #31322b; }
-  section.rooms .numbers-container-large {
+  section.rooms .building-container {
     display: flex;
-    color: #31322b;
-    justify-content: space-between;
-    margin-left: 60px; }
-    section.rooms .numbers-container-large .number-container {
-      text-align: center;
-      width: 85px; }
-      section.rooms .numbers-container-large .number-container .number {
-        border: 2px solid #31322b;
-        border-radius: 50%;
-        padding: 8px 0;
-        width: 65px;
-        height: 65px;
-        font-family: "Lora", serif;
-        font-size: 33px;
-        display: inline-block;
-        font-weight: 400; }
-      section.rooms .numbers-container-large .number-container .number-text {
-        font-size: 16px;
-        font-family: "Muli", sans-serif;
-        margin-top: 10px; }
-  section.rooms .jungle-house {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 80px;
     position: relative; }
-    section.rooms .jungle-house .building-container .left {
-      background-image: url(../img/rooms/Room1.jpg); }
-    section.rooms .jungle-house .building-container .right button {
-      display: block;
-      margin: 40px auto 0; }
-    section.rooms .jungle-house .cottage-container .cottage1 {
-      background-image: url(../img/house/casa-courtyard.jpg); }
-    section.rooms .jungle-house .cottage-container .cottage2 {
-      background-image: url(../img/house/casa-inside-couch.jpg); }
-    section.rooms .jungle-house .cottage-container .cottage3 {
-      background-image: url(../img/rooms/Room1.jpg); }
-    section.rooms .jungle-house .cottage-container .cottage4 {
-      background-image: url(../img/house/yoga-large.jpg); }
-    section.rooms .jungle-house .cottage-container .cottage5 {
-      background-image: url(../img/house/casa-inside-kitchen.jpg); }
-  section.rooms .about-us {
-    max-width: 900px;
-    margin: 100px auto 0; }
-    section.rooms .about-us h2 {
-      text-align: center;
-      margin: 30px 0; }
-    section.rooms .about-us .about-us-main {
-      display: flex; }
-      section.rooms .about-us .about-us-main .left {
-        width: 100%; }
-      section.rooms .about-us .about-us-main .right {
-        width: 420px;
-        margin-left: 50px; }
-  section.rooms .rooms-modal {
-    display: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: white; }
-    section.rooms .rooms-modal .room-categories-container {
+    section.rooms .building-container .left,
+    section.rooms .building-container .right {
+      width: 50%; }
+      section.rooms .building-container .left img,
+      section.rooms .building-container .right img {
+        width: 100%;
+        display: block; }
+    section.rooms .building-container .left {
+      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    section.rooms .building-container .right h1 {
+      text-align: center; }
+    section.rooms .building-container .right .text-container {
+      padding: 10px 0 10px 60px; }
+      section.rooms .building-container .right .text-container h2 {
+        font-size: 36px; }
+      section.rooms .building-container .right .text-container p {
+        line-height: 26px;
+        font-size: 16px;
+        margin: 10px 0; }
+      section.rooms .building-container .right .text-container p.paradise {
+        font-size: 18px;
+        font-family: "Lora", serif;
+        margin: 12px 0 15px; }
+    section.rooms .building-container .right .numbers-container-large {
       display: flex;
-      width: fit-content; }
-    section.rooms .rooms-modal .close-button svg {
-      color: #31322b; }
-
-section.rooms.rooms-two {
-  overflow: hidden; }
-  section.rooms.rooms-two h2.room-title {
-    text-align: center;
-    margin: 40px 0 30px; }
-  section.rooms.rooms-two h2.room-title-yoga,
-  section.rooms.rooms-two h2.room-title-cottage {
-    margin: 0 0 30px;
-    text-align: center; }
-  section.rooms.rooms-two .about-us {
-    margin: 30px auto; }
-  section.rooms.rooms-two .room-container:first-of-type {
-    padding: 25px 200px 100px; }
-  section.rooms.rooms-two .split-container {
-    display: flex;
-    margin-bottom: 100px; }
-    section.rooms.rooms-two .split-container .left,
-    section.rooms.rooms-two .split-container .right {
-      width: 50%;
-      padding: 50px; }
-      section.rooms.rooms-two .split-container .left button,
-      section.rooms.rooms-two .split-container .right button {
-        display: inherit;
-        margin: 40px auto 0; }
-    section.rooms.rooms-two .split-container .left {
-      box-shadow: 8px -15px 19.11px 1.89px rgba(0, 0, 0, 0.19); }
-  section.rooms.rooms-two .descriptors {
-    width: 100%;
-    margin-top: 50px; }
-  section.rooms.rooms-two .right .descriptors {
-    margin-top: 75px; }
-  section.rooms.rooms-two .paradise {
-    font-family: "Lora", serif;
-    margin-bottom: 20px; }
-  section.rooms.rooms-two .room-container {
-    padding: 0;
-    margin: 0 0 100px; }
+      color: #31322b;
+      justify-content: space-between;
+      margin-left: 60px; }
+      section.rooms .building-container .right .numbers-container-large .number-container {
+        text-align: center;
+        width: 85px; }
+        section.rooms .building-container .right .numbers-container-large .number-container .number {
+          border: 2px solid #31322b;
+          border-radius: 50%;
+          padding: 8px 0;
+          width: 65px;
+          height: 65px;
+          font-family: "Lora", serif;
+          font-size: 33px;
+          display: inline-block;
+          font-weight: 400; }
+        section.rooms .building-container .right .numbers-container-large .number-container .number-text {
+          font-size: 16px;
+          font-family: "Muli", sans-serif;
+          margin-top: 10px; }
 
 section.promo-video {
   position: relative;
@@ -1302,3 +1063,197 @@ footer {
       footer form input {
         width: 100%;
         text-align: center; } }
+
+section.rooms .beachfront-container .left {
+  background-image: url(../img/Rooms/cottage-inside.jpg); }
+
+section.rooms .images-slider {
+  display: flex;
+  width: 100%;
+  margin: 25px 0 150px;
+  border-bottom: 5px solid #f29f77; }
+  section.rooms .images-slider .image-container {
+    width: 20%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+    position: relative; }
+    section.rooms .images-slider .image-container h4 {
+      text-align: center;
+      font-family: "Lora", serif;
+      font-size: 28px;
+      color: white;
+      font-weight: normal;
+      color: #fff; }
+
+section.rooms .beachfront-image:nth-of-type(1) {
+  background-image: url(../img/Rooms/cottage-sunset.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(2) {
+  background-image: url(../img/Rooms/cottage-balcony.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(3) {
+  background-image: url(../img/Rooms/cottage-inside.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(4) {
+  background-image: url(../img/Rooms/master.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(5) {
+  background-image: url(../img/Rooms/cottage-kitchen.jpg); }
+
+section.rooms .jungle-image:nth-of-type(1) {
+  background-image: url(../img/Rooms/casa-courtyard.jpg); }
+
+section.rooms .jungle-image:nth-of-type(2) {
+  background-image: url(../img/Rooms/casa-living-room.jpg); }
+
+section.rooms .jungle-image:nth-of-type(3) {
+  background-image: url(../img/Rooms/Room1.jpg); }
+
+section.rooms .jungle-image:nth-of-type(4) {
+  background-image: url(../img/Rooms/yoga-loft.jpg); }
+
+section.rooms .jungle-image:nth-of-type(5) {
+  background-image: url(../img/Rooms/casa-kitchen.jpg); }
+
+section.rooms .jungle-container .left {
+  background-image: url(../img/Rooms/Room1.jpg); }
+
+section.rooms .jungle-container .right button {
+  margin: 40px auto 20px;
+  display: block; }
+
+section.rooms .about-us {
+  max-width: 900px;
+  margin: 80px auto; }
+  section.rooms .about-us h2 {
+    text-align: center;
+    margin: 30px 0; }
+  section.rooms .about-us .about-us-main {
+    display: flex; }
+    section.rooms .about-us .about-us-main .left {
+      width: 100%; }
+    section.rooms .about-us .about-us-main .right {
+      width: 420px;
+      margin-left: 50px; }
+
+section.rooms section.room-categories-container {
+  display: flex;
+  margin-bottom: 80px;
+  border-bottom: 5px solid #f29f77; }
+  section.rooms section.room-categories-container a.room-category {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden; }
+    section.rooms section.room-categories-container a.room-category h3 {
+      font-size: 34px;
+      font-weight: normal;
+      color: white;
+      font-family: "Lora", serif; }
+  section.rooms section.room-categories-container #room-category-0 {
+    background-image: url(../img/Rooms/casa-courtyard.jpg); }
+  section.rooms section.room-categories-container #room-category-1 {
+    background-image: url(../img/Rooms/cottage-sunset.jpg); }
+
+section.rooms header {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+  border-bottom: 10px solid #f29f77; }
+  section.rooms header video {
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative; }
+  section.rooms header .arrow-container {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%); }
+    section.rooms header .arrow-container img {
+      width: 60px; }
+
+.rooms-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 50;
+  overflow: hidden; }
+  .rooms-modal .room-slider-container {
+    display: flex;
+    width: fit-content; }
+  .rooms-modal .right-arrow,
+  .rooms-modal .left-arrow {
+    position: absolute;
+    top: 48%; }
+    .rooms-modal .right-arrow img,
+    .rooms-modal .left-arrow img {
+      width: 20px; }
+  .rooms-modal .left-arrow {
+    left: 80px; }
+  .rooms-modal .right-arrow {
+    right: 80px; }
+  .rooms-modal .room-container {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 100px 200px;
+    display: flex; }
+  .rooms-modal .room-container-left,
+  .rooms-modal .room-container-right {
+    position: relative;
+    transition: 0.5s; }
+  .rooms-modal .room-container-left {
+    width: 60%; }
+    .rooms-modal .room-container-left img {
+      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+      width: 100%;
+      display: block; }
+  .rooms-modal .room-container-right {
+    width: 40%;
+    padding: 0px 0 0 50px;
+    color: #31322b; }
+    .rooms-modal .room-container-right .top-text {
+      position: relative;
+      margin-bottom: 30px; }
+      .rooms-modal .room-container-right .top-text:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        background-color: #f7f7f7;
+        height: 3px; }
+      .rooms-modal .room-container-right .top-text p {
+        font-family: "Lora", serif; }
+    .rooms-modal .room-container-right h2 {
+      font-family: "Muli", sans-serif;
+      font-size: 32px;
+      margin-bottom: 10px; }
+    .rooms-modal .room-container-right .from {
+      font-size: 15px;
+      margin-bottom: 3px; }
+    .rooms-modal .room-container-right h1 {
+      font-size: 34px; }
+    .rooms-modal .room-container-right .description {
+      margin: 15px 0 25px;
+      padding-bottom: 25px; }
+    .rooms-modal .room-container-right .button {
+      margin-top: 20px;
+      font-size: 18px; }

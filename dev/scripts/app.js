@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './HomePage/Header';
-import TravelerInfo from './HomePage/TravelerInfo';
-import About from './HomePage/About';
-import Reviews from './HomePage/Reviews';
-import Activities from './HomePage/Activities';
-import Surf from './HomePage/Surf';
-import Footer from './HomePage/Footer';
+import Header from './HomePage/Header/Header';
+import TravelerInfo from './HomePage/TravelerInfo/TravelerInfo';
+import About from './HomePage/About/About';
+import Reviews from './HomePage/Reviews/Reviews';
+import Activities from './HomePage/Activities/Activities';
+import Surf from './HomePage/Surf/Surf';
+import Footer from './Components/Footer/Footer';
 import firebase from 'firebase/app';
-import LogoNav from './HomePage/LogoNav';
-import PromoVideo from './HomePage/PromoVideo';
+import LogoNav from './Components/LogoNav/LogoNav';
+import PromoVideo from './HomePage/PromoVideo/PromoVideo';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Rooms from './Rooms/Rooms';
-import Sirvoy from './Rooms/Sirvoy';
+import RoomsPage from './Rooms/RoomsPage';
+import Sirvoy from './Sirvoy';
 import RoomsTwo from './Rooms/RoomsTwo';
-import RoomsHeader from './Rooms/RoomsHeader';
+import RoomsHeader from './Rooms/RoomsHeader/RoomsHeader';
 
 
 // Initialize Firebase
@@ -141,32 +141,10 @@ class App extends React.Component {
               )
             }} />
 
-            <Route path="/home-2" exact render={() => {
-              return (
-                <div className="home">
-                  {/* Book Button */}
-                  <div className="book-button">
-                    <button className="button">Book Now</button>
-                  </div>
-
-                  <section className="rooms">
-                    <RoomsHeader />
-                  </section>
-
-                  <TravelerInfo />
-                  <About />
-                  <PromoVideo />
-                  <Reviews />
-                  <Activities />
-                  <Surf />
-                </div>
-              )
-            }} />
-
             <Route path="/rooms" exact render={() => {
               return (
                 <div>
-                  <Rooms />
+                  <RoomsPage />
                 </div>
               )
             }} />

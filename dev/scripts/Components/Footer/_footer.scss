@@ -1,0 +1,136 @@
+footer {
+    // General formatting of footer section
+    background-color: $green;
+    width: 100%;
+    padding: 75px 30px 50px;
+    display: flex;
+    color: $white;
+    position: relative;
+    // Giving each column an equal width
+    .column {
+        width: 25%;
+        padding: 0 10px;
+    }
+    // Styling header text for each column
+    h2 {
+        font-size: 25px;
+        font-family: $lora;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    .column1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .column2 {
+        // Styling social media icons
+        .social-media-icons svg {
+            margin: 25px 10px 0 0;
+            color: $green;
+            font-size: 20px;
+            background-color: $white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            transition: 0.2s;
+            &:hover {
+                color: $white;
+                background-color: $green;
+                transition: 0.2s;
+            }
+        }
+        .margin-top {
+            margin-top: 20px;
+        }
+    }
+    // Styling the form in Column 3
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            background: $green;
+            color: white;
+            font-family: $muli;
+            padding: 8px;
+            border: 1px solid white;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        input::placeholder {
+            color: $white;
+            opacity: 1;
+            font-family: $muli;
+        }
+        input::-webkit-input-placeholder {
+            color: $white;
+            opacity: 1;
+            font-family: $muli;
+        }
+        input::-moz-placeholder {
+            color: $white;
+            opacity: 1;
+            font-family: $muli;
+        }
+        input:-ms-input-placeholder {
+            color: $white;
+            opacity: 1;
+            font-family: $muli;
+        }
+        input[type=submit] {
+            color: white;
+            opacity: 1;
+            font-family: $muli;
+            transition: 0.2s;
+            &:hover {
+                color: $green;
+                background-color: $white;
+            }
+        }
+    }
+    // Making email and call us text bolder
+    .column4 {
+        .bold {
+            font-weight: 700;
+        }
+        // Adding spacing below email us
+        .email {
+            margin-bottom: 20px;
+        }
+    }
+    iframe {
+        border: none; 
+        overflow: hidden; 
+        width: 75%;
+    }
+    @media (max-width: 1000px) {
+        p {
+            font-size: 17px;
+        }
+        h2 {
+            font-size: 22px;
+        }
+        .call p:nth-child(2),
+        .email p:nth-child(2) {
+            font-size: 14px;
+        }
+    }
+    @media(max-width:690px) {
+        flex-direction: column;
+        padding: 50px 0;
+        h2 {
+            font-size: 32px;
+        }
+        .column {
+            width: 360px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 0;
+        }
+        form input {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
