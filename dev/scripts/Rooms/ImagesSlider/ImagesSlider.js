@@ -62,8 +62,6 @@ class ImagesSlider extends React.Component {
             else if (e.target.parentElement.classList.contains("image-container")) {
                 imageUrl = e.target.parentElement.dataset.imageurl
             }
-            console.log(imageUrl)
-            
             if(section === "beachfront") {
                 const left = document.getElementsByClassName("beachfront-container")[0].children[0]
                 left.style["background-image"] = `url(${imageUrl})`

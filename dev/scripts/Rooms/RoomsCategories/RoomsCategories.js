@@ -10,7 +10,7 @@ class RoomsCategories extends React.Component {
                 description: "Couples, Families & Groups",
                 capacity: "1 - 5",
                 imageUrl: "../img/Rooms/cottage-sunset.jpg",
-                anchor: "#jungle-house"
+                anchor: "#jungle"
             },
             {
                 name: "Beachfront Cottage",
@@ -18,7 +18,7 @@ class RoomsCategories extends React.Component {
                 description: "Couples, Families & Groups",
                 capacity: "1 - 4",
                 imageUrl: "../img/Rooms/casa-courtyard.jpg",
-                anchor: "#beachfront-cottage"
+                anchor: "#beachfront"
             }
         ]
 

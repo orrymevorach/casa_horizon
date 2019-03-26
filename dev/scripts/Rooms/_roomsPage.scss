@@ -39,80 +39,9 @@ section.rooms {
             transition: 0.2s;
         }
     }
-    
-    // Used to structure BeachfrontCottage and JungleHouse Components
-    .building-container {
-        display: flex;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding-top: 80px;
-        position: relative;
-        .left,
-        .right {
-            width: 50%;
-            img {
-                width: 100%;
-                display: block;
-            }
-        }
-        .left {
-            box-shadow: $shadow;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .right {
-            h1 {
-                text-align: center;
-            }
-            .text-container {
-                padding: 10px 0 10px 60px;
-                h2 {
-                    font-size: 36px;
-                }
-                p {
-                    line-height: 26px;
-                    font-size: 16px;
-                    margin: 10px 0;
-                }
-                p.paradise {
-                    font-size: 18px;
-                    font-family: $lora;
-                    margin: 12px 0 15px;
-                }
-            }
-            .numbers-container-large {
-                display: flex;
-                color: $black;
-                justify-content: space-between;
-                margin-left: 60px;
-                .number-container {
-                    text-align: center;
-                    width: 85px;
-                    .number {
-                        border: 2px solid $black;
-                        border-radius: 50%;
-                        padding: 8px 0;
-                        width: 65px;
-                        height: 65px;
-                        font-family: $lora;
-                        font-size: 33px;
-                        display: inline-block;
-                        font-weight: 400;
-                    }
-                    .number-text {
-                        font-size: 16px;
-                        font-family: $muli;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-    }
-
-  
-
-    
-
-    
 }
+
+
+    
+
+    

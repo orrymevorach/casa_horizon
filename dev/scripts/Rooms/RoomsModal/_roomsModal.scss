@@ -10,8 +10,9 @@
     overflow: hidden;
     
     .room-slider-container {
-        display: flex;
         width: fit-content;
+        display: flex;
+        display: -webkit-box;
     }
     .right-arrow,
     .left-arrow {
@@ -41,10 +42,12 @@
         height: 100vh;
         margin: 0 auto;
         padding: 0 120px;
+        display: -webkit-box;
         display: flex;
         align-items: center; 
         transition: 0.3s;
         justify-content: center;
+        float: left;
     }
 
     .room-container-left,

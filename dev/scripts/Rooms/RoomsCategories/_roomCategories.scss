@@ -33,4 +33,15 @@ section.rooms {
             background-image: url(../img/Rooms/cottage-sunset.jpg);
         } 
     }
+    @media(max-width: 750px) {
+        section.room-categories-container {
+            flex-direction: column;
+            border-bottom: none;
+            margin-bottom: 0;
+            a.room-category {
+                width: 95%;
+                margin: 5px auto 0;
+            }
+        }
+    }
 }

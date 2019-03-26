@@ -119,8 +119,6 @@ class RoomsModal extends React.Component {
             let posX = windowWidth * index
             
             $(".room-container").css({"transform": `translateX(-${posX}px)`})
-            console.log(posX)
-            console.log(index)
         }
 
         return (
@@ -138,7 +136,7 @@ class RoomsModal extends React.Component {
                 </div>
 
                 
-                <div className="room-slider-container">
+                <div className="room-slider-container clearfix">
                     {rooms.map((room, index) => (
                         <div className="room-container" key={index}>
                             <div className="room-container-left">

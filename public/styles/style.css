@@ -875,60 +875,6 @@ section.rooms {
     section.rooms .overlay:hover {
       opacity: 0;
       transition: 0.2s; }
-  section.rooms .building-container {
-    display: flex;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-top: 80px;
-    position: relative; }
-    section.rooms .building-container .left,
-    section.rooms .building-container .right {
-      width: 50%; }
-      section.rooms .building-container .left img,
-      section.rooms .building-container .right img {
-        width: 100%;
-        display: block; }
-    section.rooms .building-container .left {
-      box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    section.rooms .building-container .right h1 {
-      text-align: center; }
-    section.rooms .building-container .right .text-container {
-      padding: 10px 0 10px 60px; }
-      section.rooms .building-container .right .text-container h2 {
-        font-size: 36px; }
-      section.rooms .building-container .right .text-container p {
-        line-height: 26px;
-        font-size: 16px;
-        margin: 10px 0; }
-      section.rooms .building-container .right .text-container p.paradise {
-        font-size: 18px;
-        font-family: "Lora", serif;
-        margin: 12px 0 15px; }
-    section.rooms .building-container .right .numbers-container-large {
-      display: flex;
-      color: #31322b;
-      justify-content: space-between;
-      margin-left: 60px; }
-      section.rooms .building-container .right .numbers-container-large .number-container {
-        text-align: center;
-        width: 85px; }
-        section.rooms .building-container .right .numbers-container-large .number-container .number {
-          border: 2px solid #31322b;
-          border-radius: 50%;
-          padding: 8px 0;
-          width: 65px;
-          height: 65px;
-          font-family: "Lora", serif;
-          font-size: 33px;
-          display: inline-block;
-          font-weight: 400; }
-        section.rooms .building-container .right .numbers-container-large .number-container .number-text {
-          font-size: 16px;
-          font-family: "Muli", sans-serif;
-          margin-top: 10px; }
 
 section.promo-video {
   position: relative;
@@ -1072,6 +1018,9 @@ section.rooms .images-slider {
   width: 100%;
   margin: 25px 0 150px;
   border-bottom: 5px solid #f29f77; }
+  @media (max-width: 750px) {
+    section.rooms .images-slider {
+      display: none; } }
   section.rooms .images-slider .image-container {
     width: 20%;
     height: 200px;
@@ -1089,21 +1038,6 @@ section.rooms .images-slider {
       font-weight: normal;
       color: #fff; }
 
-section.rooms .beachfront-image:nth-of-type(1) {
-  background-image: url(../img/Rooms/cottage-sunset.jpg); }
-
-section.rooms .beachfront-image:nth-of-type(2) {
-  background-image: url(../img/Rooms/cottage-balcony.jpg); }
-
-section.rooms .beachfront-image:nth-of-type(3) {
-  background-image: url(../img/Rooms/cottage-inside.jpg); }
-
-section.rooms .beachfront-image:nth-of-type(4) {
-  background-image: url(../img/Rooms/master.jpg); }
-
-section.rooms .beachfront-image:nth-of-type(5) {
-  background-image: url(../img/Rooms/cottage-kitchen.jpg); }
-
 section.rooms .jungle-image:nth-of-type(1) {
   background-image: url(../img/Rooms/casa-courtyard.jpg); }
 
@@ -1119,6 +1053,21 @@ section.rooms .jungle-image:nth-of-type(4) {
 section.rooms .jungle-image:nth-of-type(5) {
   background-image: url(../img/Rooms/casa-kitchen.jpg); }
 
+section.rooms .beachfront-image:nth-of-type(1) {
+  background-image: url(../img/Rooms/cottage-sunset.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(2) {
+  background-image: url(../img/Rooms/cottage-balcony.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(3) {
+  background-image: url(../img/Rooms/cottage-inside.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(4) {
+  background-image: url(../img/Rooms/master.jpg); }
+
+section.rooms .beachfront-image:nth-of-type(5) {
+  background-image: url(../img/Rooms/cottage-kitchen.jpg); }
+
 section.rooms .jungle-container .left {
   background-image: url(../img/Rooms/Room1.jpg); }
 
@@ -1128,7 +1077,8 @@ section.rooms .jungle-container .right button {
 
 section.rooms .about-us {
   max-width: 900px;
-  margin: 80px auto; }
+  margin: 80px auto;
+  padding: 0 40px; }
   section.rooms .about-us h2 {
     text-align: center;
     margin: 30px 0; }
@@ -1139,6 +1089,26 @@ section.rooms .about-us {
     section.rooms .about-us .about-us-main .right {
       width: 420px;
       margin-left: 50px; }
+      section.rooms .about-us .about-us-main .right .descriptor {
+        width: 100%; }
+
+@media (max-width: 750px) {
+  section.rooms .about-us {
+    margin: 60px auto; }
+    section.rooms .about-us h2 {
+      font-size: 32px; }
+    section.rooms .about-us .about-us-main {
+      flex-direction: column; }
+      section.rooms .about-us .about-us-main .left,
+      section.rooms .about-us .about-us-main .right {
+        margin: 0 auto; }
+      section.rooms .about-us .about-us-main .left {
+        order: 2; }
+      section.rooms .about-us .about-us-main .right {
+        order: 1;
+        margin-left: auto;
+        margin-bottom: 30px;
+        width: 100%; } }
 
 section.rooms section.room-categories-container {
   display: flex;
@@ -1166,6 +1136,15 @@ section.rooms section.room-categories-container {
     background-image: url(../img/Rooms/casa-courtyard.jpg); }
   section.rooms section.room-categories-container #room-category-1 {
     background-image: url(../img/Rooms/cottage-sunset.jpg); }
+
+@media (max-width: 750px) {
+  section.rooms section.room-categories-container {
+    flex-direction: column;
+    border-bottom: none;
+    margin-bottom: 0; }
+    section.rooms section.room-categories-container a.room-category {
+      width: 95%;
+      margin: 5px auto 0; } }
 
 section.rooms header {
   position: relative;
@@ -1198,8 +1177,9 @@ section.rooms header {
   z-index: 50;
   overflow: hidden; }
   .rooms-modal .room-slider-container {
+    width: fit-content;
     display: flex;
-    width: fit-content; }
+    display: -webkit-box; }
   .rooms-modal .right-arrow,
   .rooms-modal .left-arrow {
     position: absolute;
@@ -1220,10 +1200,12 @@ section.rooms header {
     height: 100vh;
     margin: 0 auto;
     padding: 0 120px;
+    display: -webkit-box;
     display: flex;
     align-items: center;
     transition: 0.3s;
-    justify-content: center; }
+    justify-content: center;
+    float: left; }
   .rooms-modal .room-container-left,
   .rooms-modal .room-container-right {
     position: relative;
@@ -1266,3 +1248,116 @@ section.rooms header {
     .rooms-modal .room-container-right .button {
       margin-top: 20px;
       font-size: 18px; }
+
+section.rooms .building-container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 80px;
+  position: relative; }
+  section.rooms .building-container .left,
+  section.rooms .building-container .right {
+    width: 50%; }
+    section.rooms .building-container .left img,
+    section.rooms .building-container .right img {
+      width: 100%; }
+  section.rooms .building-container .left {
+    box-shadow: 8px 4px 19.11px 1.89px rgba(0, 0, 0, 0.19);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    section.rooms .building-container .left .slider-container-large,
+    section.rooms .building-container .left .right-arrow,
+    section.rooms .building-container .left .left-arrow {
+      display: none; }
+  section.rooms .building-container .right .text-container {
+    padding: 10px 0 10px 60px; }
+    section.rooms .building-container .right .text-container h2 {
+      font-size: 36px; }
+    section.rooms .building-container .right .text-container p {
+      line-height: 26px;
+      font-size: 16px;
+      margin: 10px 0; }
+    section.rooms .building-container .right .text-container p.paradise {
+      font-size: 18px;
+      font-family: "Lora", serif;
+      margin: 12px 0 15px; }
+  section.rooms .building-container .right .numbers-container-large {
+    display: flex;
+    color: #31322b;
+    justify-content: space-between;
+    margin-left: 60px; }
+    section.rooms .building-container .right .numbers-container-large .number-container {
+      text-align: center;
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      section.rooms .building-container .right .numbers-container-large .number-container .number {
+        border: 2px solid #31322b;
+        border-radius: 50%;
+        padding: 8px 0;
+        width: 65px;
+        height: 65px;
+        font-family: "Lora", serif;
+        font-size: 33px;
+        display: inline-block;
+        font-weight: 400; }
+      section.rooms .building-container .right .numbers-container-large .number-container .number-text {
+        font-size: 16px;
+        font-family: "Muli", sans-serif;
+        margin-top: 10px; }
+  @media (max-width: 750px) {
+    section.rooms .building-container {
+      flex-direction: column;
+      padding: 40px 0;
+      align-items: center; }
+      section.rooms .building-container .left {
+        order: 2;
+        position: relative;
+        background-image: inherit;
+        width: 400px; }
+        section.rooms .building-container .left .slider-container-large {
+          display: block;
+          width: 400px;
+          overflow: hidden;
+          margin: 0 auto; }
+        section.rooms .building-container .left .slider-container-small {
+          display: flex;
+          width: fit-content;
+          transition: 0.3s; }
+          section.rooms .building-container .left .slider-container-small img {
+            width: 400px;
+            height: 350px; }
+        section.rooms .building-container .left .right-arrow,
+        section.rooms .building-container .left .left-arrow {
+          display: block;
+          position: absolute;
+          top: 48%;
+          z-index: 30;
+          cursor: pointer; }
+          section.rooms .building-container .left .right-arrow img,
+          section.rooms .building-container .left .left-arrow img {
+            width: 20px; }
+        section.rooms .building-container .left .left-arrow {
+          left: -50px; }
+        section.rooms .building-container .left .right-arrow {
+          right: -50px; }
+      section.rooms .building-container .right {
+        order: 1;
+        width: inherit; }
+        section.rooms .building-container .right .text-container {
+          padding: 0 40px; }
+          section.rooms .building-container .right .text-container h2 {
+            font-size: 32px;
+            text-align: center; }
+        section.rooms .building-container .right .numbers-container-large {
+          margin-left: inherit;
+          padding: 20px 50px; }
+          section.rooms .building-container .right .numbers-container-large .number-container {
+            width: 50px; }
+            section.rooms .building-container .right .numbers-container-large .number-container .number {
+              padding-top: 8px;
+              width: 50px;
+              height: 50px;
+              font-size: 22px; } }

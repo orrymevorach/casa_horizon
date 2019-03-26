@@ -6,6 +6,7 @@ import JungleHouse from './JungleHouse/JungleHouse';
 import BeachfrontCottage from './BeachfrontCottage/BeachfrontCottage';
 import ImagesSlider from './ImagesSlider/ImagesSlider';
 import RoomsModal from './RoomsModal/RoomsModal';
+import BuildingContainer from './BuildingContainer/BuildingContainer';
 
 class RoomsPage extends React.Component {
     componentDidMount() {
@@ -46,12 +47,18 @@ class RoomsPage extends React.Component {
 
                 <RoomsCategories />
 
-                <JungleHouse />
+                <BuildingContainer section="jungle">
+                    <JungleHouse />
+                </BuildingContainer>
+                
                 <ImagesSlider 
                     section="jungle"
                 />
 
-                <BeachfrontCottage />
+                <BuildingContainer section="beachfront">
+                    <BeachfrontCottage />
+                </BuildingContainer>
+                
                 <ImagesSlider 
                     section="beachfront"
                 />

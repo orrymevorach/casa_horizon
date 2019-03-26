@@ -12,15 +12,11 @@ class Nav extends React.Component {
             const hamMenu = document.getElementById("ham-menu")
             
             hamMenu.addEventListener("click", () => {
-                console.log("clicked!")
                 if(hamIcon.classList.contains("open") && hamMenu.classList.contains("show")) {
                     hamIcon.classList.remove("open")
                     hamMenu.classList.remove("show")
                 }
             })
-
-            
-
         }
     }
 
