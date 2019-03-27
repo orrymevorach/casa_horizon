@@ -6,6 +6,7 @@ footer {
     display: flex;
     color: $white;
     position: relative;
+    bottom: 0;
     // Giving each column an equal width
     .column {
         width: 25%;

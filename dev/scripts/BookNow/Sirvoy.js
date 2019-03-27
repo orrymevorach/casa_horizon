@@ -9,6 +9,9 @@ class Sirvoy extends React.Component {
         script.async = true;
 
         document.getElementById("sirvoy").appendChild(script)
+
+        const logoNav = document.getElementsByClassName("logo-nav-top-right")[0]
+        logoNav.style.display = "none"
     
     }
 

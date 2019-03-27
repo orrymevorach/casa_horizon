@@ -12,7 +12,7 @@ import LogoNav from './Components/LogoNav/LogoNav';
 import PromoVideo from './HomePage/PromoVideo/PromoVideo';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import RoomsPage from './Rooms/RoomsPage';
-import Sirvoy from './Sirvoy';
+import Sirvoy from './BookNow/Sirvoy';
 import RoomsTwo from './Rooms/RoomsTwo';
 import RoomsHeader from './Rooms/RoomsHeader/RoomsHeader';
 import ComingSoon from './ComingSoon';
@@ -30,12 +30,8 @@ const config = {
 firebase.initializeApp(config);
 
 class App extends React.Component {
-  constructor() {
-    super()
-  }
-
-  componentDidMount() {
-    
+  constructor(props) {
+    super(props)
   }
 
   render() {
@@ -50,9 +46,9 @@ class App extends React.Component {
               return (
                 <div className="home">
                   {/* Book Button */}
-                  <div className="book-button">
+                  <a href="/book" target="_blank" className="book-button">
                     <button className="button">Book Now</button>
-                  </div>
+                  </a>
 
                   <Header/>
                   <TravelerInfo />
@@ -81,7 +77,7 @@ class App extends React.Component {
               )
             }} />
 
-            <Route path="/sirvoy" exact render={() => {
+            <Route path="/book" exact render={() => {
               return (
                 <Sirvoy />
               )

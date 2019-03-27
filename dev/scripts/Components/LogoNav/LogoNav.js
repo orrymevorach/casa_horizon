@@ -76,8 +76,8 @@ class Nav extends React.Component {
             }
         })
         
-            // Add hover state to fixed book button (intentionally outside of scroll event listener)
-            bookButton.addEventListener("mouseover", function() {
+        // Add hover state to fixed book button (intentionally outside of scroll event listener)
+        bookButton.addEventListener("mouseover", function() {
             bookButton.style.outline = 'none';   
             bookButton.children[0].style.color = 'white'; 
         })
@@ -190,13 +190,8 @@ class Nav extends React.Component {
             <nav className="ham-nav">
                 <ul id="ham-menu">
                     <NavLink to="/"><li className="nav-links">Home</li></NavLink>
-                    {/* <NavLink to="/home-2"><li className="nav-links">Home-V2</li></NavLink> */}
                     <NavLink to="/rooms"><li className="nav-links">Our Rooms</li></NavLink>
-                    {/* <NavLink to="/roomTwo"><li className="nav-links">Rooms 2</li></NavLink> */}
-                    <NavLink to="/sirvoy"><li className="nav-links">Sirvoy</li></NavLink>
-                    <NavLink to="/ezee"><li className="nav-links">Ezee</li></NavLink>
-
-                    {/* <li>Book Now</li> */}
+                    <NavLink to="/book" target="_blank"><li className="nav-links">Book Now</li></NavLink>
                 </ul>
                 <button id="ham-icon" onClick={this.showNav}>
                     <span></span>
