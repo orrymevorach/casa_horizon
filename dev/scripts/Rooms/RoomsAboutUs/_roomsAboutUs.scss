@@ -9,6 +9,11 @@ section.rooms {
         }
         .about-us-main {
             display: flex;
+            .left, 
+            .right {
+                transition: 1s;
+                position: relative;
+            }
             .left {
                 width: 100%;
             }
@@ -19,6 +24,24 @@ section.rooms {
                     width: 100%;
                 }
             }
+        }
+        // Initial Shift Classes Added on ComponentDidMount()
+        .shift-and-hide-left-boxes {
+            left: -100px;
+            opacity: 0;
+        }
+        .shift-and-hide-right-boxes {
+            right: -100px;
+            opacity: 0;
+        }
+        // Animations to be added on scroll
+        .animate-left {
+            opacity: 1;
+            left: 0;
+        }
+        .animate-right {
+            opacity: 1;
+            right: 0px;
         }
     }
     @media(max-width: 750px) {

@@ -357,6 +357,10 @@ nav.ham-nav {
 @media (max-width: 570px) {
   nav.ham-nav #ham-icon span {
     background: white; }
+  nav.ham-nav .ham-icon-mobile {
+    position: fixed;
+    top: 30px;
+    right: 15px; }
   nav.ham-nav ul {
     position: fixed;
     left: 0;
@@ -1084,6 +1088,10 @@ section.rooms .about-us {
     margin: 30px 0; }
   section.rooms .about-us .about-us-main {
     display: flex; }
+    section.rooms .about-us .about-us-main .left,
+    section.rooms .about-us .about-us-main .right {
+      transition: 1s;
+      position: relative; }
     section.rooms .about-us .about-us-main .left {
       width: 100%; }
     section.rooms .about-us .about-us-main .right {
@@ -1091,6 +1099,18 @@ section.rooms .about-us {
       margin-left: 50px; }
       section.rooms .about-us .about-us-main .right .descriptor {
         width: 100%; }
+  section.rooms .about-us .shift-and-hide-left-boxes {
+    left: -100px;
+    opacity: 0; }
+  section.rooms .about-us .shift-and-hide-right-boxes {
+    right: -100px;
+    opacity: 0; }
+  section.rooms .about-us .animate-left {
+    opacity: 1;
+    left: 0; }
+  section.rooms .about-us .animate-right {
+    opacity: 1;
+    right: 0px; }
 
 @media (max-width: 750px) {
   section.rooms .about-us {
@@ -1361,3 +1381,10 @@ section.rooms .building-container {
               width: 50px;
               height: 50px;
               font-size: 22px; } }
+
+.coming-soon {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; }

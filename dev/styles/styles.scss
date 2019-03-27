@@ -19,3 +19,11 @@
 @import '../scripts/Rooms/RoomsHeader/roomsHeader';
 @import '../scripts/Rooms/RoomsModal/roomsModal';
 @import '../scripts/Rooms/BuildingContainer/buildingContainer';
+
+.coming-soon {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

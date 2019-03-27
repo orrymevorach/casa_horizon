@@ -209,6 +209,11 @@ nav.ham-nav {
         #ham-icon span {
             background: white;
         }
+        .ham-icon-mobile {
+            position: fixed;
+            top: 30px;
+            right: 15px;
+        }
         ul {
             position: fixed;
             left: 0;
