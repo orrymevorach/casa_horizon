@@ -688,6 +688,12 @@ nav.ham-nav {
     align-items: center; }
   .reviews .reviews-user-review {
     width: 100%; }
+  .reviews .circles-container-reviews {
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); }
   .reviews .read-more-container {
     position: absolute;
     bottom: 40px;

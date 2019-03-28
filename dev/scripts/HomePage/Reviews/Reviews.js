@@ -8,21 +8,21 @@ class Reviews extends React.Component {
         $('.review-container-small').css({ 'width': `${containerWidth}px` })
         
     //     // set number of circles
-    //     const circlesContainer = document.getElementById('circles-container-reviews')
-    //     const reviews = document.getElementsByClassName('reviews-user-review')
-    //     for (let i = 0; i < reviews.length; i++) {
-    //         const circle = document.createElement('div')
-    //         circle.setAttribute("class", `review-circle review-circle-${i}`)
-    //         circle.style.height = "10px"
-    //         circle.style.width = "10px"
-    //         circle.style["background-color"] = "black"
-    //         circle.style.border = "1px solid black"
-    //         circle.style["border-radius"] = "50%"
-    //         circle.style.margin = "20px 15px 0 0"
-    //         circlesContainer.appendChild(circle)
-    //     }
+        const circlesContainer = document.getElementById('circles-container-reviews')
+        const reviews = document.getElementsByClassName('reviews-user-review')
+        for (let i = 0; i < reviews.length; i++) {
+            const circle = document.createElement('div')
+            circle.setAttribute("class", `review-circle review-circle-${i}`)
+            circle.style.height = "10px"
+            circle.style.width = "10px"
+            circle.style["background-color"] = "black"
+            circle.style.border = "1px solid black"
+            circle.style["border-radius"] = "50%"
+            circle.style.margin = "20px 15px 0 0"
+            circlesContainer.appendChild(circle)
+        }
 
-    //     $('.review-circle-0').css({ 'background-color': 'white' })
+        $('.review-circle-0').css({ 'background-color': 'white' })
         
     }
     render() {
@@ -53,7 +53,7 @@ class Reviews extends React.Component {
             const translate = 1000 * index
             $('.review-container-small').css({"transform": `translateX(-${translate}px)`})
             
-            // fillCircleWhite(index)
+            fillCircleWhite(index)
 
         }, 5000)
 
@@ -79,7 +79,7 @@ class Reviews extends React.Component {
                             <h3>What Our Visitors Say:</h3>
                             
                         </div>
-                        {/* <div className="circles-container-reviews" id="circles-container-reviews"></div> */}
+                        
                         <div className="review-container-large">
                             <div className="review-container-small">
                                 {reviews.map((review, index) => {
@@ -93,9 +93,10 @@ class Reviews extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <a className="read-more-container button" href="https://www.facebook.com/pg/casahorizon/reviews/" target="_blank">
+                    <div className="circles-container-reviews" id="circles-container-reviews"></div>
+                    {/* <a className="read-more-container button" href="https://www.facebook.com/pg/casahorizon/reviews/" target="_blank">
                         <p className="link-to-reviews"><span className="underline">Read more</span> reviews</p>
-                    </a>
+                    </a> */}
                     
                 </div>
             </section>
