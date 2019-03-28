@@ -27,3 +27,22 @@
     align-items: center;
     justify-content: center;
 }
+
+// NEW SHIT
+
+.nav-two {
+    top: inherit;
+    bottom: 30px;
+    .logo-nav-top-right a {
+        color: white;
+    }
+    .ham-nav #ham-icon span {
+        background: white;
+    }
+}
+
+.header-2 {
+    header {
+        background: url(../img/HomePage/header-option-2.png);
+    }
+}

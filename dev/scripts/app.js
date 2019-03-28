@@ -16,6 +16,7 @@ import Sirvoy from './BookNow/Sirvoy';
 import RoomsTwo from './Rooms/RoomsTwo';
 import RoomsHeader from './Rooms/RoomsHeader/RoomsHeader';
 import ComingSoon from './ComingSoon';
+import HomePage from './HomePage/HomePage';
 
 
 // Initialize Firebase
@@ -40,26 +41,71 @@ class App extends React.Component {
         <Router>
           <div>
           {/* LogoNav & Book Button that only display when user scrolls past the Header */}
-            <LogoNav />
-            
-            <Route path="/" exact render={() => {
-              return (
-                <div className="home">
-                  {/* Book Button */}
-                  <a href="/book" target="_blank" className="book-button">
-                    <button className="button">Book Now</button>
-                  </a>
+            {/* <div className="version-1"> */}
+              
+              <Route path="/" exact render={() => {
+                return (
 
-                  <Header/>
-                  <TravelerInfo />
-                  <About />
-                  <PromoVideo />
-                  <Reviews />
-                  <Activities />
-                  <Surf />
-                </div>
-              )
-            }} />
+                  <HomePage 
+                    version="one"
+                  />
+
+                // <div>
+                //   <div className="logo-nav-1">
+                //     <LogoNav 
+                //       version="1"
+                //     />
+                //   </div>
+                
+                //   <div className="home">
+                //     {/* Book Button */}
+                //     <a href="/book" target="_blank" className="book-button">
+                //       <button className="button">Book Now</button>
+                //     </a>
+
+                //     <Header/>
+                //     <TravelerInfo />
+                //     <About />
+                //     <PromoVideo />
+                //     <Reviews />
+                //     <Activities />
+                //     <Surf />
+                //   </div>
+                //   </div>
+                )
+              }} />
+            {/* </div> */}
+
+            {/* <div className="version-2"> */}
+              <Route path="/home-2" exact render={() => {
+                return (
+                  <HomePage 
+                    version="two"
+                  />
+                  //   <div>
+                // <div className="logo-nav-2">
+                //   <LogoNav 
+                //     version="2"
+                //   />
+                // </div>
+                //   <div className="home">
+                //     {/* Book Button */}
+                //     <a href="/book" target="_blank" className="book-button">
+                //       <button className="button">Book Now</button>
+                //     </a>
+
+                //     <Header/>
+                //     <TravelerInfo />
+                //     <About />
+                //     <PromoVideo />
+                //     <Reviews />
+                //     <Activities />
+                //     <Surf />
+                //   </div>
+                //   </div>
+                )
+              }} />
+            {/* </div> */}
 
             <Route path="/rooms" exact render={() => {
               return (

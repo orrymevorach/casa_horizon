@@ -166,6 +166,13 @@ nav.ham-nav {
     .logo-nav {
         height: 110px;
     }
+    .logo-nav-top-left {
+        img {
+            position: absolute;
+            width: 100px;
+            opacity: 0.7;
+        }
+    }
     .logo-nav-top-right a {
         color: $black;
     }

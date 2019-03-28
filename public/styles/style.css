@@ -332,6 +332,10 @@ nav.ham-nav {
   transition: 0.2s; }
   .non-header-styling .logo-nav {
     height: 110px; }
+  .non-header-styling .logo-nav-top-left img {
+    position: absolute;
+    width: 100px;
+    opacity: 0.7; }
   .non-header-styling .logo-nav-top-right a {
     color: #31322b; }
   .non-header-styling nav.ham-nav #ham-icon span {
@@ -1396,3 +1400,14 @@ section.rooms .building-container {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.nav-two {
+  top: inherit;
+  bottom: 30px; }
+  .nav-two .logo-nav-top-right a {
+    color: white; }
+  .nav-two .ham-nav #ham-icon span {
+    background: white; }
+
+.header-2 header {
+  background: url(../img/HomePage/header-option-2.png); }

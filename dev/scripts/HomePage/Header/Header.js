@@ -59,11 +59,13 @@ class Header extends React.Component {
                             <br></br>
                             deep south of Nicaragua.
                         </h1>
-                        <a href="#traveler-info" >
-                            <div className="arrow-container" >
-                                <img src="../img/header-arrow.png" alt="Click To See More"/>
-                            </div>
-                        </a>
+                        {this.props.version === "one" && (
+                            <a href="#traveler-info" >
+                                <div className="arrow-container" >
+                                    <img src="../img/header-arrow.png" alt="Click To See More"/>
+                                </div>
+                            </a>
+                        )}
                     </div>
                 </div>
             </header>

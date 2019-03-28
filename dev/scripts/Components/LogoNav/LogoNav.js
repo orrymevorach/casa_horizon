@@ -190,6 +190,7 @@ class Nav extends React.Component {
             <nav className="ham-nav">
                 <ul id="ham-menu">
                     <NavLink to="/"><li className="nav-links">Home</li></NavLink>
+                    <NavLink to="/home-2"><li className="nav-links">Home V2</li></NavLink>
                     <NavLink to="/rooms"><li className="nav-links">Our Rooms</li></NavLink>
                     <NavLink to="/book" target="_blank"><li className="nav-links">Book Now</li></NavLink>
                 </ul>
@@ -209,7 +210,8 @@ class LogoNav extends React.Component {
         return (
             <div className="logo-nav clearfix">
                 <div className="logo-nav-top-left">
-                    <img src="../img/Logo.png" alt="Casa Horizon Logo" />
+                    {/* <img src="../img/Logo.png" alt="Casa Horizon Logo" /> */}
+                    <img src="../img/logos/CasaHorizonLogo-PNG.png" alt="Casa Horizon Logo" />
                 </div>
                 <div className="logo-nav-top-right">
                     <Nav />
