@@ -387,7 +387,7 @@ nav.ham-nav {
       font-size: 40px; } }
 
 .home header {
-  background-image: url(../img/HomePage/Hero-Image.png);
+  background-image: url(../img/Homepage/Hero-Image.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1410,4 +1410,4 @@ section.rooms .building-container {
     background: white; }
 
 .header-2 header {
-  background: url(../img/HomePage/header-option-2.png); }
+  background: url(../img/Homepage/header-option-2.png); }

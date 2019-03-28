@@ -125,10 +125,10 @@ class Activities extends React.Component {
                     <div className="left">
                         <div className="image-container-large">
                             <div className="image-container-small">
-                                <img src="../img/HomePage/yoga.png" alt="Yoga"  className="activities-images"/>    
-                                <img src="../img/HomePage/rory.jpg" alt="Surf" className="activities-images"/>
-                                <img src="../img/HomePage/sunsets.jpg" alt="Sunsets" className="activities-images"/>
-                                <img src="../img/HomePage/turtles.jpg" alt="Turtles" className="activities-images"/>
+                                <img src="../img/Homepage/yoga.png" alt="Yoga"  className="activities-images"/>    
+                                <img src="../img/Homepage/rory.jpg" alt="Surf" className="activities-images"/>
+                                <img src="../img/Homepage/sunsets.jpg" alt="Sunsets" className="activities-images"/>
+                                <img src="../img/Homepage/turtles.jpg" alt="Turtles" className="activities-images"/>
                             </div>
                         </div>
                         {/* Circles get added in Component Did Mount of app.js */}
