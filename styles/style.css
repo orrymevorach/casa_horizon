@@ -357,6 +357,10 @@ nav.ham-nav {
 @media (max-width: 570px) {
   nav.ham-nav #ham-icon span {
     background: white; }
+  nav.ham-nav .ham-icon-mobile {
+    position: fixed;
+    top: 30px;
+    right: 15px; }
   nav.ham-nav ul {
     position: fixed;
     left: 0;
@@ -892,22 +896,25 @@ section.promo-video {
     section.promo-video .video-container button {
       position: absolute;
       z-index: 99; }
+  section.promo-video .promo-video-close-button {
+    display: none; }
   section.promo-video .promo-overlay {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     position: absolute;
-    top: 15px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    display: none;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center; }
-    section.promo-video .promo-overlay .video-container {
-      margin: 0;
-      max-width: 80%; }
+    section.promo-video .promo-overlay .promo-video-close-button {
+      display: block; }
+  section.promo-video .video-container-large {
+    margin: 0 auto;
+    max-width: 80%; }
 
 footer {
   background-color: #386362;
@@ -915,7 +922,8 @@ footer {
   padding: 75px 30px 50px;
   display: flex;
   color: #fff;
-  position: relative; }
+  position: relative;
+  bottom: 0; }
   footer .column {
     width: 25%;
     padding: 0 10px; }
@@ -1018,7 +1026,7 @@ section.rooms .images-slider {
   width: 100%;
   margin: 25px 0 150px;
   border-bottom: 5px solid #f29f77; }
-  @media (max-width: 750px) {
+  @media (max-width: 820px) {
     section.rooms .images-slider {
       display: none; } }
   section.rooms .images-slider .image-container {
@@ -1078,12 +1086,17 @@ section.rooms .jungle-container .right button {
 section.rooms .about-us {
   max-width: 900px;
   margin: 80px auto;
-  padding: 0 40px; }
+  padding: 0 40px;
+  overflow: hidden; }
   section.rooms .about-us h2 {
     text-align: center;
     margin: 30px 0; }
   section.rooms .about-us .about-us-main {
     display: flex; }
+    section.rooms .about-us .about-us-main .left,
+    section.rooms .about-us .about-us-main .right {
+      transition: 1s;
+      position: relative; }
     section.rooms .about-us .about-us-main .left {
       width: 100%; }
     section.rooms .about-us .about-us-main .right {
@@ -1091,6 +1104,18 @@ section.rooms .about-us {
       margin-left: 50px; }
       section.rooms .about-us .about-us-main .right .descriptor {
         width: 100%; }
+  section.rooms .about-us .shift-and-hide-left-boxes {
+    left: -100px;
+    opacity: 0; }
+  section.rooms .about-us .shift-and-hide-right-boxes {
+    right: -100px;
+    opacity: 0; }
+  section.rooms .about-us .animate-left {
+    opacity: 1;
+    left: 0; }
+  section.rooms .about-us .animate-right {
+    opacity: 1;
+    right: 0px; }
 
 @media (max-width: 750px) {
   section.rooms .about-us {
@@ -1253,7 +1278,7 @@ section.rooms .building-container {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 80px;
+  padding: 80px 30px 0;
   position: relative; }
   section.rooms .building-container .left,
   section.rooms .building-container .right {
@@ -1307,7 +1332,7 @@ section.rooms .building-container {
         font-size: 16px;
         font-family: "Muli", sans-serif;
         margin-top: 10px; }
-  @media (max-width: 750px) {
+  @media (max-width: 820px) {
     section.rooms .building-container {
       flex-direction: column;
       padding: 40px 0;
@@ -1355,9 +1380,19 @@ section.rooms .building-container {
           margin-left: inherit;
           padding: 20px 50px; }
           section.rooms .building-container .right .numbers-container-large .number-container {
-            width: 50px; }
+            width: 50px;
+            margin-right: 20px; }
             section.rooms .building-container .right .numbers-container-large .number-container .number {
               padding-top: 8px;
               width: 50px;
               height: 50px;
-              font-size: 22px; } }
+              font-size: 22px; }
+              section.rooms .building-container .right .numbers-container-large .number-container .number .number-text {
+                font-size: 13px; } }
+
+.coming-soon {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
