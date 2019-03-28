@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "casa-horizon"
+  },
+  "targets": {
+    "casa-horizon": {
+      "hosting": {
+        "production": [
+          "casa-horizon"
+        ],
+        "staging-site": [
+          "casa-horizon-staging-site"
+        ]
+      }
+    }
   }
 }
