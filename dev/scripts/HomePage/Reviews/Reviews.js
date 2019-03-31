@@ -2,12 +2,7 @@ import React from 'react';
 
 class Reviews extends React.Component {
     componentDidMount() {
-    //     // set width of review-container-large
-        const numberOfReviews = document.getElementsByClassName('reviews-user-review').length
-        const containerWidth = 1000 * numberOfReviews
-        $('.review-container-small').css({ 'width': `${containerWidth}px` })
-        
-    //     // set number of circles
+        // set number of circles
         const circlesContainer = document.getElementById('circles-container-reviews')
         const reviews = document.getElementsByClassName('reviews-user-review')
         for (let i = 0; i < reviews.length; i++) {
@@ -50,8 +45,8 @@ class Reviews extends React.Component {
                 index = 0;
             }
 
-            const translate = 1000 * index
-            $('.review-container-small').css({"transform": `translateX(-${translate}px)`})
+            const translate = index * (100 / 3)
+            $('.review-container-small').css({"transform": `translateX(-${translate}%)`})
             
             fillCircleWhite(index)
 

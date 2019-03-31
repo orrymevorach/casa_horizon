@@ -42,4 +42,10 @@ section.promo-video {
         margin: 0 auto;
         max-width: 80%;
     }
+
+    @media (max-width: 850px) {
+        .video-container {
+            width: 90%;
+        }
+    }
 }

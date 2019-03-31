@@ -58,6 +58,9 @@
         .boxes-container {
             flex-direction: column;
         }
+        .box {
+            text-align: center;
+        }
         .text-container {
             width: inherit;
         }
@@ -70,6 +73,11 @@
         }
         .box {
             padding: 25px;
+        }
+    }
+    @media(max-width: 500px) {
+        .box {
+            text-align: left;
         }
     }
 }

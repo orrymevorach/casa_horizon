@@ -31,11 +31,18 @@
     p.lh-30 {
         width: 411px;
     }
+    .left-arrow-mobile {
+        display: none;
+    }
+    .right-arrow-mobile {
+        display: none;
+    }
     // position left arrow
     .right-arrow,
     .left-arrow {
         position: absolute;
         top: 48%;
+        cursor: pointer;
         img {
             width: 20px;
         }
@@ -76,6 +83,7 @@
     // Formatting large container that holds third word
     .text-container-large {
         overflow: hidden;
+        margin-left: 5px;
     }
     // Formatting container that holds all words that slide
     .text-container-small {
@@ -107,12 +115,16 @@
     }
     @media (max-width: 930px) {
         margin-top: 50px;
-        overflow: hidden;
 
         .wrapper-small {
             flex-direction: column;
-            max-width: 360px;
+            width: 360px;
         }
+        // .image-container-large,
+        // .image-container-small img,
+        // .paragraph-container-large {
+        //     width: 360px;
+        // }
         .left-arrow,
         .right-arrow {
             top: 20%;
@@ -130,8 +142,56 @@
         }
         .left {
             order: 2;
-
+        }
+        .left-arrow {
+            left: -80px;
+        }
+        .right-arrow {
+            right: -80px;
         }
 
+    }
+    @media(max-width: 600px) {
+        margin-top: 0;
+        .wrapper-small {
+            width: 320px;
+        }
+        .image-container-large,
+        .image-container-small img,
+        .paragraph-container-large {
+            width: 320px;
+        }
+        h2 {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+        p.lh-30 {
+            font-size: 15px;
+            width: 100%;
+        }
+        .left-arrow,
+        .right-arrow {
+            display: none;
+        }
+        .left-arrow-mobile,
+        .right-arrow-mobile {
+            display: block;
+            top: 450px;
+        }
+        .left-arrow-mobile {
+            left: 25px;
+        }
+        .right-arrow-mobile {
+            right: 25px;
+        }
+
+    }
+    @media (max-width: 360px) {
+        p.lh-30 {
+            padding: 0 15px;
+        }
+        .title-container {
+            padding: 0 15px;
+        }
     }
 }

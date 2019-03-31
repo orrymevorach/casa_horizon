@@ -1,19 +1,16 @@
 .reviews {
     background-image: url(../img/Homepage/reviews-background.png);
     background-size: cover;
-    background-position: center 70px;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 60vh;
     overflow: hidden;
-    margin-top: -70px;
     position: relative;
     .overlay {
         position: absolute;
-        height: 82vh;
-        margin-top: 70px;
+        height: 100%;
         width: 100%;
         background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
-        // background-color: rgba(0,0,0,0.3);
         top: 0;
         left: 0;
         z-index: 10;
@@ -27,6 +24,7 @@
         text-align: center;
         color: white;
         font-weight: 400;
+        width: 80%;
         h1 {
             line-height: 45px;
             font-family: $lora;
@@ -49,7 +47,7 @@
         margin-top: 20px;
     }
     .review-container-large {
-        width: 1000px;
+        width: 100%;
         overflow: hidden;
         margin: 0 auto;
         position: relative;
@@ -58,6 +56,7 @@
         display: flex;
         transition: 1s;
         align-items: center;
+        width: 300%;
     }
     .reviews-user-review {
         width: 100%;
@@ -65,7 +64,6 @@
     .circles-container-reviews {
         display: flex;
         position: absolute;
-        // top: 40px;
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
@@ -94,7 +92,7 @@
         width: 100%;
         height: 5px;
         position: absolute;
-        top: 70px;
+        top: 0;
         animation: timer linear infinite 5s;
     }
 
@@ -108,18 +106,52 @@
     }
 
     @media(max-width: 1000px) {
-        .review-container-large {
-            width: 100%;
-            padding: 50px;
-        }
-        .review-container-small {
-            width: 300%;
-            padding: 0 50px;
-        }
-        h1 {
-            font-size: 24px;
+        height: 40vh;
+        .text-container {
+            h1 {
+                font-size: 24px;
+                line-height: 35px;
+            }
         }
     }
+
+    @media(max-width: 800px) {
+        .circles-container-reviews {
+            bottom: 20px;
+        }
+        .reviewer {
+            margin-top: 0;
+        }
+        .header-text-container {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media(max-width: 500px) {
+        height: 40vh;
+        .text-container {
+            text-align: left;
+            h1 {
+                font-size: 18px;
+                
+            }
+            width: 90%;
+            .header-text-container {
+                margin-bottom: 20px;
+                h3 {
+                    font-size: 27px;
+                }
+            }
+        }
+        .reviewer {
+            margin-top: 10px;
+        }
+        
+    }
+    @media(max-width: 360px) {
+        height: 60vh;
+    }
+    
 
 
 }

@@ -6,17 +6,17 @@ class Header extends React.Component {
     componentDidMount() {
         
         // Initial Css for Header Background Image
-        $('header').css({'background-size': '105% 105%'})
+        $('.overflow-container').css({'transform': 'scale(1.2)'})
         // Trigger Animation for Header Background Image
-        $('header').css({
+        $('.overflow-container').css({
             'animation': 'shrink linear 3s',
-            'background-size': '100% 100%'
+            'transform': 'scale(1)'
         })
         
         // Initial CSS for text-container H1
         $('header .text-container h1').css({ 
             'opacity': ' 0', 
-            'transform': 'scale(0.97)' 
+            'transform': 'scale(0.8)' 
         })
         // Trigger Animation for text-container H1
         $('header .text-container h1').css({
@@ -46,26 +46,28 @@ class Header extends React.Component {
 
     render() {
         return (
+            
             <header>
-                {/* <LogoNav /> */}
-    
-                <div className="text-container">
-                    <div className="header-text center">
-                        <h1>Experience rustic luxury at
-                            <br></br>
-                            Casa Horizon Surf & Yoga Luxury Hostel,
-                            <br></br>
-                            a secluded paradise in the
-                            <br></br>
-                            deep south of Nicaragua.
-                        </h1>
-                        <a href="#traveler-info" >
-                            <div className="arrow-container" >
-                                <img src="../img/header-arrow.png" alt="Click To See More"/>
-                            </div>
-                        </a>
+                <div className="overflow-container">
+                    <div className="text-container">
+                        <div className="header-text center">
+                            <h1>Experience rustic luxury at
+                                <br></br>
+                                Casa Horizon Surf & Yoga Luxury Hostel,
+                                <br></br>
+                                a secluded paradise in the
+                                <br></br>
+                                deep south of Nicaragua.
+                            </h1>
+                            <a href="#traveler-info" >
+                                <div className="arrow-container" >
+                                    <img src="../img/header-arrow.png" alt="Click To See More"/>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
+    
             </header>
         )
     }

@@ -12,6 +12,11 @@ class Sirvoy extends React.Component {
 
         const logoNav = document.getElementsByClassName("logo-nav-top-right")[0]
         logoNav.style.display = "none"
+
+        if(window.location.href === "/book") {
+            const nav = document.getElementsByClassName("logo-nav-top-right")[0]
+            nav.style.display = "none"
+        }
     
     }
 

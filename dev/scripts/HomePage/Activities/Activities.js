@@ -10,12 +10,12 @@ class Activities extends React.Component {
         // Initial width of paragraph container
         // const width = document.getElementsByClassName('textIndex-0')[0].clientWidth
         const numberOfParagraphs = document.getElementsByClassName("paragraph").length
-        const paragraphWidth = numberOfParagraphs * 360
+        const paragraphWidth = window.innerWidth > 600 ? numberOfParagraphs * 360 : numberOfParagraphs * 320
         document.getElementsByClassName('paragraph-container-small')[0].style.width = `${paragraphWidth}px`
 
         // Initial width of image container small, which holds all the images and needs to be as long as all of them combined
         const numberOfImages = document.getElementsByClassName('activities-images').length
-        const containerWidth = 360 * numberOfImages
+        const containerWidth = window.innerWidth > 600 ? 360 * numberOfImages : 320 * numberOfImages
         $('.image-container-small').css({ 'width': `${containerWidth}px` })
 
 
@@ -80,13 +80,13 @@ class Activities extends React.Component {
         }
 
         function slideImage(index) {
-            let posX = 360 * index
+            let posX = window.innerWidth > 600 ? 360 * index : 320 * index
             $('.image-container-small').css({ 'transform': `translateX(-${posX}px)` })
         }
 
         function slideParagraph(index) {
             
-            let posX = 360 * index
+            let posX = window.innerWidth > 600 ? 360 * index : 320 * index
             $('.paragraph-container-small').css({ 'transform': `translateX(-${posX}px)` })
         }
 
@@ -120,8 +120,8 @@ class Activities extends React.Component {
                         <img src="../img/left-arrow.png" alt="Left Arrow" />
                     </div>
                     <div className="right-arrow" onClick={slideRight}>
-                            <img src="../img/right-arrow.png" alt="Right Arrow"/>
-                        </div>
+                        <img src="../img/right-arrow.png" alt="Right Arrow"/>
+                    </div>
                     <div className="left">
                         <div className="image-container-large">
                             <div className="image-container-small">
@@ -149,6 +149,12 @@ class Activities extends React.Component {
                         </div>
                         
                         <div className="paragraph-container-large">
+                            <div className="left-arrow left-arrow-mobile" onClick={slideLeft}>
+                                <img src="../img/left-arrow-white.png" alt="Left Arrow" />
+                            </div>
+                            <div className="right-arrow right-arrow-mobile" onClick={slideRight}>
+                                <img src="../img/right-arrow-white.png" alt="Right Arrow"/>
+                            </div>
                             <div className="paragraph-container-small">
                                 <p className="lh-30 paragraph">We have an outstanding yoga studio that overlooks the ocean. Our yoga instructors are certified to instruct those who are brand new to yoga, all the way to the most experienced of yogis.</p>
                                 <p className="lh-30 paragraph">The regular breeze in Nicaragua is also what makes this area more well known for surfing, beause it creates the ideal 'offshore' winds that give the wave good shape. We're blssed with consistent surf, and you can catch good waves any month.</p>
