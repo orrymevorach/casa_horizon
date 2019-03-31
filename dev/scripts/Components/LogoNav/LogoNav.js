@@ -209,7 +209,7 @@ class LogoNav extends React.Component {
         return (
             <div className="logo-nav clearfix">
                 <div className="logo-nav-top-left">
-                    <img src="../img/Logo.png" alt="Casa Horizon Logo" />
+                    <img src="../img/logo-two.png" alt="Casa Horizon Logo" />
                 </div>
                 <div className="logo-nav-top-right">
                     <Nav />

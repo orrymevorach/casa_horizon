@@ -1,7 +1,6 @@
 // General Styles for LogoNav
 // Applies to the one in the header, and fixed one below the header
 .logo-nav {
-    // height: 20vh;
     padding: 40px 40px 0 40px;
     z-index: 30;
     position: absolute;
@@ -14,7 +13,11 @@
 .logo-nav-top-left {
     float: left;
     img {
-        width: 150px;
+        width: 120px;
+        position: absolute;
+        opacity: 0.6;
+        top: 40px;
+        left: 40px;
     }
 }
 .logo-nav-top-right {
@@ -166,6 +169,10 @@ nav.ham-nav {
     .logo-nav {
         height: 110px;
     }
+    .logo-nav-top-left img {
+        top: 10px;
+        left: 40px;
+    }
     .logo-nav-top-right a {
         color: $black;
     }
@@ -186,11 +193,6 @@ nav.ham-nav {
 @media (max-width:900px) {
     .logo-nav {
         padding: 30px;
-    }
-    .logo-nav-top-left {
-        img {
-            width: 120px;
-        }
     }
     .logo-nav-top-right {
         li {
