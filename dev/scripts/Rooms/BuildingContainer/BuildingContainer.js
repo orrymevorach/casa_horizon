@@ -61,19 +61,19 @@ class BuildingContainer extends React.Component {
                     <div className="slider-container-large">
                         {section === "jungle" ?
                         <div className="slider-container-small">
-                            <img src="../img/Rooms/casa-courtyard.jpg" className="jungle-slider-images" alt="Jungle House"/>
-                            <img src="./img/Rooms/casa-living-room.jpg" className="jungle-slider-images" alt="Living Room"/>
-                            <img src="../img/Rooms/Room1.jpg" className="jungle-slider-images" alt="Bedroom"/>
-                            <img src="../img/Rooms/yoga-loft.jpg" className="jungle-slider-images" alt="Yoga Loft"/>
-                            <img src="../img/Rooms/casa-kitchen.jpg" className="jungle-slider-images" alt="Kitchen"/>
+                            <img src="../img/rooms/casa-courtyard.jpg" className="jungle-slider-images" alt="Jungle House"/>
+                            <img src="./img/rooms/casa-living-room.jpg" className="jungle-slider-images" alt="Living Room"/>
+                            <img src="../img/rooms/Room1.jpg" className="jungle-slider-images" alt="Bedroom"/>
+                            <img src="../img/rooms/yoga-loft.jpg" className="jungle-slider-images" alt="Yoga Loft"/>
+                            <img src="../img/rooms/casa-kitchen.jpg" className="jungle-slider-images" alt="Kitchen"/>
                         </div>
                         : section === "beachfront" ?
                         <div className="slider-container-small">
-                            <img src="../img/Rooms/cottage-sunset.jpg" className="beachfront-slider-images" alt="Sunset"/>
-                            <img src="../img/Rooms/cottage-balcony.jpg" className="beachfront-slider-images" alt="Balcony"/>
-                            <img src="../img/Rooms/cottage-inside.jpg" className="beachfront-slider-images" alt="Living Room"/>
-                            <img src="../img/Rooms/master.jpg" className="beachfront-slider-images" alt="Master Bedroom"/>
-                            <img src="../img/Rooms/cottage-kitchen.jpg" className="beachfront-slider-images" alt="Kitchen"/>
+                            <img src="../img/rooms/cottage-sunset.jpg" className="beachfront-slider-images" alt="Sunset"/>
+                            <img src="../img/rooms/cottage-balcony.jpg" className="beachfront-slider-images" alt="Balcony"/>
+                            <img src="../img/rooms/cottage-inside.jpg" className="beachfront-slider-images" alt="Living Room"/>
+                            <img src="../img/rooms/master.jpg" className="beachfront-slider-images" alt="Master Bedroom"/>
+                            <img src="../img/rooms/cottage-kitchen.jpg" className="beachfront-slider-images" alt="Kitchen"/>
                         </div>
                         : null }
                     </div>

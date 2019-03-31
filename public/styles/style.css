@@ -1121,7 +1121,7 @@ footer {
         text-align: center; } }
 
 section.rooms .beachfront-container .left {
-  background-image: url(../img/Rooms/cottage-inside.jpg); }
+  background-image: url(../img/rooms/cottage-inside.jpg); }
 
 section.rooms .images-slider {
   display: flex;
@@ -1149,37 +1149,37 @@ section.rooms .images-slider {
       color: #fff; }
 
 section.rooms .jungle-image:nth-of-type(1) {
-  background-image: url(../img/Rooms/casa-courtyard.jpg); }
+  background-image: url(../img/rooms/casa-courtyard.jpg); }
 
 section.rooms .jungle-image:nth-of-type(2) {
-  background-image: url(../img/Rooms/casa-living-room.jpg); }
+  background-image: url(../img/rooms/casa-living-room.jpg); }
 
 section.rooms .jungle-image:nth-of-type(3) {
-  background-image: url(../img/Rooms/Room1.jpg); }
+  background-image: url(../img/rooms/Room1.jpg); }
 
 section.rooms .jungle-image:nth-of-type(4) {
-  background-image: url(../img/Rooms/yoga-loft.jpg); }
+  background-image: url(../img/rooms/yoga-loft.jpg); }
 
 section.rooms .jungle-image:nth-of-type(5) {
-  background-image: url(../img/Rooms/casa-kitchen.jpg); }
+  background-image: url(../img/rooms/casa-kitchen.jpg); }
 
 section.rooms .beachfront-image:nth-of-type(1) {
-  background-image: url(../img/Rooms/cottage-sunset.jpg); }
+  background-image: url(../img/rooms/cottage-sunset.jpg); }
 
 section.rooms .beachfront-image:nth-of-type(2) {
-  background-image: url(../img/Rooms/cottage-balcony.jpg); }
+  background-image: url(../img/rooms/cottage-balcony.jpg); }
 
 section.rooms .beachfront-image:nth-of-type(3) {
-  background-image: url(../img/Rooms/cottage-inside.jpg); }
+  background-image: url(../img/rooms/cottage-inside.jpg); }
 
 section.rooms .beachfront-image:nth-of-type(4) {
-  background-image: url(../img/Rooms/master.jpg); }
+  background-image: url(../img/rooms/master.jpg); }
 
 section.rooms .beachfront-image:nth-of-type(5) {
-  background-image: url(../img/Rooms/cottage-kitchen.jpg); }
+  background-image: url(../img/rooms/cottage-kitchen.jpg); }
 
 section.rooms .jungle-container .left {
-  background-image: url(../img/Rooms/Room1.jpg); }
+  background-image: url(../img/rooms/Room1.jpg); }
 
 section.rooms .jungle-container .right button {
   margin: 40px auto 20px;
@@ -1260,9 +1260,9 @@ section.rooms section.room-categories-container {
       color: white;
       font-family: "Lora", serif; }
   section.rooms section.room-categories-container #room-category-0 {
-    background-image: url(../img/Rooms/casa-courtyard.jpg); }
+    background-image: url(../img/rooms/casa-courtyard.jpg); }
   section.rooms section.room-categories-container #room-category-1 {
-    background-image: url(../img/Rooms/cottage-sunset.jpg); }
+    background-image: url(../img/rooms/cottage-sunset.jpg); }
 
 @media (max-width: 750px) {
   section.rooms section.room-categories-container {

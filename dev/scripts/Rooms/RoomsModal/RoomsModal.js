@@ -15,7 +15,7 @@ class RoomsModal extends React.Component {
                 name: "Room 1",
                 capacity: "4",
                 price: "$30",
-                image: "../img/Rooms/Room1.jpg",
+                image: "../img/rooms/Room1.jpg",
                 subtext: "Watch the sunset from your hammock in this room that is perfect for families and small groups",
                 category: "private",
                 descriptors: 
@@ -33,7 +33,7 @@ class RoomsModal extends React.Component {
                 subtext: "Listen to the waves crashing below from your hammock in this room that is perfect for couples or pairs",
                 category: "private",
                 price: "$30",
-                image: "../img/Rooms/Room2.jpg",
+                image: "../img/rooms/Room2.jpg",
                 descriptors: {
                     one: "One king bed",
                     two: "Open air concept",
@@ -48,7 +48,7 @@ class RoomsModal extends React.Component {
                 subtext: "This room has a larger capacity and ample storage space, perfect for families and friends alike",
                 category: "private",
                 price: "$30",
-                image: "../img/Rooms/Room3.jpg",
+                image: "../img/rooms/Room3.jpg",
                 descriptors: {
                     one: "One queen bed, one twin bed",
                     two: "Shared bathroom with hot rainfall shower",
@@ -63,7 +63,7 @@ class RoomsModal extends React.Component {
                 subtext: "This dorm style room is perfect for families, groups or solo travelers, as it includes two bunk beds with one bunk bottom being a queen",
                 category: "private",
                 price: "$30",
-                image: "../img/Rooms/Room4.jpg",
+                image: "../img/rooms/Room4.jpg",
                 descriptors: {
                     one: "Dorm style room",
                     two: "Shared bathroom with hot rainfall shower",
@@ -78,7 +78,7 @@ class RoomsModal extends React.Component {
                 subtext: "Our yoga loft has a panoramic view unlike any other within Casa Horizon, and is perfect for those looking to host retreats at Casa Horizon, or for those who are looking to flow through their own self care practice",
                 category: "loft",
                 price: "$30",
-                image: "../img/Rooms/Room5.jpg",
+                image: "../img/rooms/Room5.jpg",
                 descriptors: {
                     one: "Beautiful panoramic view",
                     two: "Open air concept",

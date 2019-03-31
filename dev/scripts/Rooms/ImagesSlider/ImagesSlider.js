@@ -8,45 +8,45 @@ class ImagesSlider extends React.Component {
             beachfront: [
                 {
                     "title": "Sunset",
-                    "imageUrl": "../img/Rooms/cottage-sunset.jpg"
+                    "imageUrl": "../img/rooms/cottage-sunset.jpg"
                 },
                 {
                     "title": "Balcony",
-                    "imageUrl": "../img/Rooms/cottage-balcony.jpg"
+                    "imageUrl": "../img/rooms/cottage-balcony.jpg"
                 },
                 {
                     "title": "Living Room",
-                    "imageUrl": "../img/Rooms/cottage-inside.jpg"
+                    "imageUrl": "../img/rooms/cottage-inside.jpg"
                 },
                 {
                     "title": "Master Bedroom",
-                    "imageUrl": "../img/Rooms/master.jpg"
+                    "imageUrl": "../img/rooms/master.jpg"
                 },
                 {
                     "title": "Kitchen",
-                    "imageUrl": "../img/Rooms/cottage-kitchen.jpg"
+                    "imageUrl": "../img/rooms/cottage-kitchen.jpg"
                 }
             ],
             jungle: [
                 {
                     "title": "Jungle House",
-                    "imageUrl": "../img/Rooms/casa-courtyard.jpg"
+                    "imageUrl": "../img/rooms/casa-courtyard.jpg"
                 },
                 {
                     "title": "Living Room",
-                    "imageUrl": "../img/Rooms/casa-living-room.jpg"
+                    "imageUrl": "../img/rooms/casa-living-room.jpg"
                 },
                 {
                     "title": "Bedroom",
-                    "imageUrl": "../img/Rooms/Room1.jpg"
+                    "imageUrl": "../img/rooms/Room1.jpg"
                 },
                 {
                     "title": "Yoga Loft",
-                    "imageUrl": "../img/Rooms/yoga-loft.jpg"
+                    "imageUrl": "../img/rooms/yoga-loft.jpg"
                 },
                 {
                     "title": "Shared Kitchen",
-                    "imageUrl": "../img/Rooms/casa-kitchen.jpg"
+                    "imageUrl": "../img/rooms/casa-kitchen.jpg"
                 }
             ]
         }

@@ -56,7 +56,7 @@ class About extends React.Component {
             <section className="about" id="about">
                 <div className="row about-row-one">
                     <div className="box box1 box-image">
-                        <img src="../img/HomePage/jungle-house.png" alt="Casa Horizon Jungle House"/>
+                        <img src="../img/homepage/jungle-house.png" alt="Casa Horizon Jungle House"/>
                     </div>
                     <div className="box box2 box-text">
                         <h2>Jungle House &
@@ -105,7 +105,7 @@ class About extends React.Component {
                         <a className="button" href="https://www.google.com.ph/maps/place/Casa+Horizon/@11.1723439,-85.8123801,17z/data=!3m1!4b1!4m5!3m4!1s0x8f75b1d791843085:0x838f3792db65c563!8m2!3d11.1723386!4d-85.8101914" target="_blank">View Map</a>
                     </div>
                     <div className="box box4 box-image">
-                        <img src="../img/HomePage/private-beach.png" alt="Casa Horizon Private Beach"/>
+                        <img src="../img/homepage/private-beach.png" alt="Casa Horizon Private Beach"/>
                     </div>
                 </div>
             </section>

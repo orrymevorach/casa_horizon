@@ -9,7 +9,7 @@ class RoomsCategories extends React.Component {
                 price: "$30",
                 description: "Couples, Families & Groups",
                 capacity: "1 - 5",
-                imageUrl: "../img/Rooms/cottage-sunset.jpg",
+                imageUrl: "../img/rooms/cottage-sunset.jpg",
                 anchor: "#jungle"
             },
             {
@@ -17,7 +17,7 @@ class RoomsCategories extends React.Component {
                 price: "$30",
                 description: "Couples, Families & Groups",
                 capacity: "1 - 4",
-                imageUrl: "../img/Rooms/casa-courtyard.jpg",
+                imageUrl: "../img/rooms/casa-courtyard.jpg",
                 anchor: "#beachfront"
             }
         ]
