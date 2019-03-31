@@ -19,7 +19,9 @@ section.rooms {
             background-repeat: no-repeat;
             .slider-container-large,
             .right-arrow,
-            .left-arrow {
+            .left-arrow,
+            .left-arrow-mobile,
+            .right-arrow-mobile {
                 display: none;
             }
         }
@@ -79,10 +81,10 @@ section.rooms {
                 order: 2;
                 position: relative;
                 background-image: inherit;
-                width: 400px;
+                width: 360px;
                 .slider-container-large {
                     display: block;
-                    width: 400px;
+                    width: 360px;
                     overflow: hidden;
                     margin: 0 auto;
     
@@ -92,8 +94,8 @@ section.rooms {
                     width: fit-content;
                     transition: 0.3s;
                     img {
-                        width: 400px;
-                        height: 350px;
+                        width: 360px;
+                        height: 360px;
                     }
                 }
                 .right-arrow,
@@ -139,6 +141,50 @@ section.rooms {
                             .number-text {
                                 font-size: 13px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+        @media(max-width: 550px) {
+            .right {
+                width: 100%;    
+                .numbers-container-large {
+                    padding: 20px;
+                }
+                .text-container {
+                    padding: 20px;
+                }
+            }
+            .left {
+                width: 100%;
+                .left-arrow,
+                .right-arrow {
+                    display: none;
+                }
+                .left-arrow-mobile,
+                .right-arrow-mobile {
+                    display: block;
+                }
+                .left-arrow-mobile {
+                    left: 30px;
+                }
+                .right-arrow-mobile {
+                    right: 30px;
+                }
+            }
+        }
+
+        @media(max-width: 360px) {
+            .left {
+                width: 100%;
+            }
+            .right {
+                .numbers-container-large {
+                    .number-container {
+                        width: 40px;
+                        .number-text {
+                            font-size: 12px;
                         }
                     }
                 }

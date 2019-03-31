@@ -11,26 +11,29 @@ class RoomsAboutUs extends React.Component {
         left.classList.add('shift-and-hide-left-boxes')
         right.classList.add('shift-and-hide-right-boxes')
 
-        // Defining Heights of Header, TravellerInfo Section and Row One
-        const headerHeight = document.getElementsByClassName('rooms-header')[0].clientHeight
-        
-        // Defining Animation Starting Points for Each Row
-        const animationStartRowOne = headerHeight + left.clientHeight ;
+        left.classList.add('animate-left')
+        right.classList.add('animate-right')
 
-        window.addEventListener('scroll', () => {
-            // Variable to pinpoint bottom of the window
-            const bottomOfWindow = window.scrollY + window.innerHeight
+        // Defining Heights of Header, TravellerInfo Section and Row One
+        // const headerHeight = document.getElementsByClassName('rooms-header')[0].clientHeight
+        
+        // // Defining Animation Starting Points for Each Row
+        // const animationStartRowOne = headerHeight + left.clientHeight ;
+
+        // window.addEventListener('scroll', () => {
+        //     // Variable to pinpoint bottom of the window
+        //     const bottomOfWindow = window.scrollY + window.innerHeight
             
-            // Animation for Row 1
-            if (bottomOfWindow > animationStartRowOne) {
-                left.classList.add('animate-left')
-                right.classList.add('animate-right')
-            }
-            else {
-                left.classList.remove('animate-left')
-                right.classList.remove('animate-right')
-            }
-        })
+        //     // Animation for Row 1
+        //     if (bottomOfWindow > animationStartRowOne) {
+        //         left.classList.add('animate-left')
+        //         right.classList.add('animate-right')
+        //     }
+        //     else {
+        //         left.classList.remove('animate-left')
+        //         right.classList.remove('animate-right')
+        //     }
+        // })
     }
     
     render() {

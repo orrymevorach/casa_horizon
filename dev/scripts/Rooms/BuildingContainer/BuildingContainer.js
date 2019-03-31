@@ -37,7 +37,7 @@ class BuildingContainer extends React.Component {
         }
 
         function slideImage(index) {
-            let posX = 400 * index
+            let posX = window.innerWidth > 820 ? 400 * index : 360 * index
             
             if(section === "jungle") {
                 $(".jungle-container .slider-container-small").css({"transform": `translateX(-${posX}px)`})
@@ -57,6 +57,12 @@ class BuildingContainer extends React.Component {
                     </div>
                     <div className="right-arrow" onClick={slideRight}>
                         <img src="../img/right-arrow.png" alt="Right Arrow"/>
+                    </div>
+                    <div className="left-arrow left-arrow-mobile" onClick={slideLeft}>
+                        <img src="../img/left-arrow-white.png" alt="Left Arrow" /> 
+                    </div>
+                    <div className="right-arrow right-arrow-mobile" onClick={slideRight}>
+                        <img src="../img/right-arrow-white.png" alt="Right Arrow"/> 
                     </div>
                     <div className="slider-container-large">
                         {section === "jungle" ?

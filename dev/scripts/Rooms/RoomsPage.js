@@ -41,7 +41,7 @@ class RoomsPage extends React.Component {
             <section className="rooms">
                 <RoomsModal />
                 
-                <RoomsHeader />
+                {/* <RoomsHeader /> */}
                 
                 <RoomsAboutUs />
 
