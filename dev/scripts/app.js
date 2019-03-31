@@ -1,23 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Footer from './Components/Footer/Footer';
-import firebase from 'firebase/app';
-import LogoNav from './Components/LogoNav/LogoNav';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import firebase from 'firebase/app';
+import config from './firebaseConfig';
+import HomePage from './HomePage/HomePage';
 import RoomsPage from './Rooms/RoomsPage';
 import Sirvoy from './BookNow/Sirvoy';
-import HomePage from './HomePage/HomePage';
+import LogoNav from './Components/LogoNav/LogoNav';
+import Footer from './Components/Footer/Footer';
 
-
-// Initialize Firebase
-const config = {
-  apiKey: "AIzaSyDKF69O_DQ5eatbEXy-H7lArnyoUqYTg4E",
-  authDomain: "casa-horizon.firebaseapp.com",
-  databaseURL: "https://casa-horizon.firebaseio.com",
-  projectId: "casa-horizon",
-  storageBucket: "casa-horizon.appspot.com",
-  messagingSenderId: "267399139758"
-};
 firebase.initializeApp(config);
 
 class App extends React.Component {
