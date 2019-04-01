@@ -1,22 +1,22 @@
 import React from 'react';
-import Header from './Header/Header';
+import HomeHeader from './HomeHeader/HomeHeader';
 import TravelerInfo from './TravelerInfo/TravelerInfo';
 import About from './About/About';
 import PromoVideo from './PromoVideo/PromoVideo';
 import Reviews from './Reviews/Reviews';
 import Activities from './Activities/Activities';
 import Surf from './Surf/Surf';
+import BookButton from '../Components/BookButton/BookButton';
 
 class HomePage extends React.Component {
+    
+    
     render() {
         return (
             <div className="home">
-                {/* Book Button */}
-                <a href="/book" target="_blank" className="book-button">
-                    <button className="button">Book Now</button>
-                </a>
+                <BookButton />
 
-                <Header/>
+                <HomeHeader/>
                 <TravelerInfo />
                 <About />
                 <PromoVideo />

@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoNav from '../../Components/LogoNav/LogoNav';
 
-class Header extends React.Component {
+class HomeHeader extends React.Component {
     // Fade In Animations
     componentDidMount() {
         
@@ -34,9 +34,9 @@ class Header extends React.Component {
         })
 
         // Initial Css for Logo and Nav
-        $('header .logo-nav').css({ 'opacity': ' 0' })
+        $('.logo-nav').css({ 'opacity': ' 0' })
         // Trigger Animation for Logo and Nav
-        $('header .logo-nav').css({ 
+        $('.logo-nav').css({ 
             'animation': ' fadeIn linear 3s',
             'opacity': ' 1' 
         })
@@ -46,8 +46,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            
-            <header>
+            <header className="home-header">
                 <div className="overflow-container">
                     <div className="text-container">
                         <div className="header-text center">
@@ -67,11 +66,10 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-    
             </header>
         )
     }
     
 }
 
-export default Header;
+export default HomeHeader;

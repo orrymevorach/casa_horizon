@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import firebase from 'firebase/app';
-import config from './firebaseConfig';
+import exports from './firebaseConfig';
 import HomePage from './HomePage/HomePage';
 import RoomsPage from './Rooms/RoomsPage';
 import Sirvoy from './BookNow/Sirvoy';
 import LogoNav from './Components/LogoNav/LogoNav';
 import Footer from './Components/Footer/Footer';
 
-firebase.initializeApp(config);
+firebase.initializeApp(exports.config);
 
 class App extends React.Component {
   constructor(props) {
@@ -26,7 +26,6 @@ class App extends React.Component {
             <Route path="/" exact render={() => (
               <HomePage />
             )} />
-            
 
             <Route path="/rooms" exact render={() => (
               <RoomsPage />
