@@ -241,13 +241,6 @@ p {
     font-family: "Lora", serif;
     transition: 0.3s; }
 
-.book-button {
-  position: fixed;
-  top: 50%;
-  right: 40px;
-  display: none;
-  z-index: 20; }
-
 nav.ham-nav {
   display: flex; }
   nav.ham-nav #ham-menu {
@@ -1528,6 +1521,13 @@ section.rooms .building-container {
   @media (max-width: 570px) {
     #sirvoy {
       margin-top: 80px; } }
+
+.book-button {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  display: none;
+  z-index: 20; }
 
 .coming-soon {
   height: 100vh;

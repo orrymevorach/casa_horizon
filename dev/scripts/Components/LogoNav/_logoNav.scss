@@ -40,15 +40,6 @@
     }
 }
 
-// Specific to the fixed book button
-.book-button {
-    position: fixed;
-    top: 50%;
-    right: 40px;
-    display: none;
-    z-index: 20;
-}
-
 // Hamburger Menu
 nav.ham-nav {
     display: flex;

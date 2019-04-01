@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import firebase from 'firebase/app';
 import exports from './firebaseConfig';
 import HomePage from './HomePage/HomePage';
@@ -18,9 +18,9 @@ class App extends React.Component {
 
   render() {
     return (
-        <HashRouter>
+        <Router>
           <div>
-          {/* LogoNav & Book Button that only display when user scrolls past the Header */}
+          
             <LogoNav />
             
             <Route path="/" exact render={() => (
@@ -40,7 +40,7 @@ class App extends React.Component {
             )} />
             
           </div>
-        </HashRouter>
+        </Router>
     )
   }
 }
