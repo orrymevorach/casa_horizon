@@ -10,9 +10,12 @@ class Sirvoy extends React.Component {
 
         document.getElementById("sirvoy").appendChild(script)
 
-        const logoNav = document.getElementsByClassName("logo-nav-top-right")[0]
-        logoNav.style.display = "none"
-    
+        window.addEventListener('load', () => {
+            const logoNav = document.getElementsByClassName("logo-nav-top-right")[0]
+            if(window.location.hash === "#/book") {
+                logoNav.style.display = "none"
+            }
+        })
     }
 
     render() {

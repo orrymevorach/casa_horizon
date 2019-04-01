@@ -13,14 +13,12 @@ class Nav extends React.Component {
         window.addEventListener('scroll', () => {
             // In desktop only:
             if(window.innerWidth > 570) {
-                // When on the header:
-                // --> Remove non-header-styling from navigation bar 
+                // When on the header, remove non-header-styling from navigation bar 
                 if (window.scrollY < windowHeight) {
                     logoNav.classList.remove("non-header-styling")
                 }
 
-                //When scrolling passed the header:
-                    // --> Add non-header-styling and animation to nav
+                // When scrolling passed the header, Add non-header-styling and animation to nav
                 else if (window.scrollY > windowHeight) {
                     logoNav.classList.add("non-header-styling")
                     logoNav.style.animation = 'fadeIn linear 0.2s'
@@ -28,9 +26,10 @@ class Nav extends React.Component {
 
             }
 
-            // For mobile, show ham icon at top if scrolled past header
+            // In mobile only:
             else if (window.innerWidth < 570) {
                 const hamIcon = document.getElementById("ham-icon")
+                // Show ham icon at top if scrolled past header
                 if (window.scrollY > windowHeight || hamIcon.classList.contains("open")) {
                     hamIcon.classList.add("ham-icon-mobile")
                     hamIcon.style.position = "fixed"
@@ -42,8 +41,6 @@ class Nav extends React.Component {
             }
 
         })
-        
-        
         
         // Ham Icon working properly for mobile
         if(window.innerWidth < 570) {
