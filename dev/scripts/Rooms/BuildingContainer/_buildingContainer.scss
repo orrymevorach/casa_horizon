@@ -178,7 +178,18 @@ section.rooms {
         @media(max-width: 360px) {
             .left {
                 width: 100%;
+                width: 320px;
+                .slider-container-large {
+                    width: 320px;
+                }
+                .slider-container-small {
+                    img {
+                        width: 320px;
+                        height: 320px;
+                    }
+                }
             }
+            
             .right {
                 .numbers-container-large {
                     .number-container {

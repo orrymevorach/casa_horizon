@@ -1,0 +1,7 @@
+#sirvoy {
+    margin-top: 200px;
+    // the same width that the logo shrinks for mobile
+    @media (max-width: 570px) {
+        margin-top: 80px;
+    }
+}

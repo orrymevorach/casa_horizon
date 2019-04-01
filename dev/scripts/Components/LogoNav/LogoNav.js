@@ -54,6 +54,14 @@ class Nav extends React.Component {
                 }
             })
         }
+
+        window.addEventListener('popstate', () => {
+            if(window.location.hash !== "#/") {
+                const logoImage = document.getElementsByClassName("logo-nav-top-left")[0].children[0]
+                logoImage.style.opacity = "1"
+            }
+        })
+        
     }
 
     growNav() {

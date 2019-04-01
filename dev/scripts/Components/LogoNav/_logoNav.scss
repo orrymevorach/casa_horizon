@@ -207,8 +207,19 @@ nav.ham-nav {
 }
 
 @media(max-width: 570px) {
+    .logo-nav-top-left img {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    .logo-nav-top-right {
+        padding-top: 0;
+        li {
+            margin-right: 0;
+        }
+    }
     nav.ham-nav {
-        #ham-icon span {
+        #ham-icon.open span {
             background: white;
         }
         .ham-icon-mobile {
@@ -227,13 +238,12 @@ nav.ham-nav {
             text-align: center;
             height: 100vh;
             a {
-                padding: 100px 0;
                 border-bottom: 1px solid white;
                 color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 25%; 
+                height: 33.3%; 
             }
             li {
                 font-size: 40px;

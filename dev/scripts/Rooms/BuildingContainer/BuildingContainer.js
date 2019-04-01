@@ -37,7 +37,11 @@ class BuildingContainer extends React.Component {
         }
 
         function slideImage(index) {
-            let posX = window.innerWidth > 820 ? 400 * index : 360 * index
+            let posX = 
+                window.innerWidth >= 820 ? 400 * index 
+                : window.innerWidth < 820 && window.innerWidth > 320 ? 360 * index 
+                : window.innerWidth <= 320 ? 320 * index
+                : null
             
             if(section === "jungle") {
                 $(".jungle-container .slider-container-small").css({"transform": `translateX(-${posX}px)`})

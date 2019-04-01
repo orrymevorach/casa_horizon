@@ -23,7 +23,7 @@ class JungleHouse extends React.Component {
         return (
             <div>
                 <div className="text-container">
-                    <h2>Jungle House</h2>
+                    <h2>Jungle House <span>(with 5 Suites)</span></h2>
                     <p>With a large and shared open concept kitchen, it creates a budget friendly experience so you can make your own meals how and when you would like. There are no grocery stores or ATMs in the area, please plan ahead accordingly. We do however have some local restaurants nearby, please find more descriptions and prices in our neighborhood section found below.</p>
                 </div>
                 <div className="numbers-container-large">

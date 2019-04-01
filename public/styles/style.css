@@ -360,7 +360,15 @@ nav.ham-nav {
     height: 20px; } }
 
 @media (max-width: 570px) {
-  nav.ham-nav #ham-icon span {
+  .logo-nav-top-left img {
+    width: 60px;
+    top: 10px;
+    left: 10px; }
+  .logo-nav-top-right {
+    padding-top: 0; }
+    .logo-nav-top-right li {
+      margin-right: 0; }
+  nav.ham-nav #ham-icon.open span {
     background: white; }
   nav.ham-nav .ham-icon-mobile {
     position: fixed;
@@ -377,13 +385,12 @@ nav.ham-nav {
     text-align: center;
     height: 100vh; }
     nav.ham-nav ul a {
-      padding: 100px 0;
       border-bottom: 1px solid white;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 25%; }
+      height: 33.3%; }
     nav.ham-nav ul li {
       font-size: 40px; } }
 
@@ -1167,6 +1174,14 @@ section.rooms .jungle-container .right button {
   margin: 40px auto 20px;
   display: block; }
 
+section.rooms .jungle-container .text-container span {
+  font-size: 22px; }
+
+@media (max-width: 550px) {
+  section.rooms .jungle-container .text-container h2 {
+    display: flex;
+    flex-direction: column; } }
+
 section.rooms .about-us {
   max-width: 900px;
   margin: 150px auto 80px;
@@ -1496,11 +1511,23 @@ section.rooms .building-container {
         right: 30px; } }
   @media (max-width: 360px) {
     section.rooms .building-container .left {
-      width: 100%; }
+      width: 100%;
+      width: 320px; }
+      section.rooms .building-container .left .slider-container-large {
+        width: 320px; }
+      section.rooms .building-container .left .slider-container-small img {
+        width: 320px;
+        height: 320px; }
     section.rooms .building-container .right .numbers-container-large .number-container {
       width: 40px; }
       section.rooms .building-container .right .numbers-container-large .number-container .number-text {
         font-size: 12px; } }
+
+#sirvoy {
+  margin-top: 200px; }
+  @media (max-width: 570px) {
+    #sirvoy {
+      margin-top: 80px; } }
 
 .coming-soon {
   height: 100vh;
