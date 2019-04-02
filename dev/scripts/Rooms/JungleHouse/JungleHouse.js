@@ -2,11 +2,10 @@ import React from 'react';
 
 class JungleHouse extends React.Component {
     displayRoomsModal() {
-        const roomsHeaderHeight = document.getElementsByClassName("rooms-header")[0].clientHeight
         const roomsAboutUsHeight = document.getElementById("rooms-about-us").clientHeight
         const roomsCategoriesHeight = document.getElementsByClassName("room-categories-container")[0].clientHeight
         const roomsModal = document.getElementsByClassName("rooms-modal")[0]
-        const roomsModalTopPosition = roomsHeaderHeight + roomsAboutUsHeight + roomsCategoriesHeight
+        const roomsModalTopPosition = roomsAboutUsHeight + roomsCategoriesHeight
         
         roomsModal.style.top = `${roomsModalTopPosition}px`;
         
@@ -28,12 +27,12 @@ class JungleHouse extends React.Component {
                 </div>
                 <div className="numbers-container-large">
                     <div className="number-container">
-                        <p className="number">6</p>
+                        <p className="number">16</p>
                         <p className="number-text">Guests</p>
                     </div>
                     <div className="number-container">
-                        <p className="number">2</p>
-                        <p className="number-text">Shared Bathrooms</p>
+                        <p className="number">5</p>
+                        <p className="number-text">Bathrooms</p>
                     </div>
                     <div className="number-container">
                         <p className="number">1</p>
@@ -41,11 +40,11 @@ class JungleHouse extends React.Component {
                     </div>
                     <div className="number-container">
                         <p className="number">1</p>
-                        <p className="number-text">Shared Balcony</p>
+                        <p className="number-text">Yoga Studio</p>
                     </div>
                     <div className="number-container">
-                        <p className="number">0</p>
-                        <p className="number-text">Oceanview</p>
+                        <p className="number">6</p>
+                        <p className="number-text">Hammocks</p>
                     </div>
                 </div>
                 <button className="button" onClick={this.displayRoomsModal}>View All Rooms</button>

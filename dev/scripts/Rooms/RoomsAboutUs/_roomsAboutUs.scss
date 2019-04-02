@@ -1,8 +1,8 @@
 section.rooms {
     .about-us {
         max-width: 900px;
-        margin: 150px auto 80px;
-        padding: 0 40px;
+        margin: 0 auto;
+        padding: 150px 40px 80px;
         overflow: hidden;
         h2 {
             text-align: center;
@@ -47,7 +47,7 @@ section.rooms {
     }
     @media(max-width: 750px) {
         .about-us {
-            margin: 80px auto;
+            padding: 80px 40px 40px;
             h2 {
                 font-size: 32px;
             }

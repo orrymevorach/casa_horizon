@@ -180,7 +180,9 @@ class RoomsModal extends React.Component {
                                         )}
                                     </div>
                                 )}
-                                <button className="button">Book Now</button>
+                                <a href="/#/book" target="_blank">
+                                    <button className="button">Book Now</button>
+                                </a>
                             </div>
                         </div>
                     ))}  

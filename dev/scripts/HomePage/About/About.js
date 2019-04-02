@@ -91,8 +91,8 @@ class About extends React.Component {
                                     <p className="text">Yoga Studio</p>
                                 </div>
                                 <div className="numbers-individual-container">
-                                    <p className="number">200</p>
-                                    <p className="text">Women</p>
+                                    <p className="number">4</p>
+                                    <p className="text">Large Patios</p>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ class About extends React.Component {
                 <div className="row about-row-two">
                     <div className="box box3 box-text">
                         <h2>Private Beach</h2>
-                        <p className="lh-30">Casa Horizon is located just a 3-minute walk away from Playa Escamaca, just a stone's throw from Costa Rica. This beach is surrounded by nothing but ocean, nature and a handful of beach bungalows. 2 hours away from San Juan Del Sure</p>
+                        <p className="lh-30">Casa Horizon is located just a 3-minute walk away from beautiful Playa Escamaca, with Costa Rica visible in the distance. This beach is surrounded by nothing but ocean, nature and a handful of beach bungalows, yet only 25 minutes away from San Juan Del Sur town.</p>
                         <a className="button" href="https://www.google.com.ph/maps/place/Casa+Horizon/@11.1723439,-85.8123801,17z/data=!3m1!4b1!4m5!3m4!1s0x8f75b1d791843085:0x838f3792db65c563!8m2!3d11.1723386!4d-85.8101914" target="_blank">View Map</a>
                     </div>
                     <div className="box box4 box-image">

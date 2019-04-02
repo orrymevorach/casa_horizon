@@ -40,13 +40,13 @@ class TravelerInfo extends React.Component {
                     <div className="box">
                         <div className="text-container">
                             <h2>Solo Travelers</h2>
-                            <p>Come enjoy the luxuries of Casa Horizon as a solo traveler with other solo travelers in our rustic luxury dorm-style room or private room.</p>
+                            <p>Come enjoy the magnificence of Casa Horizon as a solo traveler with other travelers in our rustic luxury dorm-style room or private room. Surf, yoga, hammocks, turtles, sunsets and cervazas.</p>
                         </div>
                     </div>
                     <div className="box box2">
                         <div className="text-container">
                             <h2>Couples & Families</h2>
-                            <p>Come enjoy the luxuries of Casa Horizon as a group in our dorm-style or private rooms. We can sleep up to 4 people per room with common areas to vibe with other travelers.</p>
+                            <p>The perfect getaway to enjoy a peaceful, off the beaten path paradise beach. Private suites with patio and hammocks. Large kitchen, sofas,and common areas to vibe with other travellers.</p>
                         </div>
                     </div>
                     <div className="box">

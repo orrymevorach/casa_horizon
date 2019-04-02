@@ -56,9 +56,12 @@ class Nav extends React.Component {
         }
 
         window.addEventListener('popstate', () => {
+            const logoImage = document.getElementsByClassName("logo-nav-top-left")[0].children[0]
             if(window.location.hash !== "#/") {
-                const logoImage = document.getElementsByClassName("logo-nav-top-left")[0].children[0]
                 logoImage.style.opacity = "1"
+            }
+            else {
+                logoImage.style.opacity = "0.6"
             }
         })
         

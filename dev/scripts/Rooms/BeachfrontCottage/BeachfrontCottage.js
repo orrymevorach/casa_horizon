@@ -13,7 +13,7 @@ class BeachfrontCottage extends React.Component {
                 </div>
                 <div className="numbers-container-large">
                     <div className="number-container">
-                        <p className="number">6</p>
+                        <p className="number">5</p>
                         <p className="number-text">Guests</p>
                     </div>
                     <div className="number-container">
@@ -30,7 +30,7 @@ class BeachfrontCottage extends React.Component {
                     </div>
                     <div className="number-container">
                         <p className="number">1</p>
-                        <p className="number-text">Oceanview</p>
+                        <p className="number-text">Beachview</p>
                     </div>
                 </div>
             </div>

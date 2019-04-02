@@ -1,5 +1,4 @@
 import React from 'react';
-import LogoNav from '../../Components/LogoNav/LogoNav';
 
 class HomeHeader extends React.Component {
     // Fade In Animations
@@ -40,8 +39,11 @@ class HomeHeader extends React.Component {
             'animation': ' fadeIn linear 3s',
             'opacity': ' 1' 
         })
+    }
 
-        
+    scrollToTravelerInfo() {
+        const headerHeight = document.getElementsByClassName("home-header")[0].clientHeight
+        window.scrollTo(0, headerHeight - 100)
     }
 
     render() {
@@ -58,11 +60,9 @@ class HomeHeader extends React.Component {
                                 <br></br>
                                 deep south of Nicaragua.
                             </h1>
-                            <a href="#traveler-info" >
-                                <div className="arrow-container" >
-                                    <img src="../img/header-arrow.png" alt="Click To See More"/>
-                                </div>
-                            </a>
+                            <div className="arrow-container" onClick={this.scrollToTravelerInfo}>
+                                <img src="../img/header-arrow.png" alt="Click To See More"/>
+                            </div>
                         </div>
                     </div>
                 </div>
