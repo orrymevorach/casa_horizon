@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="column column3">
                 <h2>Contact</h2>
-                <form action="#">
+                <form action="https://formspree.io/info@casahorizon.com" method="POST">
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email Address" required />
                     <input type="textarea" placeholder="Message" required/>
