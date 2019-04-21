@@ -5,6 +5,7 @@ import firebase from 'firebase/app';
 import exports from './firebaseConfig';
 import HomePage from './HomePage/HomePage';
 import RoomsPage from './Rooms/RoomsPage';
+import RoomsModal from './Rooms/RoomsModal/RoomsModal';
 import Sirvoy from './BookNow/Sirvoy';
 import LogoNav from './Components/LogoNav/LogoNav';
 import Footer from './Components/Footer/Footer';
@@ -29,6 +30,10 @@ class App extends React.Component {
 
             <Route path="/rooms" exact render={() => (
               <RoomsPage />
+            )} />
+
+            <Route path="/rooms/jungle-house" exact render={() => (
+              <RoomsModal />
             )} />
 
             <Route path="/book" exact render={() => (

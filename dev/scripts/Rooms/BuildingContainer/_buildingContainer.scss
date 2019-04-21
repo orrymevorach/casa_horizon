@@ -26,8 +26,9 @@ section.rooms {
             }
         }
         .right {
+            margin-left: 60px;
             .text-container {
-                padding: 10px 0 10px 60px;
+                padding: 10px 0 10px 0;
                 h2 {
                     font-size: 36px;
                 }
@@ -46,7 +47,6 @@ section.rooms {
                 display: flex;
                 color: $black;
                 justify-content: space-between;
-                margin-left: 60px;
                 .number-container {
                     text-align: center;
                     width: 80px;

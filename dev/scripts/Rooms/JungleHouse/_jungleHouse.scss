@@ -3,9 +3,11 @@ section.rooms {
         .left {
             background-image: url(../img/rooms/Room1.jpg);
         }
-        .right button {
+        .right a {
             margin: 40px auto 20px;
             display: block;
+            width: 200px;
+            text-align: center;
         }
         .text-container span {
             font-size: 22px;

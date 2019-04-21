@@ -1,6 +1,26 @@
 section.rooms {
     position: relative;
 
+    // Used in the room categories sections and Images Slider
+    .overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 1;
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 0;
+            transition: 0.2s;
+        }
+    }
+}
+
+section.rooms,
+.rooms-modal {
     // In the about-us section and rooms modal
     .descriptors {
         .descriptor {
@@ -20,23 +40,6 @@ section.rooms {
         }
         .descriptor:nth-child(odd) {
             background-color: #fce6da;;
-        }
-    }
-    
-    // Used in the room categories sections and Images Slider
-    .overlay {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.5);
-        opacity: 1;
-        transition: 0.2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover {
-            opacity: 0;
-            transition: 0.2s;
         }
     }
 }

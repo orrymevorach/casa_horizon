@@ -1,10 +1,5 @@
 .rooms-modal {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100vh;
-    width: 100vw;
     background-color: white;
     z-index: 50;
     overflow: hidden;
@@ -13,6 +8,11 @@
         width: fit-content;
         display: flex;
         display: -webkit-box;
+    }
+    // hide mobile only arrows
+    .left-arrow-mobile,
+    .right-arrow-mobile {
+        display: none;
     }
     .right-arrow,
     .left-arrow {
@@ -35,7 +35,6 @@
     .close-button svg {
         color: $black;
     }
-
 
     .room-container {
         width: 100vw;
@@ -68,6 +67,8 @@
         width: 40%;
         padding: 0px 0 0 50px;
         color: $black;
+        display: flex;
+        flex-direction: column;
         .top-text {
             position: relative;
             margin-bottom: 30px;
@@ -95,6 +96,7 @@
         }
         h1 {
             font-size: 34px;
+            margin-bottom: 10px;
         }
         
         .description {
@@ -106,89 +108,93 @@
             font-size: 18px;
         }
     }
+
+    @media(max-width: 1000px ) {
+        height: inherit;
+        padding: 50px 0;
+        .room-container {
+            flex-direction: column;
+            padding: 0 50px;
+        }
+        .room-container-left {
+            order: 2;
+            width: 80%;
+        }
+        .left-arrow {
+            left: 25px;
+        }
+        .right-arrow {
+            right: 25px;
+        }
+        .room-container-right {
+            width: 90%;
+            order: 1;
+            padding: 0;
+            .top-text {
+                order: 1;
+            }
+            .modal-book-button {
+                order: 2;
+                display: flex;
+                justify-content: flex-end;
+                text-decoration: none;
+                margin: 0 20px -60px 0;
+            }
+            .price {
+                order: 3;
+            }
+            .descriptors {
+                order: 4;
+                margin-bottom: 30px;
+                .descriptor {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 600px) {
+        padding: 0;
+        .room-container {
+            padding: 0;
+        }
+        .left-arrow-mobile,
+        .right-arrow-mobile {
+            display: block;
+            top: 50px;
+            img {
+                width: 15px;
+            }
+        }
+        .left-arrow-desktop,
+        .right-arrow-desktop {
+            display: none;
+        }
+        .left-arrow {
+            left: 15px;
+        }
+        .right-arrow {
+            right: 25px;
+        }
+        .room-container-right {
+            width: 100%;
+            padding: 0 50px;
+            .modal-book-button {
+                order: 3;
+                display: flex;
+                justify-content: flex-end;
+                margin: -70px 0 20px;
+            }
+            .price {
+                order: 2;
+            }
+            h1 {
+                font-size: 26px;
+            }
+        }
+        
+    }
 }
 
-// Everything below is new
-    // .room-categories-title {
-    //     text-align: center;
-    //     margin: 20px 0;
-    // }
-    
 
-    // .slider-container-large {
-    //     width: max-content;
-    //     margin: 0 auto;
-    //     overflow: hidden;
-    // }
-    // .slider-container-small {
-    //     display: flex;
-    // }
-
-    
-    
-
-    // .line {
-    //     position: absolute;
-    //     top: -50px;
-    //     width: 100px;
-    //     height: 2px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     background-color: $orange;
-    // }
-
-//     section.rooms.rooms-two {
-//     overflow: hidden;
-//     h2.room-title {
-//         text-align: center;
-//         margin: 40px 0 30px;
-//     }
-//     h2.room-title-yoga,
-//     h2.room-title-cottage {
-//         margin: 0 0 30px;
-//         text-align: center;
-//     }
-//     .about-us {
-//         margin: 30px auto;
-//     }
-//     .room-container:first-of-type {
-//         padding: 25px 200px 100px;
-//     }
-//     .split-container {
-//         display: flex;
-//         margin-bottom: 100px;
-//         .left,
-//         .right {
-//             width: 50%;
-//             padding: 50px;
-//             button {
-//                 display: inherit;
-//                 margin: 40px auto 0;
-//             }
-//             // box-shadow: $shadow;
-//         }
-//         .left {
-//             box-shadow: 8px -15px 19.11px 1.89px rgba(0,0,0,0.19);
-//         }
-//     }
-//     .descriptors {
-//         width: 100%;
-//         margin-top: 50px;
-//     }
-//     .right .descriptors {
-//         margin-top: 75px;
-//     }
-//     .paradise {
-//         font-family: $lora;
-//         margin-bottom: 20px;
-//     }
-//     .room-container  {
-//         padding: 0;
-//         margin: 0 0 100px;
-//     }
-//     .room-container-right {
-//         // margin-top: 40px;
-//     }
-    
-    
-// }

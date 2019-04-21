@@ -4,7 +4,6 @@ import RoomsCategories from './RoomsCategories/RoomsCategories';
 import JungleHouse from './JungleHouse/JungleHouse';
 import BeachfrontCottage from './BeachfrontCottage/BeachfrontCottage';
 import ImagesSlider from './ImagesSlider/ImagesSlider';
-import RoomsModal from './RoomsModal/RoomsModal';
 import BuildingContainer from './BuildingContainer/BuildingContainer';
 
 class RoomsPage extends React.Component {
@@ -12,7 +11,6 @@ class RoomsPage extends React.Component {
 
         return (
             <section className="rooms">
-                <RoomsModal />
                 
                 <RoomsAboutUs />
 
