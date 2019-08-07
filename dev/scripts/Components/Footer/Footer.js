@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="column column1">
                 <h2>Follow us on Instagram</h2>
                 {/* <!-- SnapWidget --> */}
-                <iframe src="https://snapwidget.com/embed/645913" className="snapwidget-widget" allowtransparency="true" frameBorder="0" scrolling="no"></iframe>
+                <iframe src="https://snapwidget.com/embed/645913" className="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
             </div>
             <div className="column column2">
                 <h2>Stay Informed</h2>

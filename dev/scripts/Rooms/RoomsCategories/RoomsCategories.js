@@ -1,4 +1,5 @@
 import React from 'react';
+import { awsBucket } from '../../app';
 
 class RoomsCategories extends React.Component {
     constructor(props) {
@@ -40,14 +41,14 @@ class RoomsCategories extends React.Component {
                 price: "$30",
                 description: "Couples, Families & Groups",
                 capacity: "1 - 5",
-                imageUrl: "../img/rooms/cottage-sunset.jpg",
+                imageUrl: `${awsBucket}/rooms/cottage-sunset.jpg`,
             },
             {
                 name: "Beachfront Cottage",
                 price: "$30",
                 description: "Couples, Families & Groups",
                 capacity: "1 - 4",
-                imageUrl: "../img/rooms/casa-courtyard.jpg",
+                imageUrl: `${awsBucket}/rooms/casa-courtyard.jpg`,
             }
         ]
 

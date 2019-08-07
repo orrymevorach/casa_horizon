@@ -3,7 +3,7 @@
     width: 100%;
     height: 110vh;
     .overflow-container {
-        background-image: url(../img/homepage/Hero-Image.png);
+        background-image: url($awsBucket+'/homepage/Hero-Image.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

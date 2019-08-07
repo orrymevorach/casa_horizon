@@ -1,7 +1,7 @@
 section.rooms {
     .beachfront-container {
         .left {
-            background-image: url(../img/rooms/cottage-inside.jpg);
+            background-image: url($awsBucket+'/rooms/cottage-inside.jpg');
         }
     }
 }

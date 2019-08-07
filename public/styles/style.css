@@ -392,7 +392,7 @@ nav.ham-nav {
   width: 100%;
   height: 110vh; }
   .home header .overflow-container {
-    background-image: url(../img/homepage/Hero-Image.png);
+    background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/homepage/Hero-Image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -671,7 +671,7 @@ nav.ham-nav {
       width: 320px; } }
 
 .reviews {
-  background-image: url(../img/homepage/reviews-background.png);
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/homepage/reviews-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -923,7 +923,7 @@ nav.ham-nav {
 .surf {
   position: relative; }
   .surf .background {
-    background-image: url(../img/homepage/surfing.png);
+    background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/homepage/surfing.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1121,7 +1121,7 @@ footer {
         text-align: center; } }
 
 section.rooms .beachfront-container .left {
-  background-image: url(../img/rooms/cottage-inside.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-inside.jpg"); }
 
 section.rooms .images-slider {
   display: flex;
@@ -1149,37 +1149,37 @@ section.rooms .images-slider {
       color: #fff; }
 
 section.rooms .jungle-image:nth-of-type(1) {
-  background-image: url(../img/rooms/casa-courtyard.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-courtyard.jpg"); }
 
 section.rooms .jungle-image:nth-of-type(2) {
-  background-image: url(../img/rooms/casa-living-room.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-living-room.jpg"); }
 
 section.rooms .jungle-image:nth-of-type(3) {
-  background-image: url(../img/rooms/Room1.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/Room1.jpg"); }
 
 section.rooms .jungle-image:nth-of-type(4) {
-  background-image: url(../img/rooms/yoga-loft.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/yoga-loft.jpg"); }
 
 section.rooms .jungle-image:nth-of-type(5) {
-  background-image: url(../img/rooms/casa-kitchen.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-kitchen.jpg"); }
 
 section.rooms .beachfront-image:nth-of-type(1) {
-  background-image: url(../img/rooms/cottage-sunset.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-sunset.jpg"); }
 
 section.rooms .beachfront-image:nth-of-type(2) {
-  background-image: url(../img/rooms/cottage-balcony.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-balcony.jpg"); }
 
 section.rooms .beachfront-image:nth-of-type(3) {
-  background-image: url(../img/rooms/cottage-inside.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-inside.jpg"); }
 
 section.rooms .beachfront-image:nth-of-type(4) {
-  background-image: url(../img/rooms/master.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/master.jpg"); }
 
 section.rooms .beachfront-image:nth-of-type(5) {
-  background-image: url(../img/rooms/cottage-kitchen.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-kitchen.jpg"); }
 
 section.rooms .jungle-container .left {
-  background-image: url(../img/rooms/Room1.jpg); }
+  background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/Room1.jpg"); }
 
 section.rooms .jungle-container .right a {
   margin: 40px auto 20px;
@@ -1270,9 +1270,9 @@ section.rooms section.room-categories-container {
       color: white;
       font-family: "Lora", serif; }
   section.rooms section.room-categories-container #room-category-0 {
-    background-image: url(../img/rooms/casa-courtyard.jpg); }
+    background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-courtyard.jpg"); }
   section.rooms section.room-categories-container #room-category-1 {
-    background-image: url(../img/rooms/cottage-sunset.jpg); }
+    background-image: url("https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-sunset.jpg"); }
 
 @media (max-width: 750px) {
   section.rooms section.room-categories-container {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { awsBucket } from '../../app';
 
 class Nav extends React.Component {
     constructor(props) {
@@ -160,7 +161,7 @@ class LogoNav extends React.Component {
         return (
             <div className="logo-nav clearfix">
                 <div className="logo-nav-top-left">
-                    <img src="../img/logo-two.png" alt="Casa Horizon Logo" />
+                    <img src={`${awsBucket}/logo-two.png`} alt="Casa Horizon Logo" />
                 </div>
                 <div className="logo-nav-top-right">
                     <Nav />

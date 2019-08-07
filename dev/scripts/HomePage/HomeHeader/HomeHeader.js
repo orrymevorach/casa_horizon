@@ -1,4 +1,5 @@
 import React from 'react';
+import { awsBucket } from '../../app';
 
 class HomeHeader extends React.Component {
     // Fade In Animations
@@ -61,7 +62,7 @@ class HomeHeader extends React.Component {
                                 deep south of Nicaragua.
                             </h1>
                             <div className="arrow-container" onClick={this.scrollToTravelerInfo}>
-                                <img src="../img/header-arrow.png" alt="Click To See More"/>
+                                <img src={`${awsBucket}/icons/header-arrow.png`} alt="Click To See More"/>
                             </div>
                         </div>
                     </div>

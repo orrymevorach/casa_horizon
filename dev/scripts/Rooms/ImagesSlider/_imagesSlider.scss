@@ -29,34 +29,34 @@ section.rooms {
     }
     
     .jungle-image:nth-of-type(1) {
-        background-image: url(../img/rooms/casa-courtyard.jpg);
+        background-image: url($awsBucket+'/rooms/casa-courtyard.jpg');
     }
     .jungle-image:nth-of-type(2) {
-        background-image: url(../img/rooms/casa-living-room.jpg);
+        background-image: url($awsBucket+'/rooms/casa-living-room.jpg');
     }
     .jungle-image:nth-of-type(3) {
-        background-image: url(../img/rooms/Room1.jpg);
+        background-image: url($awsBucket+'/rooms/Room1.jpg');
     }
     .jungle-image:nth-of-type(4) {
-        background-image: url(../img/rooms/yoga-loft.jpg);
+        background-image: url($awsBucket+'/rooms/yoga-loft.jpg');
     }
     .jungle-image:nth-of-type(5) {
-        background-image: url(../img/rooms/casa-kitchen.jpg);
+        background-image: url($awsBucket+'/rooms/casa-kitchen.jpg');
     }
 
     .beachfront-image:nth-of-type(1) {
-        background-image: url(../img/rooms/cottage-sunset.jpg);
+        background-image: url($awsBucket+'/rooms/cottage-sunset.jpg');
     }
     .beachfront-image:nth-of-type(2) {
-        background-image: url(../img/rooms/cottage-balcony.jpg);
+        background-image: url($awsBucket+'/rooms/cottage-balcony.jpg');
     }
     .beachfront-image:nth-of-type(3) {
-        background-image: url(../img/rooms/cottage-inside.jpg);
+        background-image: url($awsBucket+'/rooms/cottage-inside.jpg');
     }
     .beachfront-image:nth-of-type(4) {
-        background-image: url(../img/rooms/master.jpg);
+        background-image: url($awsBucket+'/rooms/master.jpg');
     }
     .beachfront-image:nth-of-type(5) {
-        background-image: url(../img/rooms/cottage-kitchen.jpg);
+        background-image: url($awsBucket+'/rooms/cottage-kitchen.jpg');
     }
 }

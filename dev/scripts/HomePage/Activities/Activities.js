@@ -1,4 +1,5 @@
 import React from 'react';
+import { awsBucket } from '../../app';
 
 class Activities extends React.Component {
     componentDidMount() {
@@ -117,18 +118,18 @@ class Activities extends React.Component {
             <section className="activities" id="activities">
                 <div className="wrapper-small">
                     <div className="left-arrow" onClick={slideLeft}>
-                        <img src="../img/left-arrow.png" alt="Left Arrow" />
+                        <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
                     </div>
                     <div className="right-arrow" onClick={slideRight}>
-                        <img src="../img/right-arrow.png" alt="Right Arrow"/>
+                        <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow"/>
                     </div>
                     <div className="left">
                         <div className="image-container-large">
                             <div className="image-container-small">
-                                <img src="../img/homepage/yoga.png" alt="Yoga"  className="activities-images"/>    
-                                <img src="../img/homepage/rory.jpg" alt="Surf" className="activities-images"/>
-                                <img src="../img/homepage/sunsets.jpg" alt="Sunsets" className="activities-images"/>
-                                <img src="../img/homepage/turtles.jpg" alt="Turtles" className="activities-images"/>
+                                <img src={`${awsBucket}/homepage/sunsets.jpg`} alt="Sunsets" className="activities-images"/>
+                                <img src={`${awsBucket}/homepage/yoga.png`} alt="Yoga"  className="activities-images"/>    
+                                <img src={`${awsBucket}/homepage/rory.jpg`} alt="Surf" className="activities-images"/>
+                                <img src={`${awsBucket}/homepage/turtles.jpg`} alt="Turtles" className="activities-images"/>
                             </div>
                         </div>
                         {/* Circles get added in Component Did Mount of app.js */}
@@ -150,10 +151,10 @@ class Activities extends React.Component {
                         
                         <div className="paragraph-container-large">
                             <div className="left-arrow left-arrow-mobile" onClick={slideLeft}>
-                                <img src="../img/left-arrow-white.png" alt="Left Arrow" />
+                                <img src={`${awsBucket}/icons/left-arrow-white.png`} alt="Left Arrow" />
                             </div>
                             <div className="right-arrow right-arrow-mobile" onClick={slideRight}>
-                                <img src="../img/right-arrow-white.png" alt="Right Arrow"/>
+                                <img src={`${awsBucket}/icons/right-arrow-white.png`} alt="Right Arrow"/>
                             </div>
                             <div className="paragraph-container-small">
                                 <p className="lh-30 paragraph">We have an outstanding yoga studio that overlooks the ocean. Our yoga instructors are certified to instruct those who are brand new to yoga, all the way to the most experienced of yogis.</p>

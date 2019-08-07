@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { awsBucket } from '../../app';
 
 class RoomsModal extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class RoomsModal extends React.Component {
                     name: "Room 1",
                     capacity: "4",
                     price: "$30",
-                    image: "../img/rooms/Room1.jpg",
+                    image: `${awsBucket}/rooms/Room1.jpg`,
                     subtext: "Watch the sunset from your hammock in this room that is perfect for families and small groups",
                     category: "private",
                     descriptors: 
@@ -29,7 +30,7 @@ class RoomsModal extends React.Component {
                     subtext: "Listen to the waves crashing below from your hammock in this room that is perfect for couples or pairs",
                     category: "private",
                     price: "$30",
-                    image: "../img/rooms/Room2.jpg",
+                    image: `${awsBucket}/rooms/Room2.jpg`,
                     descriptors: {
                         one: "One king bed",
                         two: "Open air concept",
@@ -44,7 +45,7 @@ class RoomsModal extends React.Component {
                     subtext: "This room has a larger capacity and ample storage space, perfect for families and friends alike",
                     category: "private",
                     price: "$30",
-                    image: "../img/rooms/Room3.jpg",
+                    image: `${awsBucket}/rooms/Room3.jpg`,
                     descriptors: {
                         one: "One queen bed, one twin bed",
                         two: "Shared bathroom with hot rainfall shower",
@@ -59,7 +60,7 @@ class RoomsModal extends React.Component {
                     subtext: "This dorm style room is perfect for families, groups or solo travelers, as it includes two bunk beds with one bunk bottom being a queen",
                     category: "private",
                     price: "$30",
-                    image: "../img/rooms/Room4.jpg",
+                    image: `${awsBucket}/rooms/Room4.jpg`,
                     descriptors: {
                         one: "Dorm style room",
                         two: "Shared bathroom with hot rainfall shower",
@@ -74,7 +75,7 @@ class RoomsModal extends React.Component {
                     subtext: "Our yoga loft has a panoramic view unlike any other within Casa Horizon, and is perfect for those looking to host retreats at Casa Horizon, or for those who are looking to flow through their own self care practice",
                     category: "loft",
                     price: "$30",
-                    image: "../img/rooms/Room5.jpg",
+                    image: `${awsBucket}/rooms/Room5.jpg`,
                     descriptors: {
                         one: "Beautiful panoramic view",
                         two: "Open air concept",
@@ -162,11 +163,11 @@ class RoomsModal extends React.Component {
                 </div>
 
                 <div className="left-arrow left-arrow-desktop" onClick={this.slideLeft}>
-                    <img src="../img/left-arrow.png" alt="Left Arrow" />
+                    <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
                 </div>
 
                 <div className="right-arrow right-arrow-desktop" onClick={this.slideRight}>
-                    <img src="../img/right-arrow.png" alt="Right Arrow"/>
+                    <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow"/>
                 </div>
 
                 
@@ -180,11 +181,11 @@ class RoomsModal extends React.Component {
                             <div className="room-container-right">
                                 {/* arrows only visible in */}
                                 <div className="left-arrow left-arrow-mobile" onClick={this.slideLeft}>
-                                    <img src="../img/left-arrow.png" alt="Left Arrow" />
+                                    <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
                                 </div>
 
                                 <div className="right-arrow right-arrow-mobile" onClick={this.slideRight}>
-                                    <img src="../img/right-arrow.png" alt="Right Arrow"/>
+                                    <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow"/>
                                 </div>
                                 <div className="top-text">
                                     <h2>{room.name}</h2>

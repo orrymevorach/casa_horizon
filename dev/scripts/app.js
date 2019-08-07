@@ -10,6 +10,8 @@ import Sirvoy from './BookNow/Sirvoy';
 import LogoNav from './Components/LogoNav/LogoNav';
 import Footer from './Components/Footer/Footer';
 
+export const awsBucket = 'https://casa-horizon.s3.ca-central-1.amazonaws.com'
+
 firebase.initializeApp(exports.config);
 
 class App extends React.Component {

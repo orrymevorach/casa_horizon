@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { awsBucket } from '../../app';
 
 class ImagesSlider extends React.Component {
     render() {
@@ -8,45 +9,45 @@ class ImagesSlider extends React.Component {
             beachfront: [
                 {
                     "title": "Sunset",
-                    "imageUrl": "../img/rooms/cottage-sunset.jpg"
+                    "imageUrl": `${awsBucket}/rooms/cottage-sunset.jpg`
                 },
                 {
                     "title": "Balcony",
-                    "imageUrl": "../img/rooms/cottage-balcony.jpg"
+                    "imageUrl": `${awsBucket}/rooms/cottage-balcony.jpg`
                 },
                 {
                     "title": "Living Room",
-                    "imageUrl": "../img/rooms/cottage-inside.jpg"
+                    "imageUrl": `${awsBucket}/rooms/cottage-inside.jpg`
                 },
                 {
                     "title": "Master Bedroom",
-                    "imageUrl": "../img/rooms/master.jpg"
+                    "imageUrl": `${awsBucket}/rooms/master.jpg`
                 },
                 {
                     "title": "Kitchen",
-                    "imageUrl": "../img/rooms/cottage-kitchen.jpg"
+                    "imageUrl": `${awsBucket}/rooms/cottage-kitchen.jpg`
                 }
             ],
             jungle: [
                 {
                     "title": "Jungle House",
-                    "imageUrl": "../img/rooms/casa-courtyard.jpg"
+                    "imageUrl": `${awsBucket}/rooms/casa-courtyard.jpg`
                 },
                 {
                     "title": "Living Room",
-                    "imageUrl": "../img/rooms/casa-living-room.jpg"
+                    "imageUrl": `${awsBucket}/rooms/casa-living-room.jpg`
                 },
                 {
                     "title": "Bedroom",
-                    "imageUrl": "../img/rooms/Room1.jpg"
+                    "imageUrl": `${awsBucket}/rooms/Room1.jpg`
                 },
                 {
                     "title": "Yoga Loft",
-                    "imageUrl": "../img/rooms/yoga-loft.jpg"
+                    "imageUrl": `${awsBucket}/rooms/yoga-loft.jpg`
                 },
                 {
                     "title": "Shared Kitchen",
-                    "imageUrl": "../img/rooms/casa-kitchen.jpg"
+                    "imageUrl": `${awsBucket}/rooms/casa-kitchen.jpg`
                 }
             ]
         }
