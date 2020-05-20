@@ -1,0 +1,12 @@
+.logo-menu-bar img {
+  width: 120px;
+  opacity: 0.6;
+}
+
+@media (max-width: 570px) {
+  .logo-menu-bar img {
+    width: 60px;
+    top: 10px;
+    left: 10px;
+  }
+}

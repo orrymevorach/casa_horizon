@@ -1,7 +1,7 @@
 @import 'setup';
 @import 'variables';
 @import 'general';
-@import '../scripts/Components/LogoNav/logoNav';
+@import '../scripts/Components/MenuBar/menuBar';
 @import '../scripts/HomePage/HomeHeader/HomeHeader';
 @import '../scripts/HomePage/TravelerInfo/travelerInfo';
 @import '../scripts/HomePage/About/about';
@@ -21,3 +21,6 @@
 @import '../scripts/Rooms/BuildingContainer/buildingContainer';
 @import '../scripts/BookNow/sirvoy';
 @import '../scripts/Components/BookButton/bookButton';
+@import '../scripts/Components/MenuBar/Logo/logo';
+@import '../scripts/Components/MenuBar/HamburgerButton/hamburgerButton';
+@import '../scripts/Components/MenuBar/Nav/nav';
