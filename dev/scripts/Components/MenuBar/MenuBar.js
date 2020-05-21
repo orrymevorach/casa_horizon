@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
+import { RouteContext } from '../../context/routeContext';
 import Logo from './Logo';
 import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
@@ -10,6 +11,7 @@ export default function MenuBar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const { onHeader, isMobile } = useMenuScreenSize();
   const menuRef = useRef(null);
+  const route = useContext(RouteContext);
 
   useEffect(() => {
     // add opacity after animation fade in
@@ -30,19 +32,23 @@ export default function MenuBar() {
       <Logo isNonHeaderStyling={isNonHeaderStyling} />
       {/* <Ezee /> */}
 
-      <div className='menu-bar-right'>
-        <Nav
-          isNavShowing={isNavShowing}
-          setIsNavShowing={setIsNavShowing}
-          isNonHeaderStyling={isNonHeaderStyling}
-        />
-        <HamburgerButton
-          isNavShowing={isNavShowing}
-          setIsNavShowing={setIsNavShowing}
-          onHeader={onHeader}
-          isMobile={isMobile}
-        />
-      </div>
+      {route !== '/book' && (
+        <div className='menu-bar-right'>
+          <Nav
+            isNavShowing={isNavShowing}
+            setIsNavShowing={setIsNavShowing}
+            isNonHeaderStyling={isNonHeaderStyling}
+            route={route}
+          />
+          <HamburgerButton
+            isNavShowing={isNavShowing}
+            setIsNavShowing={setIsNavShowing}
+            onHeader={onHeader}
+            isMobile={isMobile}
+            route={route}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -9,6 +9,7 @@ import RoomsModal from './Rooms/RoomsModal/RoomsModal';
 import Sirvoy from './BookNow/Sirvoy';
 import MenuBar from './Components/MenuBar/MenuBar';
 import Footer from './Components/Footer/Footer';
+import { RouteContextProvider } from './context/routeContext';
 
 export const awsBucket = 'https://casa-horizon.s3.ca-central-1.amazonaws.com';
 
@@ -21,21 +22,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          <MenuBar />
+      <RouteContextProvider>
+        <Router>
+          <div>
+            <MenuBar />
 
-          <Route path='/' exact render={() => <HomePage />} />
+            <Route path='/' exact render={() => <HomePage />} />
 
-          <Route path='/rooms' exact render={() => <RoomsPage />} />
+            <Route path='/rooms' exact render={() => <RoomsPage />} />
 
-          <Route
-            path='/rooms/jungle-house'
-            exact
-            render={() => <RoomsModal />}
-          />
+            <Route
+              path='/rooms/jungle-house'
+              exact
+              render={() => <RoomsModal />}
+            />
 
-          {/* <Route
+            {/* <Route
             path='/book'
             exact
             render={() => (
@@ -43,9 +45,10 @@ class App extends React.Component {
             )}
           /> */}
 
-          <Route path='/' render={() => <Footer />} />
-        </div>
-      </Router>
+            <Route path='/' render={() => <Footer />} />
+          </div>
+        </Router>
+      </RouteContextProvider>
     );
   }
 }
