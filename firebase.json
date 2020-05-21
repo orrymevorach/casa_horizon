@@ -29,7 +29,21 @@
           "destination": "/index.html"
         }
       ]
+    },
+    {
+      "target": "staging-site-2",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ]
-  
 }

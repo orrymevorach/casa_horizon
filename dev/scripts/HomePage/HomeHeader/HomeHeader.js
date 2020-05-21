@@ -31,14 +31,6 @@ class HomeHeader extends React.Component {
       animation: 'fadeIn linear 3s',
       opacity: ' 1',
     });
-
-    // Initial Css for Logo and Nav
-    $('.logo-nav').css({ opacity: ' 0' });
-    // Trigger Animation for Logo and Nav
-    $('.logo-nav').css({
-      animation: ' fadeIn linear 3s',
-      opacity: ' 1',
-    });
   }
 
   scrollToTravelerInfo() {

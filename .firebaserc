@@ -10,6 +10,9 @@
         ],
         "staging-site": [
           "casa-horizon-staging-site"
+        ],
+        "staging-site-2": [
+          "casa-horizon-staging-site-2"
         ]
       }
     }

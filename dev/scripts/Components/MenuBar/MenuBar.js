@@ -1,38 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Logo from './Logo';
 import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
 import classnames from 'classnames';
-import { debounce } from '../../utils';
 import Ezee from '../../BookNow/Ezee';
+import useMenuScreenSize from './useMenuScreenSize';
 
 export default function MenuBar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [onHeader, setOnHeader] = useState(true);
+  const { onHeader, isMobile } = useMenuScreenSize();
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-
-    function setMobile() {
-      setIsMobile(windowWidth < 570);
-    }
-
-    function setHeader() {
-      setOnHeader(window.scrollY < windowHeight);
-    }
-
-    setMobile();
-    setHeader();
-
-    window.addEventListener('resize', debounce(setMobile, 100));
-    window.addEventListener('scroll', debounce(setHeader, 100));
-
-    return () => {
-      window.removeEventListener('resize', debounce(setMobile, 100));
-      window.removeEventListener('scroll', debounce(setHeader, 100));
-    };
+    // add opacity after animation fade in
+    setTimeout(() => {
+      menuRef.current.style.opacity = '1';
+    }, 300);
   });
 
   const isNonHeaderStyling = !onHeader && !isMobile;
@@ -41,7 +24,9 @@ export default function MenuBar() {
     <div
       className={classnames('menu-bar', {
         'non-header-styling': isNonHeaderStyling,
-      })}>
+      })}
+      style={{ opacity: '0', animation: ' fadeIn linear 3s' }}
+      ref={menuRef}>
       <Logo isNonHeaderStyling={isNonHeaderStyling} />
       {/* <Ezee /> */}
 
