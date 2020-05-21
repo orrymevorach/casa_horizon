@@ -32,7 +32,7 @@ export default function MenuBar() {
       <Logo isNonHeaderStyling={isNonHeaderStyling} />
       {/* <Ezee /> */}
 
-      {route !== '/book' && (
+      {route !== '/book' && route !== '/rooms/jungle-house' && (
         <div className='menu-bar-right'>
           <Nav
             isNavShowing={isNavShowing}

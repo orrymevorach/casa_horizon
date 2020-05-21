@@ -15,29 +15,24 @@ export const awsBucket = 'https://casa-horizon.s3.ca-central-1.amazonaws.com';
 
 firebase.initializeApp(exports.config);
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function App() {
+  return (
+    <RouteContextProvider>
+      <Router>
+        <div>
+          <MenuBar />
 
-  render() {
-    return (
-      <RouteContextProvider>
-        <Router>
-          <div>
-            <MenuBar />
+          <Route path='/' exact render={() => <HomePage />} />
 
-            <Route path='/' exact render={() => <HomePage />} />
+          <Route path='/rooms' exact render={() => <RoomsPage />} />
 
-            <Route path='/rooms' exact render={() => <RoomsPage />} />
+          <Route
+            path='/rooms/jungle-house'
+            exact
+            render={() => <RoomsModal />}
+          />
 
-            <Route
-              path='/rooms/jungle-house'
-              exact
-              render={() => <RoomsModal />}
-            />
-
-            {/* <Route
+          {/* <Route
             path='/book'
             exact
             render={() => (
@@ -45,12 +40,11 @@ class App extends React.Component {
             )}
           /> */}
 
-            <Route path='/' render={() => <Footer />} />
-          </div>
-        </Router>
-      </RouteContextProvider>
-    );
-  }
+          <Route path='/' render={() => <Footer />} />
+        </div>
+      </Router>
+    </RouteContextProvider>
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

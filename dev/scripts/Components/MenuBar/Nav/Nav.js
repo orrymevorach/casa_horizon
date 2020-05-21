@@ -21,9 +21,11 @@ export default function Nav({
         <NavLink to='/rooms'>
           <li className='nav-links'>Our Rooms</li>
         </NavLink>
-        <NavLink to='/book' target='_blank'>
+        <a
+          href='https://live.ipms247.com/booking/book-rooms-casahorizon'
+          target='_blank'>
           <li className='nav-links'>Book Now</li>
-        </NavLink>
+        </a>
       </ul>
     </nav>
   );
