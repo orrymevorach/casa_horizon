@@ -4,12 +4,12 @@ import classnames from 'classnames';
 export default function Nav({
   isNavShowing,
   setIsNavShowing,
-  isNonHeaderStyling,
+  isBelowHeaderDesktop,
 }) {
   return (
     <nav
       className={classnames('nav', {
-        'nav-non-header-styling': isNonHeaderStyling,
+        'nav-below-header-desktop': isBelowHeaderDesktop,
         'fadeIn show': isNavShowing,
       })}>
       <ul

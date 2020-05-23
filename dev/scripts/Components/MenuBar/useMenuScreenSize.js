@@ -3,7 +3,7 @@ import { debounce } from '../../utils';
 
 export default function useMenuScreenSize() {
   const [isMobile, setIsMobile] = useState(false);
-  const [onHeader, setOnHeader] = useState(true);
+  const [isBelowHeader, setIsBelowHeader] = useState(true);
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
@@ -14,7 +14,7 @@ export default function useMenuScreenSize() {
     }
 
     function setHeader() {
-      setOnHeader(window.scrollY < windowHeight);
+      setIsBelowHeader(window.scrollY > windowHeight);
     }
 
     setMobile();
@@ -30,6 +30,6 @@ export default function useMenuScreenSize() {
   });
   return {
     isMobile,
-    onHeader,
+    isBelowHeader,
   };
 }

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { awsBucket } from '../../../app';
-import classnames from 'classnames';
 
-export default function Logo({ isNonHeaderStyling }) {
+export default function Logo() {
   const [isHomePage, setIsHomePage] = useState(true);
   useEffect(() => {
     const hash = window.location.hash;
@@ -13,10 +12,7 @@ export default function Logo({ isNonHeaderStyling }) {
     }
   });
   return (
-    <div
-      className={classnames('logo-menu-bar', {
-        'logo-non-header-styling': isNonHeaderStyling,
-      })}>
+    <div className='logo-menu-bar'>
       <img
         src={`${awsBucket}/logo-two.png`}
         alt='Casa Horizon Logo'

@@ -9,7 +9,7 @@ import useMenuScreenSize from './useMenuScreenSize';
 
 export default function MenuBar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
-  const { onHeader, isMobile } = useMenuScreenSize();
+  const { isBelowHeader, isMobile } = useMenuScreenSize();
   const menuRef = useRef(null);
   const route = useContext(RouteContext);
 
@@ -20,30 +20,30 @@ export default function MenuBar() {
     }, 300);
   });
 
-  const isNonHeaderStyling = !onHeader && !isMobile;
+  const isBelowHeaderDesktop = isBelowHeader && !isMobile;
 
   return (
     <div
       className={classnames('menu-bar', {
-        'non-header-styling': isNonHeaderStyling,
+        'below-header-desktop': isBelowHeaderDesktop,
       })}
       style={{ opacity: '0', animation: ' fadeIn linear 3s' }}
       ref={menuRef}>
-      <Logo isNonHeaderStyling={isNonHeaderStyling} />
-      {/* <Ezee /> */}
+      <Logo />
+      <Ezee isBelowHeader={isBelowHeader} isNavShowing={isNavShowing} />
 
       {route !== '/book' && route !== '/rooms/jungle-house' && (
         <div className='menu-bar-right'>
           <Nav
             isNavShowing={isNavShowing}
             setIsNavShowing={setIsNavShowing}
-            isNonHeaderStyling={isNonHeaderStyling}
+            isBelowHeaderDesktop={isBelowHeaderDesktop}
             route={route}
           />
           <HamburgerButton
             isNavShowing={isNavShowing}
             setIsNavShowing={setIsNavShowing}
-            onHeader={onHeader}
+            isBelowHeader={isBelowHeader}
             isMobile={isMobile}
             route={route}
           />

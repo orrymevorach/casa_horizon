@@ -221,18 +221,18 @@ p {
 
 .menu-bar-right {
   display: flex;
-  padding-top: 20px;
-  align-content: center; }
+  align-items: center; }
 
-.non-header-styling {
+.below-header-desktop {
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  height: 105px;
+  background-color: #fff;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   padding: 10px 40px 0 40px;
   transition: 0.2s;
   animation: fadeIn linear 0.2s; }
-  .non-header-styling .menu-bar {
+  .below-header-desktop .menu-bar {
     height: 110px; }
 
 @media (max-width: 570px) {
@@ -1459,10 +1459,6 @@ section.rooms .building-container {
     #sirvoy {
       margin-top: 80px; } }
 
-.bewarp {
-  float: left;
-  margin-left: 200px; }
-
 #eZ_chkin {
   width: 140px; }
 
@@ -1487,6 +1483,7 @@ section.rooms .building-container {
   width: 40px;
   height: 45px;
   position: relative;
+  top: 10px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -1563,10 +1560,11 @@ section.rooms .building-container {
   #ham-icon {
     width: 25px;
     height: 20px;
-    position: relative;
     top: -5px; } }
 
 @media (max-width: 570px) {
+  #ham-icon {
+    top: 15px; }
   #ham-icon.open span {
     background: white; }
   #ham-icon.ham-icon-mobile {
@@ -1593,9 +1591,9 @@ section.rooms .building-container {
     font-family: "Lora", serif;
     transition: 0.3s; }
 
-.nav-non-header-styling li {
+.nav-below-header-desktop li {
   font-size: 20px; }
-  .nav-non-header-styling li.shrink {
+  .nav-below-header-desktop li.shrink {
     font-size: 20px;
     margin-right: 40px; }
 

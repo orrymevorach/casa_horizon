@@ -4,7 +4,7 @@ import classnames from 'classnames';
 export default function Hamburger({
   setIsNavShowing,
   isNavShowing,
-  onHeader,
+  isBelowHeader,
   isMobile,
 }) {
   return (
@@ -13,7 +13,7 @@ export default function Hamburger({
       onClick={() => setIsNavShowing((isShowing) => !isShowing)}
       className={classnames({
         open: isNavShowing,
-        'ham-icon-mobile': !onHeader && isMobile,
+        'ham-icon-mobile': isBelowHeader && isMobile,
       })}>
       <span></span>
       <span></span>
