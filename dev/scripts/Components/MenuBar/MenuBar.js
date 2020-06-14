@@ -4,7 +4,7 @@ import Logo from './Logo';
 import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
 import classnames from 'classnames';
-import Ezee from '../../BookNow/Ezee';
+// import Ezee from '../../BookNow/Ezee';
 import useMenuScreenSize from './useMenuScreenSize';
 
 export default function MenuBar() {
@@ -30,7 +30,7 @@ export default function MenuBar() {
       style={{ opacity: '0', animation: ' fadeIn linear 3s' }}
       ref={menuRef}>
       <Logo />
-      <Ezee isBelowHeader={isBelowHeader} isNavShowing={isNavShowing} />
+      {/* <Ezee isBelowHeader={isBelowHeader} isNavShowing={isNavShowing} /> */}
 
       {route !== '/book' && route !== '/rooms/jungle-house' && (
         <div className='menu-bar-right'>

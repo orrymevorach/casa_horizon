@@ -7,25 +7,25 @@ import Reviews from './Reviews/Reviews';
 import Activities from './Activities/Activities';
 import Surf from './Surf/Surf';
 import BookButton from '../Components/BookButton/BookButton';
+import Ezee from '../BookNow/Ezee';
 
 class HomePage extends React.Component {
-    
-    
-    render() {
-        return (
-            <div className="home">
-                <BookButton />
+  render() {
+    return (
+      <div className='home'>
+        <BookButton />
 
-                <HomeHeader/>
-                <TravelerInfo />
-                <About />
-                <PromoVideo />
-                <Reviews />
-                <Activities />
-                <Surf />
-            </div>
-        )
-    }
+        <HomeHeader />
+        <TravelerInfo />
+        <Ezee />
+        <About />
+        <PromoVideo />
+        <Reviews />
+        <Activities />
+        <Surf />
+      </div>
+    );
+  }
 }
 
-export default HomePage ;
+export default HomePage;

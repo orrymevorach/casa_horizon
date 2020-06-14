@@ -11,6 +11,7 @@
     top: -50px;
     height: 100%;
     width: 100%;
+    animation: shrink linear 3s;
   }
   h1 {
     font-family: $lora;
@@ -19,6 +20,7 @@
     font-weight: 400;
     padding-top: 70px;
     line-height: 38px;
+    animation: fadeAndGrow linear 3s;
   }
 
   .text-container {
@@ -33,6 +35,7 @@
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
+      animation: fadeIn linear 3s;
       img {
         width: 60px;
       }

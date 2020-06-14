@@ -7,34 +7,27 @@ import ImagesSlider from './ImagesSlider/ImagesSlider';
 import BuildingContainer from './BuildingContainer/BuildingContainer';
 
 class RoomsPage extends React.Component {
-    render() {
+  render() {
+    return (
+      <section className='rooms'>
+        <RoomsAboutUs />
 
-        return (
-            <section className="rooms">
-                
-                <RoomsAboutUs />
+        <RoomsCategories />
 
-                <RoomsCategories />
+        <BuildingContainer section='jungle'>
+          <JungleHouse />
+        </BuildingContainer>
 
-                <BuildingContainer section="jungle">
-                    <JungleHouse />
-                </BuildingContainer>
-                
-                <ImagesSlider 
-                    section="jungle"
-                />
+        <ImagesSlider section='jungle' />
 
-                <BuildingContainer section="beachfront">
-                    <BeachfrontCottage />
-                </BuildingContainer>
-                
-                <ImagesSlider 
-                    section="beachfront"
-                />
+        <BuildingContainer section='beachfront'>
+          <BeachfrontCottage />
+        </BuildingContainer>
 
-            </section>
-        )
-    }
+        <ImagesSlider section='beachfront' />
+      </section>
+    );
+  }
 }
 
-export default RoomsPage ;
+export default RoomsPage;
