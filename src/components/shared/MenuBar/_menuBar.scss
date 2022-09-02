@@ -1,0 +1,41 @@
+// General Styles for LogoNav
+// Applies to the one in the header, and fixed one below the header
+.menu-bar {
+  padding: 40px 40px 0 40px;
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+// Styles that get added to the nav once scroll past the header
+.below-header-desktop {
+  position: fixed;
+  top: 0;
+  // background-color: rgba(255, 255, 255, 0.8);
+  height: 105px; // for ezee
+  background-color: $white; // for ezee
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  padding: 10px 40px 0 40px;
+  transition: 0.2s;
+  animation: fadeIn linear 0.2s;
+  .menu-bar {
+    height: 110px;
+  }
+}
+
+@media (max-width: 570px) {
+  .menu-bar {
+    padding: 30px;
+  }
+}

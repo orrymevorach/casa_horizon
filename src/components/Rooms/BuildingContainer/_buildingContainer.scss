@@ -1,0 +1,187 @@
+section.rooms {
+  .building-container {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 30px 0;
+    position: relative;
+    .left,
+    .right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .left {
+      box-shadow: $shadow;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .right {
+      margin-left: 60px;
+      .text-container {
+        padding: 10px 0 10px 0;
+        h2 {
+          font-size: 36px;
+        }
+        p {
+          line-height: 26px;
+          font-size: 16px;
+          margin: 10px 0;
+        }
+        p.paradise {
+          font-size: 18px;
+          font-family: $lora;
+          margin: 12px 0 15px;
+        }
+      }
+      .numbers-container-large {
+        display: flex;
+        color: $black;
+        justify-content: space-between;
+        .number-container {
+          text-align: center;
+          width: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .number {
+            border: 2px solid $black;
+            border-radius: 50%;
+            padding: 8px 0;
+            width: 65px;
+            height: 65px;
+            font-family: $lora;
+            font-size: 33px;
+            display: inline-block;
+            font-weight: 400;
+          }
+          .number-text {
+            font-size: 16px;
+            font-family: $muli;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 820px) {
+      flex-direction: column;
+      padding: 40px 0;
+      align-items: center;
+      .left {
+        order: 2;
+        position: relative;
+        background-image: inherit;
+        width: 360px;
+        .slider-container-large {
+          width: 360px;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+        .slider-container-small {
+          display: flex;
+          width: fit-content;
+          transition: 0.3s;
+          img {
+            width: 360px;
+            height: 360px;
+          }
+        }
+        .right-arrow,
+        .left-arrow {
+          position: absolute;
+          top: 48%;
+          z-index: 30;
+          cursor: pointer;
+          img {
+            width: 20px;
+          }
+        }
+        .left-arrow {
+          left: -50px;
+        }
+        // position right arrow
+        .right-arrow {
+          right: -50px;
+        }
+      }
+      .right {
+        order: 1;
+        width: inherit;
+        .text-container {
+          padding: 0 40px;
+          h2 {
+            font-size: 32px;
+            text-align: center;
+          }
+        }
+        .numbers-container-large {
+          margin-left: inherit;
+          padding: 20px 50px;
+          .number-container {
+            width: 50px;
+            margin-right: 20px;
+            .number {
+              padding-top: 8px;
+              width: 50px;
+              height: 50px;
+              font-size: 22px;
+              .number-text {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 550px) {
+      .right {
+        width: 100%;
+        .numbers-container-large {
+          padding: 20px;
+        }
+        .text-container {
+          padding: 20px;
+        }
+      }
+      .left {
+        width: 100%;
+        .left-arrow-mobile {
+          left: 30px;
+        }
+        .right-arrow-mobile {
+          right: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 360px) {
+      .left {
+        width: 100%;
+        width: 320px;
+        .slider-container-large {
+          width: 320px;
+        }
+        .slider-container-small {
+          img {
+            width: 320px;
+            height: 320px;
+          }
+        }
+      }
+
+      .right {
+        .numbers-container-large {
+          .number-container {
+            width: 40px;
+            .number-text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

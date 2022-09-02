@@ -1,0 +1,110 @@
+// Ham Menu Icon
+#ham-icon {
+  width: 40px;
+  height: 45px;
+  position: relative;
+  top: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.2s;
+  outline: 0 none;
+  &:hover span {
+    transform: scaleX(1.2);
+    transition: 0.2s;
+  }
+  &:hover span:nth-child(2),
+  &:hover span:nth-child(3) {
+    top: 14px;
+  }
+  &:hover span:nth-child(4) {
+    top: 28px;
+  }
+}
+
+#ham-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#ham-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#ham-icon span:nth-child(2),
+#ham-icon span:nth-child(3) {
+  top: 10px;
+}
+
+#ham-icon span:nth-child(4) {
+  top: 20px;
+}
+
+#ham-icon.open span:nth-child(1) {
+  top: 30px;
+  width: 0%;
+  left: 50%;
+}
+
+#ham-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#ham-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#ham-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+@media (max-width: 900px) {
+  #ham-icon {
+    width: 25px;
+    height: 20px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 570px) {
+  #ham-icon {
+    top: 15px;
+  }
+  #ham-icon.open span {
+    background: white;
+  }
+  #ham-icon.ham-icon-mobile {
+    position: fixed;
+    top: 30px;
+    right: 15px;
+  }
+}
