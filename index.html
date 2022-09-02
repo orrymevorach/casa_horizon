@@ -1,134 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title -->
+        <title>Casa Horizon</title>
 
-    <!-- Title -->
-    <title>Casa Horizon</title>
+        <!-- Icon -->
+        <link rel="icon" href="img/sun-icon.png">
 
-    <!-- Icon -->
-    <link rel="icon" href="img/sun-icon.png" />
+        <!-- Google Fonts -->
+        <link
+            href='https://fonts.googleapis.com/css?family=Lora:400i,700i|Muli:400,600,700'
+            rel='stylesheet'
+        />
+    
+        <!-- Ezee Stylesheets -->
+        <link href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_datepicker.css" rel="stylesheet" type="text/css" />
+        <link href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_bookingbox.css" rel="stylesheet" type="text/css" />
+    </head>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400i,700i|Muli:400,600,700"
-      rel="stylesheet"
-    />
+    <body>
+        <!-- App -->
+        <div id="app"></div>
 
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/public/styles/style.css" />
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
 
-    <!-- Ezee stylessheet -->
-    <link
-      href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_datepicker.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://live.ipms247.com/themes/reservation/css/bookingbtn/resui_bookingbox.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+        <!-- Fontawesome -->
+        <script defer src='https://use.fontawesome.com/releases/v5.5.0/js/all.js'></script>
 
-  <body>
-    <div id="app"></div>
+        <!-- SnapWidget -->
+        <script src="https://snapwidget.com/js/snapwidget.js"></script>
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
 
-    <!-- Fontawesome -->
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
-    ></script>
-
-    <!-- SnapWidget -->
-    <script src="https://snapwidget.com/js/snapwidget.js"></script>
-
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="/dev/scripts/app.js"></script>
-
-    <!-- Ezee Scripts -->
-    <script
-      src="https://live.ipms247.com/themes/reservation/js/bookingbtn/jquery-ui.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="https://live.ipms247.com/themes/reservation/js/bookingbtn/common.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="https://live.ipms247.com/themes/reservation/js/bookingbtn/resui_resbookingbox.js"
-      type="text/javascript"
-    ></script>
-    <script>
-      jQuery('#bb_resBookingBox').bb_resBookingBox({
-        btnContainer: 'bb_resBookingBox',
-        headerColor: '#56c5d0',
-        bodyColor: 'rgba(0, 0, 0, 0)',
-        showborder: false,
-        BorderColor: 'rgba(0, 0, 0, 0)',
-        BorderWidth: 2,
-        BorderType: 'solid',
-        FontFamily: 'Arial, Helvetica, sans-serif',
-        BodyLanguage: 'en',
-        FontSize: '16',
-        TextColor: 'black',
-        InputBorderColor: '#fff',
-        InputbackColor: '#fff',
-        InputTextColor: '#000',
-        ButnBackColor: '#fce6da',
-        ButnBorderColor: '#fce6da',
-        ButnTextColor: 'black',
-        HeaderTextColor: '#000000',
-        HeaderFontSize: '15',
-        ShowHeader: '0',
-        boxwidth: '1000',
-        boxwidthtype: 'TYPE_PER',
-        ShowInlineCSS: '1',
-        type: 'htype',
-        acr: true,
-        ShowChild: true,
-        rooms: true,
-        promotion: false,
-        defaultadult: 10,
-        defaultchild: 10,
-        defaultroom: 16,
-        ShowNights: true,
-        Nonights: 15,
-        HTextCaption: 'Reservation',
-        BtnTextCaption: 'Book Now',
-        LblPromoCaption: 'Promotion',
-        LblChkOutCaption: 'Check Out',
-        Calinit: true,
-        CalShowOn: 'both',
-        CalDefaultDt: '+0w',
-        CalChangeMonth: true,
-        CalMinDate: '0',
-        CalMaxDate: '',
-        CalDtFormat: 'dd-mm-yy',
-        CalCutoffDays: '1',
-        CalImage: '1px -24px',
-        CalBackColor: '#a0f2ea',
-        CalHeaderColor: '#fff',
-        CalCellActiveColor: '#101414',
-        CalCellInActiveColor: '#c8dbda',
-        LblArrivalCaption: 'Check In',
-        LblNightsCaption: 'Nights',
-        LblAdultsCaption: 'Adult',
-        LblChildsCaption: 'Child',
-        LblRoomsCaption: 'Rooms',
-        LblPerRoomCaption: 'Per Room',
-        HotelId: 'casahorizon',
-      });
-    </script>
-  </body>
+        <!-- Ezee -->
+        <script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/jquery-ui.js" type="text/javascript"></script>
+        <script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/common.js" type="text/javascript"></script>
+        <script src="https://live.ipms247.com/themes/reservation/js/bookingbtn/resui_resbookingbox.js" type="text/javascript"></script>
+    </body>
 </html>

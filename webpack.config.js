@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './dev/scripts/app.js',
+  entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app_bundle.js',
@@ -39,12 +39,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     alias: {
-      components: path.resolve(__dirname, './dev/components/'),
+      components: path.resolve(__dirname, './src/components/'),
       styles: path.resolve(__dirname, './styles/'),
-      data: path.resolve(__dirname, './dev/data'),
-      utils: path.resolve(__dirname, './dev/utils'),
-      context: path.resolve(__dirname, './dev/context/'),
-      constants: path.resolve(__dirname, './dev/constants.js'),
+      data: path.resolve(__dirname, './src/data'),
+      utils: path.resolve(__dirname, './src/utils'),
+      context: path.resolve(__dirname, './src/context/'),
+      constants: path.resolve(__dirname, './src/constants.js'),
     },
   },
   devtool: 'eval-source-map',
