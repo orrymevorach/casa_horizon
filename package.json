@@ -5,7 +5,10 @@
   "main": "./src/app.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy:production": "webpack --mode production && firebase deploy --only hosting:production",
+    "deploy:staging-site": "webpack --mode production && firebase deploy --only hosting:staging-site",
+    "deploy:staging-site-2": "webpack --mode production && firebase deploy --only hosting:staging-site-2"
   },
   "author": "",
   "license": "ISC",

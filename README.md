@@ -11,11 +11,11 @@ To run in dev mode:
 
 ### Deploy commands
 
+Deploy to production site:
+`npm run deploy:production`
+
 Deploy to staging site 1:
-`firebase deploy --only staging-site`
+`npm run deploy:staging-site`
 
 Deploy to staging site 2:
-`firebase deploy --only hosting:staging-site-2`
-
-Deploy to production site:
-`firebase deploy --only production`
+`npm run deploy:staging-site-2`
