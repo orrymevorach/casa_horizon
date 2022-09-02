@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
-import firebase from 'firebase/app';
-import exports from './firebaseConfig';
+// import firebase from 'firebase/app';
+// import exports from './firebaseConfig';
 import HomePage from './HomePage/HomePage';
 import RoomsPage from './Rooms/RoomsPage';
 import RoomsModal from './Rooms/RoomsModal/RoomsModal';
@@ -13,7 +13,7 @@ import { RouteContextProvider } from './context/routeContext';
 
 export const awsBucket = 'https://casa-horizon.s3.ca-central-1.amazonaws.com';
 
-firebase.initializeApp(exports.config);
+// firebase.initializeApp(exports.config);
 
 function App() {
   return (
@@ -22,25 +22,19 @@ function App() {
         <div>
           <MenuBar />
 
-          <Route path='/' exact render={() => <HomePage />} />
+          <Route path="/" exact render={() => <HomePage />} />
 
-          <Route path='/rooms' exact render={() => <RoomsPage />} />
+          <Route path="/rooms" exact render={() => <RoomsPage />} />
 
           <Route
-            path='/rooms/jungle-house'
+            path="/rooms/jungle-house"
             exact
             render={() => <RoomsModal />}
           />
 
-          {/* <Route
-            path='/book'
-            exact
-            render={() => (
-              <Sirvoy />
-            )}
-          /> */}
+          {/* <Route path="/book" exact render={() => <Sirvoy />} /> */}
 
-          <Route path='/' render={() => <Footer />} />
+          <Route path="/" render={() => <Footer />} />
         </div>
       </Router>
     </RouteContextProvider>
