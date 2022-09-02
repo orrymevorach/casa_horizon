@@ -7,14 +7,9 @@
 
 To run in dev mode:
 
-3. Run `gulp`
+3. Run `npm run start`
 
 ### Deploy commands
-
-When deploying, change the following files in public/index.html:
-
-<link rel="stylesheet" type="text/css" href="./styles/style.css">
-<script src="./scripts/app.js"></script>
 
 Deploy to staging site 1:
 `firebase deploy --only staging-site`

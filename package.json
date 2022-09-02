@@ -2,7 +2,7 @@
   "name": "casa-horizon",
   "version": "1.0.0",
   "description": "",
-  "main": "./dev/index.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production"
