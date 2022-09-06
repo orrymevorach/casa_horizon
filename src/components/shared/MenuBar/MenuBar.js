@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef, useContext } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
 import classnames from 'classnames';
-import Ezee from '../../BookNow/Ezee';
 import useMenuScreenSize from './useMenuScreenSize';
 
 export default function MenuBar() {
@@ -31,13 +30,11 @@ export default function MenuBar() {
       ref={menuRef}
     >
       <Logo pathname={pathname} />
-      <Ezee isBelowHeader={isBelowHeader} isNavShowing={isNavShowing} />
 
       {pathname !== '/book' && pathname !== '/jungle-house' && (
         <div className="menu-bar-right">
           <Nav
             isNavShowing={isNavShowing}
-            setIsNavShowing={setIsNavShowing}
             isBelowHeaderDesktop={isBelowHeaderDesktop}
           />
           <HamburgerButton

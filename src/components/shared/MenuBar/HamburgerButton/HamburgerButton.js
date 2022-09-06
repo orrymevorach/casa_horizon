@@ -9,12 +9,13 @@ export default function Hamburger({
 }) {
   return (
     <button
-      id='ham-icon'
+      id="ham-icon"
       onClick={() => setIsNavShowing((isShowing) => !isShowing)}
       className={classnames({
         open: isNavShowing,
         'ham-icon-mobile': isBelowHeader && isMobile,
-      })}>
+      })}
+    >
       <span></span>
       <span></span>
       <span></span>

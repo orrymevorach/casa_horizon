@@ -1,5 +1,4 @@
 module.exports = {
-  parser: 'babel-eslint', // Specifies the ESLint parser
   plugins: ['react', 'react-hooks'],
   extends: [
     'eslint:recommended',
@@ -22,7 +21,9 @@ module.exports = {
     'react/no-unused-state': 'error', //Prevent definition of unused state fields
     'react/destructuring-assignment': 2,
     'react/prefer-es6-class': 2,
+    'react/prop-types': 0,
     'no-console': 1,
+    'no-unused-vars': 'warn',
   },
   settings: {
     react: {

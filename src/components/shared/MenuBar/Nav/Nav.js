@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
-export default function Nav({
-  isNavShowing,
-  setIsNavShowing,
-  isBelowHeaderDesktop,
-}) {
+export default function Nav({ isNavShowing, isBelowHeaderDesktop }) {
   return (
     <nav
       className={classnames('nav', {
@@ -13,10 +9,7 @@ export default function Nav({
         'fadeIn show': isNavShowing,
       })}
     >
-      <ul
-        id="ham-menu"
-        onClick={() => setIsNavShowing((isShowing) => !isShowing)}
-      >
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -27,6 +20,7 @@ export default function Nav({
           <a
             href="https://live.ipms247.com/booking/book-rooms-casahorizon"
             target="_blank"
+            rel="noreferrer"
           >
             Book Now
           </a>
