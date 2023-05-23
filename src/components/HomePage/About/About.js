@@ -16,12 +16,12 @@ class About extends React.Component {
     boxFour.classList.add('shift-and-hide-right-boxes');
 
     // Defining Heights of Header, TravellerInfo Section and Row One
-    const headerHeight = document.getElementsByTagName('header')[0]
-        .clientHeight,
-      travellerInfoHeight = document.getElementsByClassName('traveler-info')[0]
-        .clientHeight,
-      rowOneHeight = document.getElementsByClassName('about-row-one')[0]
-        .clientHeight;
+    const headerHeight =
+        document.getElementsByTagName('header')[0].clientHeight,
+      travellerInfoHeight =
+        document.getElementsByClassName('traveler-info')[0].clientHeight,
+      rowOneHeight =
+        document.getElementsByClassName('about-row-one')[0].clientHeight;
 
     // Defining Animation Starting Points for Each Row
     const animationStartRowOne =
@@ -58,63 +58,63 @@ class About extends React.Component {
 
   render() {
     return (
-      <section className='about' id='about'>
-        <div className='row about-row-one'>
-          <div className='box box1 box-image'>
+      <section className="about" id="about">
+        <div className="row about-row-one">
+          <div className="box box1 box-image">
             <img
               src={`${awsBucket}/homepage/jungle-house.png`}
-              alt='Casa Horizon Jungle House'
+              alt="Casa Horizon Jungle House"
             />
           </div>
-          <div className='box box2 box-text'>
+          <div className="box box2 box-text">
             <h2>
               Jungle House &<br></br>
               Beachfront Cottage
             </h2>
             <div>
-              <p className='lh-30'>
+              <p className="lh-30">
                 Casa Horizon is a multi-leveled jungle house and beachfront
-                cottage with breathtaking views of Nicaragua's sunsets
+                cottage with breathtaking views of Nicaragua&apos;s sunsets
               </p>
             </div>
-            <div className='numbers-container-large'>
-              <div className='row'>
-                <div className='numbers-individual-container'>
-                  <p className='number'>100</p>
-                  <p className='text'>
+            <div className="numbers-container-large">
+              <div className="row">
+                <div className="numbers-individual-container">
+                  <p className="number">100</p>
+                  <p className="text">
                     Steps to the<br></br>Beach
                   </p>
                 </div>
-                <div className='numbers-individual-container'>
-                  <p className='number'>16</p>
-                  <p className='text'>Guests</p>
+                <div className="numbers-individual-container">
+                  <p className="number">16</p>
+                  <p className="text">Guests</p>
                 </div>
-                <div className='numbers-individual-container'>
-                  <p className='number'>6</p>
-                  <p className='text'>Suites</p>
+                <div className="numbers-individual-container">
+                  <p className="number">6</p>
+                  <p className="text">Suites</p>
                 </div>
               </div>
-              <div className='row'>
-                <div className='numbers-individual-container'>
-                  <p className='number'>2</p>
-                  <p className='text'>Kitchens</p>
+              <div className="row">
+                <div className="numbers-individual-container">
+                  <p className="number">2</p>
+                  <p className="text">Kitchens</p>
                 </div>
-                <div className='numbers-individual-container'>
-                  <p className='number'>1</p>
-                  <p className='text'>Yoga Studio</p>
+                <div className="numbers-individual-container">
+                  <p className="number">1</p>
+                  <p className="text">Yoga Studio</p>
                 </div>
-                <div className='numbers-individual-container'>
-                  <p className='number'>4</p>
-                  <p className='text'>Large Patios</p>
+                <div className="numbers-individual-container">
+                  <p className="number">4</p>
+                  <p className="text">Large Patios</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='row about-row-two'>
-          <div className='box box3 box-text'>
+        <div className="row about-row-two">
+          <div className="box box3 box-text">
             <h2>Private Beach</h2>
-            <p className='lh-30'>
+            <p className="lh-30">
               Casa Horizon is located just a 3-minute walk away from beautiful
               Playa Escamaca, with Costa Rica visible in the distance. This
               beach is surrounded by nothing but ocean, nature and a handful of
@@ -122,16 +122,18 @@ class About extends React.Component {
               town.
             </p>
             <a
-              className='button'
-              href='https://www.google.com.ph/maps/place/Casa+Horizon/@11.1723439,-85.8123801,17z/data=!3m1!4b1!4m5!3m4!1s0x8f75b1d791843085:0x838f3792db65c563!8m2!3d11.1723386!4d-85.8101914'
-              target='_blank'>
+              className="button"
+              href="https://www.google.com.ph/maps/place/Casa+Horizon/@11.1723439,-85.8123801,17z/data=!3m1!4b1!4m5!3m4!1s0x8f75b1d791843085:0x838f3792db65c563!8m2!3d11.1723386!4d-85.8101914"
+              target="_blank"
+              rel="noreferrer"
+            >
               View Map
             </a>
           </div>
-          <div className='box box4 box-image'>
+          <div className="box box4 box-image">
             <img
               src={`${awsBucket}/homepage/private-beach.png`}
-              alt='Casa Horizon Private Beach'
+              alt="Casa Horizon Private Beach"
             />
           </div>
         </div>

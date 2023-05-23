@@ -3,18 +3,18 @@ import { awsBucket } from '../../../constants';
 
 export default function HomeHeader() {
   function scrollToTravelerInfo() {
-    const headerHeight = document.getElementsByClassName('home-header')[0]
-      .clientHeight;
+    const headerHeight =
+      document.getElementsByClassName('home-header')[0].clientHeight;
     if (typeof window === 'object') {
       window.scrollTo(0, headerHeight - 100);
     }
   }
 
   return (
-    <header className='home-header'>
-      <div className='overflow-container'>
-        <div className='text-container'>
-          <div className='header-text center'>
+    <header className="home-header">
+      <div className="overflow-container">
+        <div className="text-container">
+          <div className="header-text center">
             <h1>
               Experience rustic luxury at
               <br></br>
@@ -23,12 +23,12 @@ export default function HomeHeader() {
               <br></br>
               deep south of Nicaragua.
             </h1>
-            <div className='arrow-container' onClick={scrollToTravelerInfo}>
+            <button className="arrow-container" onClick={scrollToTravelerInfo}>
               <img
                 src={`${awsBucket}/icons/header-arrow.png`}
-                alt='Click To See More'
+                alt="Click To See More"
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>

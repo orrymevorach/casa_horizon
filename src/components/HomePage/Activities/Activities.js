@@ -7,16 +7,15 @@ import { debounce } from 'utils';
 export default function Activities() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDistance, setSlideDistance] = useState(360);
-  const [textContainerLargeWidth, setTextContainerLargeWidth] = useState(
-    '95px',
-  );
+  const [textContainerLargeWidth, setTextContainerLargeWidth] =
+    useState('95px');
   const [textContainerSmallSlide, setTextContainerSmallSlide] = useState('0px');
 
   useEffect(() => {
+    function setSlide() {
+      setSlideDistance(window.innerWidth > 600 ? 360 : 320);
+    }
     if (typeof window === 'object') {
-      function setSlide() {
-        setSlideDistance(window.innerWidth > 600 ? 360 : 320);
-      }
       setSlide();
       window.addEventListener('resize', debounce(setSlide, 100));
       return () =>
@@ -46,70 +45,74 @@ export default function Activities() {
   }
 
   return (
-    <section className='activities' id='activities'>
-      <div className='wrapper-small'>
-        <div className='left-arrow' onClick={slideLeft}>
+    <section className="activities" id="activities">
+      <div className="wrapper-small">
+        <button className="left-arrow" onClick={slideLeft}>
           <picture>
             <source
               srcSet={`${awsBucket}/icons/left-arrow-white.png`}
-              media='(max-width: 360px)'
+              media="(max-width: 360px)"
             />
             <source srcSet={`${awsBucket}/icons/left-arrow.png`} />
-            <img src={`${awsBucket}/icons/left-arrow.png`} alt='Left Arrow' />
+            <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
           </picture>
-        </div>
-        <div className='right-arrow' onClick={slideRight}>
+        </button>
+        <button className="right-arrow" onClick={slideRight}>
           <picture>
             <source
               srcSet={`${awsBucket}/icons/right-arrow-white.png`}
-              media='(max-width: 360px)'
+              media="(max-width: 360px)"
             />
             <source srcSet={`${awsBucket}/icons/right-arrow.png`} />
-            <img src={`${awsBucket}/icons/right-arrow.png`} alt='Right Arrow' />
+            <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow" />
           </picture>
-        </div>
-        <div className='left'>
-          <div className='image-container-large'>
+        </button>
+        <div className="left">
+          <div className="image-container-large">
             <div
-              className='image-container-small'
+              className="image-container-small"
               style={{
                 width: `${slideDistance * numberOfParagraphs}px`,
                 transform: `translateX(-${slideDistance * currentIndex}px)`,
-              }}>
+              }}
+            >
               {activities.map(({ src, alt }) => (
                 <img
                   key={src}
                   src={`${awsBucket}/${src}`}
                   alt={alt}
-                  className='activities-images'
+                  className="activities-images"
                 />
               ))}
             </div>
           </div>
-          <div className='circles-container' id='circles-container'>
+          <div className="circles-container" id="circles-container">
             {activities.map((activity, index) => (
               <div
                 key={activity.alt}
                 className={classnames('circle', {
                   selected: index === currentIndex,
-                })}></div>
+                })}
+              ></div>
             ))}
           </div>
         </div>
 
-        <div className='right'>
-          <div className='title-container'>
+        <div className="right">
+          <div className="title-container">
             <h2>Eat. Sleep.</h2>
             <div
-              className='text-container-large'
-              style={{ width: textContainerLargeWidth }}>
+              className="text-container-large"
+              style={{ width: textContainerLargeWidth }}
+            >
               <div
-                className='text-container-small'
+                className="text-container-small"
                 style={{
                   transform: `translateX(-${textContainerSmallSlide}px)`,
-                }}>
+                }}
+              >
                 {activities.map(({ heading }) => (
-                  <h2 className='textIndex' key={heading}>
+                  <h2 className="textIndex" key={heading}>
                     {heading}
                   </h2>
                 ))}
@@ -117,15 +120,16 @@ export default function Activities() {
             </div>
           </div>
 
-          <div className='paragraph-container-large'>
+          <div className="paragraph-container-large">
             <div
-              className='paragraph-container-small'
+              className="paragraph-container-small"
               style={{
                 width: `${numberOfParagraphs * slideDistance}px`,
                 transform: `translateX(-${currentIndex * slideDistance}px)`,
-              }}>
+              }}
+            >
               {activities.map(({ description }) => (
-                <p key={description} className='lh-30 paragraph'>
+                <p key={description} className="lh-30 paragraph">
                   {description}
                 </p>
               ))}

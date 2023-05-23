@@ -11,8 +11,8 @@ class Sirvoy extends React.Component {
     document.getElementById('sirvoy').appendChild(script);
 
     const logoNav = document.getElementsByClassName('logo-nav-top-right')[0];
-    const logoImage = document.getElementsByClassName('logo-nav-top-left')[0]
-      .children[0];
+    const logoImage =
+      document.getElementsByClassName('logo-nav-top-left')[0].children[0];
     if (window.location.hash === '#/book') {
       logoNav.style.display = 'none';
       logoImage.style.opacity = '1';
@@ -20,7 +20,7 @@ class Sirvoy extends React.Component {
   }
 
   render() {
-    return <div id='sirvoy'></div>;
+    return <div id="sirvoy"></div>;
   }
 }
 

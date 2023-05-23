@@ -9,22 +9,22 @@ import BuildingContainer from './BuildingContainer/BuildingContainer';
 class RoomsPage extends React.Component {
   render() {
     return (
-      <section className='rooms'>
+      <section className="rooms">
         <RoomsAboutUs />
 
         <RoomsCategories />
 
-        <BuildingContainer section='jungle'>
+        <BuildingContainer section="jungle">
           <JungleHouse />
         </BuildingContainer>
 
-        <ImagesSlider section='jungle' />
+        <ImagesSlider section="jungle" />
 
-        <BuildingContainer section='beachfront'>
+        <BuildingContainer section="beachfront">
           <BeachfrontCottage />
         </BuildingContainer>
 
-        <ImagesSlider section='beachfront' />
+        <ImagesSlider section="beachfront" />
       </section>
     );
   }

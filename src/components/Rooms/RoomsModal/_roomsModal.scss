@@ -1,200 +1,200 @@
 .rooms-modal {
-    height: 100vh;
-    background-color: white;
-    z-index: 50;
-    overflow: hidden;
-    
-    .room-slider-container {
-        width: fit-content;
-        display: flex;
-        display: -webkit-box;
+  height: 100vh;
+  background-color: white;
+  z-index: 50;
+  overflow: hidden;
+
+  .room-slider-container {
+    width: fit-content;
+    display: flex;
+    display: -webkit-box;
+  }
+  // hide mobile only arrows
+  .left-arrow-mobile,
+  .right-arrow-mobile {
+    display: none;
+  }
+  .right-arrow,
+  .left-arrow {
+    position: absolute;
+    top: 48%;
+    z-index: 30;
+    cursor: pointer;
+    img {
+      width: 20px;
     }
-    // hide mobile only arrows
+    background: none;
+    border: none;
+    color: $black;
+  }
+  .left-arrow {
+    left: 50px;
+  }
+  // position right arrow
+  .right-arrow {
+    right: 50px;
+  }
+  // Close Button
+  .close-button svg {
+    color: $black;
+  }
+
+  .room-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: center;
+    float: left;
+  }
+
+  .room-container-left,
+  .room-container-right {
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .room-container-left {
+    width: 60%;
+    img {
+      box-shadow: $shadow;
+      width: 100%;
+      display: block;
+    }
+  }
+  .room-container-right {
+    width: 40%;
+    padding: 0px 0 0 50px;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    .top-text {
+      position: relative;
+      margin-bottom: 30px;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+        height: 3px;
+      }
+      p {
+        font-family: $lora;
+      }
+    }
+    h2 {
+      font-family: $muli;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .from {
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin: 15px 0 25px;
+      padding-bottom: 25px;
+    }
+    .button {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    height: inherit;
+    padding: 50px 0;
+    .room-container {
+      flex-direction: column;
+      padding: 0 50px;
+    }
+    .room-container-left {
+      order: 2;
+      width: 80%;
+    }
+    .left-arrow {
+      left: 25px;
+    }
+    .right-arrow {
+      right: 25px;
+    }
+    .room-container-right {
+      width: 90%;
+      order: 1;
+      padding: 0;
+      .top-text {
+        order: 1;
+      }
+      .modal-book-button {
+        order: 2;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        margin: 0 20px -60px 0;
+      }
+      .price {
+        order: 3;
+      }
+      .descriptors {
+        order: 4;
+        margin-bottom: 30px;
+        .descriptor {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0;
+    .room-container {
+      padding: 0;
+    }
     .left-arrow-mobile,
     .right-arrow-mobile {
-        display: none;
+      display: block;
+      top: 50px;
+      img {
+        width: 15px;
+      }
     }
-    .right-arrow,
-    .left-arrow {
-        position: absolute;
-        top: 48%;
-        z-index: 30;
-        cursor: pointer;
-        img {
-            width: 20px;
-        }
+    .left-arrow-desktop,
+    .right-arrow-desktop {
+      display: none;
     }
     .left-arrow {
-        left: 50px;
+      left: 15px;
     }
-    // position right arrow
     .right-arrow {
-        right: 50px;
-    }
-    // Close Button
-    .close-button svg {
-        color: $black;
-    }
-
-    .room-container {
-        width: 100vw;
-        height: 100vh;
-        margin: 0 auto;
-        padding: 0 120px;
-        display: -webkit-box;
-        display: flex;
-        align-items: center; 
-        transition: 0.3s;
-        justify-content: center;
-        float: left;
-    }
-
-    .room-container-left,
-    .room-container-right {
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .room-container-left {
-        width: 60%;
-        img {
-            box-shadow: $shadow;
-            width: 100%;
-            display: block;
-        }
+      right: 25px;
     }
     .room-container-right {
-        width: 40%;
-        padding: 0px 0 0 50px;
-        color: $black;
+      width: 100%;
+      padding: 0 50px;
+      .modal-book-button {
+        order: 3;
         display: flex;
-        flex-direction: column;
-        .top-text {
-            position: relative;
-            margin-bottom: 30px;
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: -20px;
-                left: 0;
-                width: 100%;
-                background-color: rgb(247, 247, 247);
-                height: 3px;
-            }
-            p {
-                font-family: $lora;
-            }
-        }
-        h2 {
-            font-family: $muli;
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        .from {
-            font-size: 15px;
-            margin-bottom: 3px;
-        }
-        h1 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-        
-        .description {
-            margin: 15px 0 25px;
-            padding-bottom: 25px;
-        }
-        .button {
-            margin-top: 20px;
-            font-size: 18px;
-        }
+        justify-content: flex-end;
+        margin: -70px 0 20px;
+      }
+      .price {
+        order: 2;
+      }
+      h1 {
+        font-size: 26px;
+      }
     }
-
-    @media(max-width: 1000px ) {
-        height: inherit;
-        padding: 50px 0;
-        .room-container {
-            flex-direction: column;
-            padding: 0 50px;
-        }
-        .room-container-left {
-            order: 2;
-            width: 80%;
-        }
-        .left-arrow {
-            left: 25px;
-        }
-        .right-arrow {
-            right: 25px;
-        }
-        .room-container-right {
-            width: 90%;
-            order: 1;
-            padding: 0;
-            .top-text {
-                order: 1;
-            }
-            .modal-book-button {
-                order: 2;
-                display: flex;
-                justify-content: flex-end;
-                text-decoration: none;
-                margin: 0 20px -60px 0;
-            }
-            .price {
-                order: 3;
-            }
-            .descriptors {
-                order: 4;
-                margin-bottom: 30px;
-                .descriptor {
-                    width: 100%;
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
-    @media(max-width: 600px) {
-        padding: 0;
-        .room-container {
-            padding: 0;
-        }
-        .left-arrow-mobile,
-        .right-arrow-mobile {
-            display: block;
-            top: 50px;
-            img {
-                width: 15px;
-            }
-        }
-        .left-arrow-desktop,
-        .right-arrow-desktop {
-            display: none;
-        }
-        .left-arrow {
-            left: 15px;
-        }
-        .right-arrow {
-            right: 25px;
-        }
-        .room-container-right {
-            width: 100%;
-            padding: 0 50px;
-            .modal-book-button {
-                order: 3;
-                display: flex;
-                justify-content: flex-end;
-                margin: -70px 0 20px;
-            }
-            .price {
-                order: 2;
-            }
-            h1 {
-                font-size: 26px;
-            }
-        }
-        
-    }
+  }
 }
-
-

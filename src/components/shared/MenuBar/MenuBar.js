@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
@@ -10,7 +10,7 @@ export default function MenuBar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const { isBelowHeader, isMobile } = useMenuScreenSize();
   const menuRef = useRef(null);
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
 
   useEffect(() => {
     // add opacity after animation fade in
@@ -20,6 +20,8 @@ export default function MenuBar() {
   });
 
   const isBelowHeaderDesktop = isBelowHeader && !isMobile;
+
+  const pathname = '';
 
   return (
     <div

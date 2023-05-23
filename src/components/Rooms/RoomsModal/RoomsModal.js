@@ -30,91 +30,97 @@ export default function RoomsModal() {
 
   return (
     <div className="rooms-modal">
-      <div className="close-button" onClick={closeRoomsModal}>
+      <button className="close-button" onClick={closeRoomsModal}>
         <i className="fas fa-times"></i>
-      </div>
+      </button>
 
-      <div className="left-arrow left-arrow-desktop" onClick={slideLeft}>
+      <button className="left-arrow left-arrow-desktop" onClick={slideLeft}>
         <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
-      </div>
+      </button>
 
-      <div className="right-arrow right-arrow-desktop" onClick={slideRight}>
+      <button className="right-arrow right-arrow-desktop" onClick={slideRight}>
         <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow" />
-      </div>
+      </button>
 
       <div className="room-slider-container clearfix">
-        {rooms.map((room, index) => (
-          <div
-            className="room-container"
-            key={index}
-            style={{ transform: `translateX(-${slideDistance}px)` }}
-          >
-            <div className="room-container-left">
-              <img src={`${awsBucket}/${room.image}`} alt={room.name} />
-            </div>
-
-            <div className="room-container-right">
-              {/* arrows only visible in */}
-              <div className="left-arrow left-arrow-mobile" onClick={slideLeft}>
-                <img
-                  src={`${awsBucket}/icons/left-arrow.png`}
-                  alt="Left Arrow"
-                />
+        {rooms.map((room) => {
+          return (
+            <div
+              className="room-container"
+              key={room.name}
+              style={{ transform: `translateX(-${slideDistance}px)` }}
+            >
+              <div className="room-container-left">
+                <img src={`${awsBucket}/${room.image}`} alt={room.name} />
               </div>
 
-              <div
-                className="right-arrow right-arrow-mobile"
-                onClick={slideRight}
-              >
-                <img
-                  src={`${awsBucket}/icons/right-arrow.png`}
-                  alt="Right Arrow"
-                />
-              </div>
-              <div className="top-text">
-                <h2>{room.name}</h2>
-                {room.subtext && <p className="subtext">{room.subtext}</p>}
-              </div>
-              <div className="price">
-                <p className="from">from</p>
-                <h1>{room.price} / night</h1>
-              </div>
-              {room.descriptors && (
-                <div className="descriptors">
-                  <div className="descriptor">
-                    <i className="fas fa-check"></i>
-                    <p>{room.descriptors.one}</p>
-                  </div>
-                  <div className="descriptor">
-                    <i className="fas fa-check"></i>
-                    <p>{room.descriptors.two}</p>
-                  </div>
-                  <div className="descriptor">
-                    <i className="fas fa-check"></i>
-                    <p>{room.descriptors.three}</p>
-                  </div>
-                  <div className="descriptor">
-                    <i className="fas fa-check"></i>
-                    <p>{room.descriptors.four}</p>
-                  </div>
-                  {room.descriptors.five && (
+              <div className="room-container-right">
+                {/* arrows only visible in */}
+                <button
+                  className="left-arrow left-arrow-mobile"
+                  onClick={slideLeft}
+                >
+                  <img
+                    src={`${awsBucket}/icons/left-arrow.png`}
+                    alt="Left Arrow"
+                  />
+                </button>
+
+                <button
+                  className="right-arrow right-arrow-mobile"
+                  onClick={slideRight}
+                >
+                  <img
+                    src={`${awsBucket}/icons/right-arrow.png`}
+                    alt="Right Arrow"
+                  />
+                </button>
+                <div className="top-text">
+                  <h2>{room.name}</h2>
+                  {room.subtext && <p className="subtext">{room.subtext}</p>}
+                </div>
+                <div className="price">
+                  <p className="from">from</p>
+                  <h1>{room.price} / night</h1>
+                </div>
+                {room.descriptors && (
+                  <div className="descriptors">
                     <div className="descriptor">
                       <i className="fas fa-check"></i>
-                      <p>{room.descriptors.five}</p>
+                      <p>{room.descriptors.one}</p>
                     </div>
-                  )}
-                </div>
-              )}
-              <a
-                href="https://live.ipms247.com/booking/book-rooms-casahorizon"
-                target="_blank"
-                className="modal-book-button"
-              >
-                <button className="button">Book Now</button>
-              </a>
+                    <div className="descriptor">
+                      <i className="fas fa-check"></i>
+                      <p>{room.descriptors.two}</p>
+                    </div>
+                    <div className="descriptor">
+                      <i className="fas fa-check"></i>
+                      <p>{room.descriptors.three}</p>
+                    </div>
+                    <div className="descriptor">
+                      <i className="fas fa-check"></i>
+                      <p>{room.descriptors.four}</p>
+                    </div>
+                    {room.descriptors.five && (
+                      <div className="descriptor">
+                        <i className="fas fa-check"></i>
+                        <p>{room.descriptors.five}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+                <a
+                  href="https://live.ipms247.com/booking/book-rooms-casahorizon"
+                  target="_blank"
+                  className="modal-book-button"
+                  rel="noreferrer"
+                >
+                  <button className="button">Book Now</button>
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
