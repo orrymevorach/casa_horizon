@@ -35,8 +35,12 @@
     right: 50px;
   }
   // Close Button
-  .close-button svg {
-    color: $black;
+  .close-button {
+    border: none;
+    background: none;
+    svg {
+      color: $black;
+    }
   }
 
   .room-container {
@@ -109,6 +113,7 @@
     .button {
       margin-top: 20px;
       font-size: 18px;
+      font-family: $lora;
     }
   }
 

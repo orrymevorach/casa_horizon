@@ -40,7 +40,7 @@ class JungleHouse extends React.Component {
             <p className="number-text">Hammocks</p>
           </div>
         </div>
-        <Link to="jungle-house" className="button">
+        <Link to="/jungle-house" className="button">
           View All Rooms
         </Link>
       </div>

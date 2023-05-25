@@ -5,6 +5,7 @@ import HamburgerButton from './HamburgerButton';
 import Nav from './Nav';
 import classnames from 'classnames';
 import useMenuScreenSize from './useMenuScreenSize';
+import { Link } from 'gatsby';
 
 export default function MenuBar() {
   const [isNavShowing, setIsNavShowing] = useState(false);
@@ -31,7 +32,9 @@ export default function MenuBar() {
       style={{ opacity: '0', animation: ' fadeIn linear 3s' }}
       ref={menuRef}
     >
-      <Logo pathname={pathname} />
+      <Link to="/">
+        <Logo pathname={pathname} />
+      </Link>
 
       {pathname !== '/book' && pathname !== '/jungle-house' && (
         <div className="menu-bar-right">

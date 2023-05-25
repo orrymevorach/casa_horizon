@@ -3,19 +3,18 @@ import React from 'react';
 class BookButton extends React.Component {
   componentDidMount() {
     const bookButton = document.getElementsByClassName('book-button')[0];
-    const headerHeight = document.getElementsByClassName('home-header')[0]
-      .clientHeight;
-    const travelerInfoHeight = document.getElementsByClassName(
-      'traveler-info',
-    )[0].clientHeight;
-    const aboutHeight = document.getElementsByClassName('about')[0]
-      .clientHeight;
-    const promoHeight = document.getElementsByClassName('promo-video')[0]
-      .clientHeight;
-    const reviewsHeight = document.getElementsByClassName('reviews')[0]
-      .clientHeight;
-    const activitiesHeight = document.getElementsByClassName('activities')[0]
-      .clientHeight;
+    const headerHeight =
+      document.getElementsByClassName('home-header')[0].clientHeight;
+    const travelerInfoHeight =
+      document.getElementsByClassName('traveler-info')[0].clientHeight;
+    const aboutHeight =
+      document.getElementsByClassName('about')[0].clientHeight;
+    const promoHeight =
+      document.getElementsByClassName('promo-video')[0].clientHeight;
+    const reviewsHeight =
+      document.getElementsByClassName('reviews')[0].clientHeight;
+    const activitiesHeight =
+      document.getElementsByClassName('activities')[0].clientHeight;
     const surfHeight = document.getElementsByClassName('surf')[0].clientHeight;
     const totalHeightWithoutFooter =
       headerHeight +
@@ -92,11 +91,8 @@ class BookButton extends React.Component {
   render() {
     return (
       //   <a href='/#/book' target='_blank' className='book-button'>
-      <a
-        href='https://live.ipms247.com/booking/book-rooms-casahorizon'
-        target='_blank'
-        className='book-button'>
-        <button className='button'>Book Now</button>
+      <a href="/book-now" className="book-button">
+        <button className="button">Book Now</button>
       </a>
     );
   }

@@ -17,13 +17,7 @@ export default function Nav({ isNavShowing, isBelowHeaderDesktop }) {
           <Link to="/rooms">Our Rooms</Link>
         </li>
         <li>
-          <a
-            href="https://live.ipms247.com/booking/book-rooms-casahorizon"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Book Now
-          </a>
+          <Link to="/book-now">Book Now</Link>
         </li>
       </ul>
     </nav>

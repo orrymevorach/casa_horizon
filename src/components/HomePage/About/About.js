@@ -104,8 +104,8 @@ class About extends React.Component {
                   <p className="text">Yoga Studio</p>
                 </div>
                 <div className="numbers-individual-container">
-                  <p className="number">4</p>
-                  <p className="text">Large Patios</p>
+                  <p className="number">1</p>
+                  <p className="text">Private Pool</p>
                 </div>
               </div>
             </div>

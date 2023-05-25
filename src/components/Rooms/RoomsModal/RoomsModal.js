@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { awsBucket } from 'constants';
 import { rooms } from 'data';
+import { Link } from 'gatsby';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function RoomsModal() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,7 +34,7 @@ export default function RoomsModal() {
   return (
     <div className="rooms-modal">
       <button className="close-button" onClick={closeRoomsModal}>
-        <i className="fas fa-times"></i>
+        <FontAwesomeIcon icon={faTimes} />
       </button>
 
       <button className="left-arrow left-arrow-desktop" onClick={slideLeft}>
@@ -44,6 +47,7 @@ export default function RoomsModal() {
 
       <div className="room-slider-container clearfix">
         {rooms.map((room) => {
+          const Image = room.Image;
           return (
             <div
               className="room-container"
@@ -51,7 +55,7 @@ export default function RoomsModal() {
               style={{ transform: `translateX(-${slideDistance}px)` }}
             >
               <div className="room-container-left">
-                <img src={`${awsBucket}/${room.image}`} alt={room.name} />
+                <Image />
               </div>
 
               <div className="room-container-right">
@@ -65,7 +69,6 @@ export default function RoomsModal() {
                     alt="Left Arrow"
                   />
                 </button>
-
                 <button
                   className="right-arrow right-arrow-mobile"
                   onClick={slideRight}
@@ -86,37 +89,32 @@ export default function RoomsModal() {
                 {room.descriptors && (
                   <div className="descriptors">
                     <div className="descriptor">
-                      <i className="fas fa-check"></i>
+                      <FontAwesomeIcon icon={faCheck} />
                       <p>{room.descriptors.one}</p>
                     </div>
                     <div className="descriptor">
-                      <i className="fas fa-check"></i>
+                      <FontAwesomeIcon icon={faCheck} />
                       <p>{room.descriptors.two}</p>
                     </div>
                     <div className="descriptor">
-                      <i className="fas fa-check"></i>
+                      <FontAwesomeIcon icon={faCheck} />
                       <p>{room.descriptors.three}</p>
                     </div>
                     <div className="descriptor">
-                      <i className="fas fa-check"></i>
+                      <FontAwesomeIcon icon={faCheck} />
                       <p>{room.descriptors.four}</p>
                     </div>
                     {room.descriptors.five && (
                       <div className="descriptor">
-                        <i className="fas fa-check"></i>
+                        <FontAwesomeIcon icon={faCheck} />
                         <p>{room.descriptors.five}</p>
                       </div>
                     )}
                   </div>
                 )}
-                <a
-                  href="https://live.ipms247.com/booking/book-rooms-casahorizon"
-                  target="_blank"
-                  className="modal-book-button"
-                  rel="noreferrer"
-                >
+                <Link to="/book-now" className="modal-book-button">
                   <button className="button">Book Now</button>
-                </a>
+                </Link>
               </div>
             </div>
           );
