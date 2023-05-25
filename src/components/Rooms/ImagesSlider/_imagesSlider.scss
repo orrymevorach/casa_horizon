@@ -1,62 +1,44 @@
 section.rooms {
-      // Bottom images sectin of beachfront cottage and jungle
-      .images-slider {
-        display: flex;
-        width: 100%;
-        margin: 25px 0 150px;
-        border-bottom: 5px solid $orange;
-        @media(max-width: 820px) {
-            display: none;
-        }
-        .image-container {
-            width: 20%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-shadow: $shadow;
-            position: relative;
-            cursor: pointer;
-            h4 {
-                text-align: center;
-                font-family: $lora;
-                font-size: 28px;
-                color: white;
-                font-weight: normal;
-                color: $white;
-            }
-        }
-    }
-    
-    .jungle-image:nth-of-type(1) {
-        background-image: url($awsBucket+'/rooms/casa-courtyard.jpg');
-    }
-    .jungle-image:nth-of-type(2) {
-        background-image: url($awsBucket+'/rooms/casa-living-room.jpg');
-    }
-    .jungle-image:nth-of-type(3) {
-        background-image: url($awsBucket+'/rooms/Room1.jpg');
-    }
-    .jungle-image:nth-of-type(4) {
-        background-image: url($awsBucket+'/rooms/yoga-loft.jpg');
-    }
-    .jungle-image:nth-of-type(5) {
-        background-image: url($awsBucket+'/rooms/casa-kitchen.jpg');
-    }
+  // Bottom images sectin of beachfront cottage and jungle
+  .images-slider {
+    display: flex;
+    width: 100%;
+    margin: 25px 0 150px;
+    border-bottom: 5px solid $orange;
+    height: 200px;
+  }
 
-    .beachfront-image:nth-of-type(1) {
-        background-image: url($awsBucket+'/rooms/cottage-sunset.jpg');
+  .image-container {
+    width: 100%;
+    box-shadow: $shadow;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      text-align: center;
+      font-family: $lora;
+      font-size: 28px;
+      color: white;
+      font-weight: normal;
+      color: $white;
+      z-index: 2;
+      position: relative;
     }
-    .beachfront-image:nth-of-type(2) {
-        background-image: url($awsBucket+'/rooms/cottage-balcony.jpg');
-    }
-    .beachfront-image:nth-of-type(3) {
-        background-image: url($awsBucket+'/rooms/cottage-inside.jpg');
-    }
-    .beachfront-image:nth-of-type(4) {
-        background-image: url($awsBucket+'/rooms/master.jpg');
-    }
-    .beachfront-image:nth-of-type(5) {
-        background-image: url($awsBucket+'/rooms/cottage-kitchen.jpg');
-    }
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 }

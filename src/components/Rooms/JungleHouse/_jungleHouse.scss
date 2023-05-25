@@ -1,23 +1,19 @@
 section.rooms {
-    .jungle-container {
-        .left {
-            background-image: url($awsBucket+'/rooms/Room1.jpg');
-        }
-        .right a {
-            margin: 40px auto 20px;
-            display: block;
-            width: 200px;
-            text-align: center;
-        }
-        .text-container span {
-            font-size: 22px;
-        }
-        @media(max-width: 550px) {
-            .text-container h2 {
-                display: flex;
-                flex-direction: column;
-            }
-        }
+  .jungle-container {
+    .right a {
+      margin: 40px auto 20px;
+      display: block;
+      width: 200px;
+      text-align: center;
     }
-
+    .text-container span {
+      font-size: 22px;
+    }
+    @media (max-width: 550px) {
+      .text-container h2 {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }
