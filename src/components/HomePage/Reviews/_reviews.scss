@@ -1,5 +1,5 @@
 .reviews {
-  background-image: url('../images/Homepage/beach-new.jpg');
+  background-image: url($awsBucket + '/homepage/reviews-background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,10 +29,10 @@
     color: white;
     font-weight: 400;
     width: 80%;
-    .text {
-      line-height: 30px;
+    h1 {
+      line-height: 45px;
+      font-family: $lora;
       font-weight: normal;
-      font-size: 24px;
     }
     .header-text-container {
       position: relative;
@@ -60,7 +60,6 @@
   }
   .reviewer {
     margin-top: 20px;
-    font-family: $lora;
   }
   .review-container-large {
     width: 100%;
@@ -102,9 +101,22 @@
     }
   }
 
+  @media (max-width: 1000px) {
+    height: 40vh;
+    .text-container {
+      h1 {
+        font-size: 24px;
+        line-height: 35px;
+      }
+    }
+  }
+
   @media (max-width: 800px) {
     .circles-container-reviews {
       bottom: 20px;
+    }
+    .reviewer {
+      margin-top: 0;
     }
     .header-text-container {
       margin-bottom: 20px;
@@ -115,7 +127,7 @@
     height: 40vh;
     .text-container {
       text-align: left;
-      .text {
+      h1 {
         font-size: 18px;
       }
       width: 90%;
