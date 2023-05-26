@@ -66,9 +66,8 @@ export default function ContactForm() {
               placeholder="Check in date"
               id="check-in"
               name="check-in"
-              onChange={(e) => console.log(e.target.value)}
-              onFocus={(e) => (e.target.type = 'date')}
-              onBlur={(e) => (e.target.type = 'text')}
+              onFocus={(e) => (e.currentTarget.type = 'date')}
+              onBlur={(e) => (e.currentTarget.type = 'text')}
             />
             <input
               type="number"

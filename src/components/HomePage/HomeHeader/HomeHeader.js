@@ -1,5 +1,6 @@
 import React from 'react';
 import { awsBucket } from '../../../constants';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 export default function HomeHeader() {
   function scrollToTravelerInfo() {
@@ -9,6 +10,12 @@ export default function HomeHeader() {
       window.scrollTo(0, headerHeight - 100);
     }
   }
+  const { isMobile } = useWindowSize({
+    customWidths: {
+      desktop: 1000,
+      mobile: 570,
+    },
+  });
 
   return (
     <header className="home-header">
@@ -17,11 +24,10 @@ export default function HomeHeader() {
           <div className="header-text center">
             <h1>
               Experience rustic luxury at
-              <br></br>
+              <br />
               Casa Horizon Surf & Yoga Luxury Hostel,
-              <br></br>a secluded paradise in the
-              <br></br>
-              deep south of Nicaragua.
+              {!isMobile && <br />} a secluded paradise in the
+              {!isMobile && <br />} deep south of Nicaragua.
             </h1>
             <button className="arrow-container" onClick={scrollToTravelerInfo}>
               <img

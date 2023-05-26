@@ -11,7 +11,7 @@ export default function useWindowSize({ customWidths }) {
   useEffect(() => {
     if (customWidths) {
       if (
-        customWidths.desktop !== config.desktop &&
+        customWidths.desktop !== config.desktop ||
         customWidths.mobile !== config.mobile
       ) {
         setConfig(customWidths);
