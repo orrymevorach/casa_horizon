@@ -12,29 +12,31 @@ export default function Reviews() {
   }, [currentIndex]);
 
   return (
-    <section className='reviews' id='reviews'>
-      <div className='timer'></div>
-      <div className='overlay'>
-        <div className='text-container'>
-          <div className='header-text-container'>
+    <section className="reviews" id="reviews">
+      <div className="timer"></div>
+      <div className="overlay">
+        <div className="text-container">
+          <div className="header-text-container">
             <h3>What Our Visitors Say:</h3>
           </div>
 
-          <div className='review-container-large'>
+          <div className="review-container-large">
             <div
-              className='review-container-small'
+              className="review-container-small"
               style={{
                 transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-              }}>
+              }}
+            >
               {reviews.map((review) => {
                 return (
                   <a
-                    className='reviews-user-review'
+                    className="reviews-user-review"
                     key={review.name}
-                    href='https://www.facebook.com/pg/casahorizon/reviews/'
-                    target='_blank'>
-                    <h1>"{review.text}"</h1>
-                    <h1 className='reviewer'>- {review.name}</h1>
+                    href="https://www.facebook.com/pg/casahorizon/reviews/"
+                    target="_blank"
+                  >
+                    <p className="text">"{review.text}"</p>
+                    <p className="reviewer text">- {review.name}</p>
                   </a>
                 );
               })}
@@ -42,15 +44,17 @@ export default function Reviews() {
           </div>
         </div>
         <div
-          className='circles-container-reviews'
-          id='circles-container-reviews'>
+          className="circles-container-reviews"
+          id="circles-container-reviews"
+        >
           {reviews.map((_, index) => {
             return (
               <div
                 key={`circle-${index}`}
                 className={classnames(`review-circle review-circle-${index}`, {
                   selected: index === currentIndex,
-                })}></div>
+                })}
+              ></div>
             );
           })}
         </div>
