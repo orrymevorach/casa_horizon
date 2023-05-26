@@ -83,7 +83,7 @@ export default function ContactForm() {
               name="rooms"
             />
             <textarea
-              placeholder="Message"
+              placeholder="Message (Room preferences, special requests, etc.)"
               id="message"
               name="message"
               rows={5}

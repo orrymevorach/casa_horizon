@@ -61,9 +61,9 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .book-now-page {
-    padding: 120px 40px 40px;
+    padding: 120px 0px 40px;
     .row {
       flex-direction: column;
     }
@@ -72,10 +72,15 @@
     }
     .column {
       width: 100%;
+      padding: 0 20px;
     }
     .column1 {
       order: 2;
       margin-top: 30px;
+    }
+    form input[type='submit'] {
+      padding: 12px 0;
+      font-size: 16px;
     }
   }
 }
