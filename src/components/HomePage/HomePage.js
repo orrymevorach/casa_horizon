@@ -7,23 +7,21 @@ import Reviews from './Reviews/Reviews';
 import Activities from './Activities/Activities';
 import Surf from './Surf/Surf';
 import BookButton from 'components/shared/BookButton/BookButton';
+import CasaHorizonHighlight from 'components/HomePage/CasaHorizonHighlight/CasaHorizonHighlight';
 
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div className="home">
-        <BookButton />
+export default function HomePage() {
+  return (
+    <div className="home">
+      <BookButton />
 
-        <HomeHeader />
-        <TravelerInfo />
-        <About />
-        <PromoVideo />
-        <Reviews />
-        <Activities />
-        <Surf />
-      </div>
-    );
-  }
+      <HomeHeader />
+      <TravelerInfo />
+      <About />
+      <CasaHorizonHighlight />
+      <PromoVideo />
+      <Reviews />
+      <Activities />
+      <Surf />
+    </div>
+  );
 }
-
-export default HomePage;

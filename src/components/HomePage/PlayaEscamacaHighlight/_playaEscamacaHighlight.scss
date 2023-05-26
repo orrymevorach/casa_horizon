@@ -1,0 +1,35 @@
+.casa-horizon-highlight {
+  background-image: url('../images/Homepage/beach-new.jpg');
+  background-size: cover;
+  background-position: center -200px;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  h2 {
+    color: white;
+    font-size: 80px;
+    font-family: $muli;
+    position: relative;
+    z-index: 11;
+  }
+  .overlay {
+    background-color: rgba($black, 0.3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  @media screen and (max-width: 750px) {
+    background-position: center;
+    h2 {
+      font-size: 40px;
+    }
+  }
+}
