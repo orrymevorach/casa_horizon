@@ -1,7 +1,7 @@
 .casa-horizon-highlight {
   background-image: url('../images/Homepage/beach-new.jpg');
   background-size: cover;
-  background-position: center -200px;
+  background-position: center -250;
   background-repeat: no-repeat;
   height: 300px;
   display: flex;
@@ -10,6 +10,7 @@
   flex-direction: column;
   width: 100%;
   position: relative;
+  margin-top: 50px;
   h2 {
     color: white;
     font-size: 80px;

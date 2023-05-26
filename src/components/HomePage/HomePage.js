@@ -7,7 +7,7 @@ import Reviews from './Reviews/Reviews';
 import Activities from './Activities/Activities';
 import Surf from './Surf/Surf';
 import BookButton from 'components/shared/BookButton/BookButton';
-import CasaHorizonHighlight from 'components/HomePage/CasaHorizonHighlight/CasaHorizonHighlight';
+import PlayaEscamacaHighlight from 'components/HomePage/PlayaEscamacaHighlight/PlayaEscamacaHighlight';
 
 export default function HomePage() {
   return (
@@ -17,7 +17,7 @@ export default function HomePage() {
       <HomeHeader />
       <TravelerInfo />
       <About />
-      <CasaHorizonHighlight />
+      <PlayaEscamacaHighlight />
       <PromoVideo />
       <Reviews />
       <Activities />
