@@ -63,7 +63,7 @@ export default function ContactForm() {
             />
             <input
               type="text"
-              placeholder="Check in date"
+              placeholder="Check in date (optional)"
               id="check-in"
               name="check-in"
               onFocus={(e) => (e.currentTarget.type = 'date')}
@@ -71,13 +71,13 @@ export default function ContactForm() {
             />
             <input
               type="number"
-              placeholder="Number of nights"
+              placeholder="Number of nights (optional)"
               id="number-of-nights"
               name="number-of-nights"
             />
             <input
               type="number"
-              placeholder="Number of rooms"
+              placeholder="Number of rooms (optional)"
               id="rooms"
               name="rooms"
             />

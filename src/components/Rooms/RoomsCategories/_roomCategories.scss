@@ -1,47 +1,46 @@
 section.rooms {
+  section.room-categories-container {
+    display: flex;
+    margin-bottom: 80px;
+    border-bottom: 5px solid $orange;
+
+    a.room-category {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      box-shadow: $shadow;
+      position: relative;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      overflow: hidden;
+      h3 {
+        font-size: 34px;
+        font-weight: normal;
+        color: white;
+        font-family: $lora;
+      }
+    }
+
+    #room-category-0 {
+      background-image: url('../images/Homepage/pool-close-new.jpg');
+    }
+    #room-category-1 {
+      background-image: url($awsBucket + '/rooms/cottage-sunset.jpg');
+    }
+  }
+  @media (max-width: 750px) {
     section.room-categories-container {
-        display: flex;
-        margin-bottom: 80px;
-        border-bottom: 5px solid $orange;
-    
-        a.room-category {
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            box-shadow: $shadow;
-            position: relative;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            cursor: pointer;
-            overflow: hidden;
-            h3 {
-                font-size: 34px;
-                font-weight: normal;
-                color: white;
-                font-family: $lora;
-                
-            }
-        }
-    
-        #room-category-0 {
-            background-image: url($awsBucket+'/rooms/casa-courtyard.jpg');
-        }
-        #room-category-1 {
-            background-image: url($awsBucket+'/rooms/cottage-sunset.jpg');
-        } 
+      flex-direction: column;
+      border-bottom: none;
+      margin-bottom: 0;
+      a.room-category {
+        width: 95%;
+        margin: 5px auto 0;
+      }
     }
-    @media(max-width: 750px) {
-        section.room-categories-container {
-            flex-direction: column;
-            border-bottom: none;
-            margin-bottom: 0;
-            a.room-category {
-                width: 95%;
-                margin: 5px auto 0;
-            }
-        }
-    }
+  }
 }
