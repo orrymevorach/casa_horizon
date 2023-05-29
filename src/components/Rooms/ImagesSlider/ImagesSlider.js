@@ -4,20 +4,20 @@ import { StaticImage } from 'gatsby-plugin-image';
 export const images = {
   beachfront: [
     {
-      title: 'Sunset',
+      title: 'Balcony',
       Image: ({ classNames = '' }) => (
         <StaticImage
-          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-sunset.jpg"
+          src="../../../images/Homepage/cottage-balcony-new.jpg"
           className={classNames}
           alt=""
         />
       ),
     },
     {
-      title: 'Balcony',
+      title: 'Sunset',
       Image: ({ classNames = '' }) => (
         <StaticImage
-          src="../../../images/Homepage/cottage-balcony-new.jpg"
+          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-sunset.jpg"
           className={classNames}
           alt=""
         />

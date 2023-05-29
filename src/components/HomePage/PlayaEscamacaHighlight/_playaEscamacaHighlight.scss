@@ -1,9 +1,9 @@
 .casa-horizon-highlight {
-  background-image: url('../images/Homepage/beach-new.jpg');
+  background-image: url('../images/Homepage/beach-new-marker.jpg');
   background-size: cover;
-  background-position: center -250px;
+  background-position: center -150px;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
   margin-top: 50px;
   h2 {
     color: white;
-    font-size: 80px;
+    font-size: 100px;
     font-family: $muli;
     position: relative;
     z-index: 11;
@@ -26,6 +26,16 @@
     top: 0;
     left: 0;
     z-index: 10;
+  }
+  @media screen and (max-width: 1250px) {
+    background-position: center -100px;
+  }
+  @media screen and (max-width: 1000px) {
+    background-position: center;
+    height: 300px;
+    h2 {
+      font-size: 80px;
+    }
   }
   @media screen and (max-width: 750px) {
     background-position: center;
