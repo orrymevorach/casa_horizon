@@ -53,6 +53,16 @@ export const images = {
         />
       ),
     },
+    {
+      title: 'Epic Views',
+      Image: ({ classNames = '' }) => (
+        <StaticImage
+          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/cottage-view.jpeg"
+          className={classNames}
+          alt=""
+        />
+      ),
+    },
   ],
   jungle: [
     {
@@ -69,7 +79,7 @@ export const images = {
       title: 'Living Room',
       Image: ({ classNames = '' }) => (
         <StaticImage
-          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-living-room.jpg"
+          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/living-room-updated.jpeg"
           className={classNames}
           alt=""
         />
@@ -86,10 +96,10 @@ export const images = {
       ),
     },
     {
-      title: 'Yoga Loft',
+      title: 'Epic Views',
       Image: ({ classNames = '' }) => (
         <StaticImage
-          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/yoga-loft.jpg"
+          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/epic-views.jpeg"
           className={classNames}
           alt=""
         />
@@ -99,7 +109,7 @@ export const images = {
       title: 'Shared Kitchen',
       Image: ({ classNames = '' }) => (
         <StaticImage
-          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/casa-kitchen.jpg"
+          src="https://casa-horizon.s3.ca-central-1.amazonaws.com/rooms/kitchen-updated-two.jpeg"
           className={classNames}
           alt=""
         />

@@ -77,7 +77,7 @@ const Footer = () => {
         <h2>Get In Touch</h2>
         <div className="email">
           <p className="bold">Email us</p>
-          <p>casahorizonretreat@gmail.com</p>
+          <p>horizonsanctuary@gmail.com</p>
         </div>
         <div className="call">
           <p className="bold">Whatsapp</p>

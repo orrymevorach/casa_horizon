@@ -23,11 +23,11 @@ export default function HomeHeader() {
         <div className="text-container">
           <div className="header-text center">
             <h1>
-              Experience rustic luxury at
+              Experience our beachfront paradise at
               <br />
-              Casa Horizon Surf & Yoga Luxury Hostel,
-              {!isMobile && <br />} a secluded paradise in the
-              {!isMobile && <br />} deep south of Nicaragua.
+              Casa Horizon Surf & Yoga Sanctuary,
+              {!isMobile && <br />} a secluded hotel in the deep south of
+              {!isMobile && <br />} Nicaragua surrounded by pristine nature.
             </h1>
             <button className="arrow-container" onClick={scrollToTravelerInfo}>
               <img

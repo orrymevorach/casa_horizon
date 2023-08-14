@@ -19,8 +19,6 @@ export default function useWindowSize({ customWidths }) {
     }
   }, [customWidths]);
 
-  console.log('config', config);
-
   useEffect(() => {
     function getDevice() {
       let device = '';

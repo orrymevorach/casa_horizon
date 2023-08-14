@@ -5,24 +5,20 @@ import JungleHouse from './JungleHouse/JungleHouse';
 import BeachfrontCottage from './BeachfrontCottage/BeachfrontCottage';
 import BuildingContainer from './BuildingContainer/BuildingContainer';
 
-class RoomsPage extends React.Component {
-  render() {
-    return (
-      <section className="rooms">
-        <RoomsAboutUs />
+export default function RoomsPage() {
+  return (
+    <section className="rooms">
+      <RoomsAboutUs />
 
-        <RoomsCategories />
+      <RoomsCategories />
 
-        <BuildingContainer section="jungle">
-          <JungleHouse />
-        </BuildingContainer>
+      <BuildingContainer section="jungle">
+        <JungleHouse />
+      </BuildingContainer>
 
-        <BuildingContainer section="beachfront">
-          <BeachfrontCottage />
-        </BuildingContainer>
-      </section>
-    );
-  }
+      <BuildingContainer section="beachfront">
+        <BeachfrontCottage />
+      </BuildingContainer>
+    </section>
+  );
 }
-
-export default RoomsPage;
