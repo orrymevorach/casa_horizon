@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { awsBucket } from 'constants';
 import { buildingContainerData } from 'data';
 import useWindowSize from '../../../hooks/useWindowSize';
 import ImagesSlider, { images } from '../ImagesSlider/ImagesSlider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 const MobileSlider = ({ section }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,29 +22,11 @@ const MobileSlider = ({ section }) => {
     setCurrentIndex((currentIndex - 1) % buildingContainerData[section].length);
   }
   return (
-    <div>
-      <div className="left-arrow" onClick={slideLeft}>
-        <picture>
-          <source
-            srcSet={`${awsBucket}/icons/left-arrow-white.png`}
-            media="(max-width: 360px)"
-          />
-          <source srcSet={`${awsBucket}/icons/left-arrow.png`} />
-          <img src={`${awsBucket}/icons/left-arrow.png`} alt="Left Arrow" />
-        </picture>
-      </div>
-      <div className="right-arrow" onClick={slideRight}>
-        <picture>
-          <source
-            srcSet={`${awsBucket}/icons/right-arrow-white.png`}
-            media="(max-width: 360px)"
-          />
-          <source srcSet={`${awsBucket}/icons/right-arrow.png`} />
-          <img src={`${awsBucket}/icons/right-arrow.png`} alt="Right Arrow" />
-        </picture>
-      </div>
-
+    <>
       <div className="slider-container-large">
+        <div className="left-arrow" onClick={slideLeft}>
+          <FontAwesomeIcon icon={faChevronLeft} color="white" size="3x" />
+        </div>
         <div
           className="slider-container-small"
           style={{
@@ -51,8 +37,11 @@ const MobileSlider = ({ section }) => {
             <Image classNames="mobile-image" key={`mobile-image-${index}`} />
           ))}
         </div>
+        <div className="right-arrow" onClick={slideRight}>
+          <FontAwesomeIcon icon={faChevronRight} color="white" size="3x" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
